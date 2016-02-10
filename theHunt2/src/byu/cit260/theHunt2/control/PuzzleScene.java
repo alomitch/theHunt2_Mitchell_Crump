@@ -7,7 +7,7 @@ package byu.cit260.theHunt2.control;
 
 /**
  *
- * @author mikec_000
+ * @author AlleciaMitchell
  */
 public class PuzzleScene {
     
