@@ -13,10 +13,10 @@ public class InventoryItem {
     
     
     public double calcSpeedOfTrainA ( double speed,  double distance ) {
-             if ( speed == 35) {
+             if ( speed != 35) {
                  return-1;
              }
-             if ( distance == 100){
+             if ( distance != 100){
                  return-1;
              }
             double travelTimeA = speed / distance;
@@ -25,10 +25,10 @@ public class InventoryItem {
     }  
              
     public double calcSpeedOfTrainB ( double speed, double distance){
-                 if ( speed== 70){
+                 if ( speed != 70){
                      return -1;
                  }
-                 if (distance==200){
+                 if (distance!=200){
                      return -1;
                  }
                  double travelTimeB = speed / distance;
@@ -36,13 +36,14 @@ public class InventoryItem {
                  return totalTravelTimeB;
     }               
            
-       public double calcTotalTravelTime ( double travelTimeA, double travelTimeB)
-               if ( travelTimeA== .35){
+       public double calcTotalTravelTime (double travelTimeA, double travelTimeB){
+               if ( travelTimeA != .35){
                         return -1;
                 }
-               if ( travelTimeB == .35){
+               if ( travelTimeB != .35){
                          return -1;     
                }
-               double totalTravelTime = travelTimeA + travelTime B;
+               double totalTravelTime = travelTimeA + travelTimeB;
                return totalTravelTime;
+       }
 }
