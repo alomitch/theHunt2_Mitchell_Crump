@@ -53,8 +53,7 @@ public class InventoryItemTest {
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.35);
         
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -69,8 +68,7 @@ public class InventoryItemTest {
         double expResult = 0.35;
         double result = instance.calcSpeedOfTrainB(speed, distance);
         assertEquals(expResult, result, 0.35);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -85,8 +83,7 @@ public class InventoryItemTest {
         double expResult = 0.7;
         double result = instance.calcTotalTravelTime(travelTimeA, travelTimeB);
         assertEquals(expResult, result, 0.7);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     
     
      /**
@@ -159,13 +156,13 @@ public class InventoryItemTest {
         speed = 35.0;
         distance = 100.0;
         
-        expResult = -1; // expected output returned value
+        expResult = .35; // expected output returned value
         
         // call function to run test
         result = instance.calcSpeedOfTrainA(speed, distance);
         
         // compare expected return value with actual value returned
-        assertEquals(expResult, result, -1.0);
+        assertEquals(expResult, result, .35);
         
     }
     
