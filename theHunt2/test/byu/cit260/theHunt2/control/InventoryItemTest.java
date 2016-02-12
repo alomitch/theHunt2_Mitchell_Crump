@@ -96,13 +96,13 @@ public class InventoryItemTest {
         System.out.println("\tTest case #2");
         
         // input values for test case 2
-        speed = -1.0;
-        distance = 100.0;
+        double speed = -1.0;
+        double distance = 100.0;
         
         expResult = -1; // expected output returned value
         
         // call function to run test
-        result = instance.calcSpeedOfTrainA(speed, distance);
+        result = instance.calcSpeedOfTrainA( speed, distance);
         
         // compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
@@ -116,8 +116,8 @@ public class InventoryItemTest {
         System.out.println("\tTest case #3");
         
         // input values for test case 3
-        speed = 35.0;
-        distance = -1.0;
+         speed = 35.0;
+         distance = -1.0;
         
         expResult = -1; // expected output returned value
         
