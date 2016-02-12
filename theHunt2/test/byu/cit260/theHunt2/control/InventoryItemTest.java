@@ -80,98 +80,80 @@ public class InventoryItemTest {
      * Test case #2
      * Test of calcSpeedOfTrainA method, of class InventoryItem.
      */
-    @Test
-    public void testCalcSpeedOfTrainA() {
-        System.out.println("calcSpeedOfTrainA");
-        double speed = -1.0;
-        double distance = 100.0;
-        InventoryItem instance = new InventoryItem();
-        double expResult = -1.0;
-        double result = instance.calcSpeedOfTrainA(speed, distance);
+        System.out.println("\tTest case #2");
+        
+        // input values for test case 2
+        speed = -1.0;
+        distance = 100.0;
+        
+        expResult = -1; // expected output returned value
+        
+        // call function to run test
+        result = instance.calcSpeedOfTrainA(speed, distance);
+        
+        // compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
-    /**
-     * Test of calcSpeedOfTrainB method, of class InventoryItem.
-     */
-    @Test
-    public void testCalcSpeedOfTrainB() {
-        System.out.println("calcSpeedOfTrainB");
-        double speed = -1.0;
-        double distance = 200.0;
-        InventoryItem instance = new InventoryItem();
-        double expResult = -1.0;
-        double result = instance.calcSpeedOfTrainB(speed, distance);
-        assertEquals(expResult, result, -1.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of calcTotalTravelTime method, of class InventoryItem.
-     */
-    @Test
-    public void testCalcTotalTravelTime() {
-        System.out.println("calcTotalTravelTime");
-        double travelTimeA = -1.0;
-        double travelTimeB = -1.0;
-        InventoryItem instance = new InventoryItem();
-        double expResult = -1.0;
-        double result = instance.calcTotalTravelTime(travelTimeA, travelTimeB);
-        assertEquals(expResult, result, -1.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
      /**
      * Test case #3
      * Test of calcSpeedOfTrainA method, of class InventoryItem.
      */
-    @Test
-    public void testCalcSpeedOfTrainA() {
-        System.out.println("calcSpeedOfTrainA");
-        double speed = -1.0;
-        double distance = 100.0;
-        InventoryItem instance = new InventoryItem();
-        double expResult = -1.0;
-        double result = instance.calcSpeedOfTrainA(speed, distance);
+        System.out.println("\tTest case #2");
+        
+        // input values for test case 2
+        speed = 35.0;
+        distance = -1.0;
+        
+        expResult = -1; // expected output returned value
+        
+        // call function to run test
+        result = instance.calcSpeedOfTrainA(speed, distance);
+        
+        // compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+    }
+    
+     /**
+     * Test case #4
+     * Test of calcSpeedOfTrainA method, of class InventoryItem.
+     */
+        System.out.println("\tTest case #2");
+        
+        // input values for test case 2
+        speed = 35.0;
+        distance = 135.0;
+        
+        expResult = -1; // expected output returned value
+        
+        // call function to run test
+        result = instance.calcSpeedOfTrainA(speed, distance);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result, -1.0);
+        
     }
 
-    /**
-     * Test of calcSpeedOfTrainB method, of class InventoryItem.
+     /**
+     * Test case #5
+     * Test of calcSpeedOfTrainA method, of class InventoryItem.
      */
-    @Test
-    public void testCalcSpeedOfTrainB() {
-        System.out.println("calcSpeedOfTrainB");
-        double speed = -1.0;
-        double distance = 200.0;
-        InventoryItem instance = new InventoryItem();
-        double expResult = -1.0;
-        double result = instance.calcSpeedOfTrainB(speed, distance);
+        System.out.println("\tTest case #2");
+        
+        // input values for test case 2
+        speed = 35.0;
+        distance = 100.0;
+        
+        expResult = -1; // expected output returned value
+        
+        // call function to run test
+        result = instance.calcSpeedOfTrainA(speed, distance);
+        
+        // compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of calcTotalTravelTime method, of class InventoryItem.
-     */
-    @Test
-    public void testCalcTotalTravelTime() {
-        System.out.println("calcTotalTravelTime");
-        double travelTimeA = -1.0;
-        double travelTimeB = -1.0;
-        InventoryItem instance = new InventoryItem();
-        double expResult = -1.0;
-        double result = instance.calcTotalTravelTime(travelTimeA, travelTimeB);
-        assertEquals(expResult, result, -1.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }
