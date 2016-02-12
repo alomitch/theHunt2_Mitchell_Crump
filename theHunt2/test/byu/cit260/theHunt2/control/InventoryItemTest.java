@@ -28,18 +28,31 @@ public class InventoryItemTest {
     }
 
     /**
-     * Test case #1
      * Test of calcSpeedOfTrainA method, of class InventoryItem.
      */
     @Test
     public void testCalcSpeedOfTrainA() {
         System.out.println("calcSpeedOfTrainA");
+        /****************
+         * Test case #1
+         ***************/
+        System.out.println("\tTest case #1");
+        
+        //input values for test case 1
         double speed = 35.0;
         double distance = 100.0;
+        
+        double expResult = 0.35; // expected output value
+        
+        //create instance of InventoryItem class
         InventoryItem instance = new InventoryItem();
-        double expResult = 0.35;
+        
+        //call function to run test
         double result = instance.calcSpeedOfTrainA(speed, distance);
+        
+        //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.35);
+        
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -74,7 +87,7 @@ public class InventoryItemTest {
         assertEquals(expResult, result, 0.7);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-    }
+    
     
      /**
      * Test case #2
@@ -94,7 +107,7 @@ public class InventoryItemTest {
         // compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
         
-    }
+    
 
      /**
      * Test case #3
@@ -102,7 +115,7 @@ public class InventoryItemTest {
      */
         System.out.println("\tTest case #3");
         
-        // input values for test case 2
+        // input values for test case 3
         speed = 35.0;
         distance = -1.0;
         
@@ -114,7 +127,7 @@ public class InventoryItemTest {
         // compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
         
-    }
+    
     
      /**
      * Test case #4
@@ -122,7 +135,7 @@ public class InventoryItemTest {
      */
         System.out.println("\tTest case #4");
         
-        // input values for test case 2
+        // input values for test case 4
         speed = 35.0;
         distance = 135.0;
         
@@ -134,7 +147,7 @@ public class InventoryItemTest {
         // compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
         
-    }
+    
 
      /**
      * Test case #5
@@ -142,7 +155,7 @@ public class InventoryItemTest {
      */
         System.out.println("\tTest case #5");
         
-        // input values for test case 2
+        // input values for test case 5
         speed = 35.0;
         distance = 100.0;
         
