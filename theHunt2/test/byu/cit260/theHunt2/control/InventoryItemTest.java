@@ -100,7 +100,7 @@ public class InventoryItemTest {
      * Test case #3
      * Test of calcSpeedOfTrainA method, of class InventoryItem.
      */
-        System.out.println("\tTest case #2");
+        System.out.println("\tTest case #3");
         
         // input values for test case 2
         speed = 35.0;
@@ -120,7 +120,7 @@ public class InventoryItemTest {
      * Test case #4
      * Test of calcSpeedOfTrainA method, of class InventoryItem.
      */
-        System.out.println("\tTest case #2");
+        System.out.println("\tTest case #4");
         
         // input values for test case 2
         speed = 35.0;
@@ -140,7 +140,7 @@ public class InventoryItemTest {
      * Test case #5
      * Test of calcSpeedOfTrainA method, of class InventoryItem.
      */
-        System.out.println("\tTest case #2");
+        System.out.println("\tTest case #5");
         
         // input values for test case 2
         speed = 35.0;
