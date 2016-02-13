@@ -40,10 +40,8 @@ public class PuzzleSceneWaterTest {
         //input values for test case 1
         double volume = 40.0;
         double gpm = 2.2;
-        double numberOfFills = 3.0;
-        
-        //
-        double expResult = 54.54; // expected output value
+                
+        double expResult = 18.18; // expected output value
         
         //create instance of PuzzleSceneWater class
         PuzzleSceneWater instance = new PuzzleSceneWater();
@@ -52,7 +50,7 @@ public class PuzzleSceneWaterTest {
         double result = instance.calcTubFillRate(volume, gpm);
         
         //compare expected return value with actual value returned
-        assertEquals(expResult, result, 54.54);
+        assertEquals(expResult, result, 18.18);
         
     }
 
@@ -78,7 +76,7 @@ public class PuzzleSceneWaterTest {
         // input values for test case 2
         double volume = -1.0;
         double gpm = 2.2;
-        double numberOfFills = 3.0;
+        numberOfFills = 3.0;
         
         expResult = -1; // expected output returned value
         
@@ -95,9 +93,9 @@ public class PuzzleSceneWaterTest {
         System.out.println("\tTest case #3");
         
         // input values for test case 3
-        double volume = 40.0;
-        double gpm = -1;
-        double numberOfFills = 3.0;
+        volume = 40.0;
+        gpm = -1;
+        numberOfFills = 3.0;
         
         expResult = -1; // expected output returned value
         
@@ -114,17 +112,17 @@ public class PuzzleSceneWaterTest {
         System.out.println("\tTest case #4");
         
         // input values for test case 4
-        double volume = 40.0;
-        double gpm = 2.2;
-        double numberOfFills = -1;
+        volume = 40.0;
+        gpm = 2.2;
+        numberOfFills = -1;
         
-        expResult = -1; // expected output returned value
+        expResult = 18.18181818181818; // expected output returned value
         
         // call function to run test
         result = instance.calcTubFillRate( volume, gpm);
         
         // compare expected return value with actual value returned
-        assertEquals(expResult, result, -1.0);
+        assertEquals(expResult, result, 18.18181818181818);
      
     /**
      * Test case #5
@@ -133,9 +131,9 @@ public class PuzzleSceneWaterTest {
         System.out.println("\tTest case #5");
         
         // input values for test case 5
-        double volume = 40.0;
-        double gpm = 2.2;
-        double numberOfFills = 3.0;
+        volume = 40.0;
+        gpm = 2.2;
+        numberOfFills = 3.0;
         
         expResult = 54.54; // expected output returned value
         
