@@ -20,6 +20,7 @@ import byu.cit260.theHunt2.model.PuzzleScene;
 import byu.cit260.theHunt2.model.Scene;
 import byu.cit260.theHunt2.model.TNT;
 import byu.cit260.theHunt2.model.Treasure;
+import citbyui.cit260.theHunt2.view.StartProgramView;
 
 /**
  *
@@ -128,9 +129,10 @@ private static void groupTest(){
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        groupTest();
-        alleciaTests();
-        michaelTests();   
+        
+        //create StartProgramView and start the program
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
     }
     
 }
