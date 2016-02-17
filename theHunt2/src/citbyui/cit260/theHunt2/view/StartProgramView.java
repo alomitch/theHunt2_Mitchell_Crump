@@ -5,6 +5,7 @@
  */
 package citbyui.cit260.theHunt2.view;
 
+import byu.cit260.theHunt2.control.ProgramControl;
 import byu.cit260.theHunt2.model.Player;
 import java.util.Scanner;
 
@@ -15,8 +16,6 @@ import java.util.Scanner;
 public class StartProgramView {
 
     private String playersName;
-    private Object ProgramControl;
-        
        public StartProgramView(){
        }
            public void startProgram(){
@@ -29,8 +28,10 @@ public class StartProgramView {
                // Create and save the player object
                Player player = ProgramControl.createPlayer(playersName);
                // Display a personalized welcome message
-               
+               this.displayWelcomeMessage(player);
                // Display the Main Menu
+               MainMenuView mainMenu = new MainMenuView();
+               mainMenu.displayMenu();
            }
 
     private void displayBanner() {
@@ -48,8 +49,9 @@ public class StartProgramView {
                                    +"\n*need to answer the riddle inorder to overcome the obstacle. Hidden within each of these          *"
                                    +"\n*obstacles is a clue which may be useful for solving the final riddle to find the treasure.             *");
         System.out.println("*                                                                                                                                                                      "
-                + "\n*Many paths exist within the island, but only one leads to the hidden treasure. You may encounter peril   *"
-                + "\n*along any path, and a wrong step, or answer, that will lead you an untimely demise .                                  *");
+                                  + "\n*Many paths exist within the island, but only one leads to the hidden treasure. You may             *"
+                                  + "\n*encounter peril along any path, and a wrong step, or answer, that will lead you an untimely     *"
+                                  + " \n*demise .                                                                                                                                                   *");
         
     }
 
@@ -68,7 +70,7 @@ public class StartProgramView {
            playersName = playersName.trim();
            
            //if the name is invalid (less than two character in lenght))
-           if (playersName. lenght() <2){
+           if (playersName. length() <2){
                System.out.println("Invalid name - the name must not be blank");
                continue; // and repeat again
                
@@ -76,6 +78,14 @@ public class StartProgramView {
            break; // out of the (exit) the repetition
        }
        return playersName; //return the name
+    }
+
+    private void displayWelcomeMessage(Player player) {
+        System.out.println("\n\nn==============================================================================");
+        System.out.println("\tWelcome to the game" + player.getName());
+        System.out.println("\tWe hope you have a lot of fun!");
+        System.out.println("===================================================================================");
+        
     }
        
 }

@@ -27,6 +27,25 @@ import citbyui.cit260.theHunt2.view.StartProgramView;
  * @author AlleciaMitchell
  */
 public class theHunt2 {
+ 
+    private static Game currentGame = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        theHunt2.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        theHunt2.player = player;
+    }
+    private static Player player = null;
     
 private static void groupTest(){
        Player playerOne = new Player();  
