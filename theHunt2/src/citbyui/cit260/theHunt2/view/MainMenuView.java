@@ -10,9 +10,30 @@ package citbyui.cit260.theHunt2.view;
  * @author AlleciaMitchell
  */
 public class MainMenuView {
+    
+    private final String MENU = "\n"
+            +"\n-----------------------------------------"
+            + "\n| Main Menu                            |"
+            +"\n-----------------------------------------"
+            +"\nG - Start game"
+            +"\nH - Get help on how to play the game"
+            +"\nS - Save game"
+            +"\nE - Exit"
+            +"\n-----------------------------------------";
 
-    void displayMenu() {
-       System.out.println("***MainMenuView.displayMenu() function called ****************************************");
+    public void displayMenu() {
+        
+        char selection = ' ';
+        do {
+               
+            System.out.println(MENU); // display the main menu
+       
+            String input = this.getInput(); // get the user's selection
+            selection = input.charAt(0); // get first character of string
+       
+            this.doAction(selection); // do action based on selection
+       
+        } while (selection != 'E'); // while selection is not "Exit"
        
     }
     

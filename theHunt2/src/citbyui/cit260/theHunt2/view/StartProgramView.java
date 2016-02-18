@@ -38,15 +38,15 @@ public class StartProgramView {
       System.out.println("\n\n*******************************************************************************");
       System.out.println("*                                                                                                                                                                        "
                                    +"\n*This is a game to explore a virtual world full of riddles and treasure.                                              *"
-                                   +"\n*You will enjoy an intriguing story andadventure every step of teh way. You will be                      *"
+                                   +"\n*You will enjoy an intriguing story and adventure every step of the way. You will be                      *"
                                    +"\n*encouraged to continue the treasure hunt until ultimately you uncover the hiddent treasure    *"
                                    +"\n*that is hidden away on the mysterious island that you have been placed on.                               *");
        System.out.println("*                                                                                                                                                                       "
                                    +"\n*You will be presented with a section of dialogue describing a tropical island and a mysterious   *"
                                    +"\n*map that you will aquire. You will be presented with options to move througout the land          *"
                                    +"\n* using a series of command prompt entries. After exploring the island for a shortime you          *"
-                                   +"\n*to obstecales that will block your path that will prevent you from further travel. You will the    *"
-                                   +"\n*need to answer the riddle inorder to overcome the obstacle. Hidden within each of these          *"
+                                   +"\n*to obstacles that will block your path that will prevent you from further travel. You will the    *"
+                                   +"\n*need to answer the riddle in order to overcome the obstacle. Hidden within each of these          *"
                                    +"\n*obstacles is a clue which may be useful for solving the final riddle to find the treasure.             *");
         System.out.println("*                                                                                                                                                                      "
                                   + "\n*Many paths exist within the island, but only one leads to the hidden treasure. You may             *"
@@ -81,7 +81,7 @@ public class StartProgramView {
     }
 
     private void displayWelcomeMessage(Player player) {
-        System.out.println("\n\nn==============================================================================");
+        System.out.println("\n\n===============================================================================");
         System.out.println("\tWelcome to the game" + player.getName());
         System.out.println("\tWe hope you have a lot of fun!");
         System.out.println("===================================================================================");
