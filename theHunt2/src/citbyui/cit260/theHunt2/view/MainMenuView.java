@@ -7,6 +7,7 @@ package citbyui.cit260.theHunt2.view;
 
 import byu.cit260.theHunt2.control.GameControl;
 import java.util.Scanner;
+import thehunt2.theHunt2;
 
 /**
  *
@@ -67,7 +68,7 @@ public class MainMenuView {
        return getInput; //return the name
     }
 
-    private void doAction(char choice) {
+    public void doAction(char choice) {
         switch (choice){
             case 'N'://create and start a new game
                 this.startNewGame();
@@ -99,7 +100,7 @@ public class MainMenuView {
 
     private void startNewGame() {
         // create new game
-       GameControl.createNewGame(TheHunt2.getPlayer());
+       GameControl.createNewGame(theHunt2.getPlayer());
        
        // display the game menu
        GameMenuView gameMenu = new GameMenuView();
