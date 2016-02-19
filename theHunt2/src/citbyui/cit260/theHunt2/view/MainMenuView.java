@@ -5,6 +5,7 @@
  */
 package citbyui.cit260.theHunt2.view;
 
+import byu.cit260.theHunt2.control.GameControl;
 import java.util.Scanner;
 
 /**
@@ -21,6 +22,8 @@ public class MainMenuView {
             +"\nH - Get help on how to play the game"
             +"\nS - Save game"
             +"\nE - Exit"
+            +"\nM - Show Game Map"
+            +"\nR - Return to Main Menu"
             +"\n-----------------------------------------";
 
     public void displayMenu() {
@@ -46,7 +49,7 @@ public class MainMenuView {
        
        while (!valid) { // while a valid name has not been retrieved
            
-           //propt for the player's name
+           //prompt for the player's name
            System.out.println("Choose Option From Main Menu");
           
            // get the name from the keyboard and trim off the blanks
@@ -81,7 +84,7 @@ public class MainMenuView {
             case 'M': // Show game map
                 this.displayGameMap();
                 break;
-           case'R':// Return to Main Menu
+            case 'R':// Return to Main Menu
                this.returnToMainMenu();
                break;
             case 'E':// exit current game
@@ -89,14 +92,20 @@ public class MainMenuView {
            default:
                System.out.println("\n*** Invalid selection *** Try again ");
                break;
-                
-                
+           
+               
         }
     }
 
     private void startNewGame() {
-       System.out.println("***startNewGame function called ***");
-    }
+        // create new game
+       GameControl.createNewGame(TheHunt2.getPlayer());
+       
+       // display the game menu
+       GameMenuView gameMenu = new GameMenuView();
+       gameMenu.displayMenu();
+       
+       }
 
     private void startExistingGame() {
        System.out.println("*** startExistingGame function called ***");
