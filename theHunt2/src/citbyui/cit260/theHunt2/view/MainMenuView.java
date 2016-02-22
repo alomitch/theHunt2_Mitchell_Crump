@@ -77,7 +77,7 @@ public class MainMenuView {
                 this.startExistingGame();
                 break;
             case 'H': // display the help menu
-                this.displayHelpMenu();
+                this.displayHelpMenuView();
                 break;
             case 'S':// save current game
                 this.saveGame();
@@ -112,7 +112,7 @@ public class MainMenuView {
        System.out.println("*** startExistingGame function called ***");
     }
 
-    private void displayHelpMenu() {
+    private void displayHelpMenuView() {
         System.out.println("*** displayHelpMenu function called ***");
     }
 
@@ -127,5 +127,7 @@ public class MainMenuView {
     private void returnToMainMenu() {
        System.out.println("***start returnToMainMenu function called***");
     }
+
+   
     
 }
