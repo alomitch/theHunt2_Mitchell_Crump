@@ -113,11 +113,12 @@ public class MainMenuView {
     }
 
     private void displayHelpMenuView() {
-        System.out.println("*** displayHelpMenu function called ***");
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayMenu();
     }
 
     private void saveGame() {
-        System.out.println("*** startExistingGame function called ***");
+        System.out.println("*** start saveGame function called ***");
     }
 
     private void displayGameMap() {

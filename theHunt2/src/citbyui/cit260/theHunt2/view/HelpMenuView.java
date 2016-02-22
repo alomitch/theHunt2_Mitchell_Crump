@@ -5,8 +5,9 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-import byu.cit260.theHunt2.control.GameControl;
+
 import java.util.Scanner;
+
 
 /**
  *
@@ -56,7 +57,7 @@ public class HelpMenuView {
           getInput = keyboard.nextLine();
            getInput = getInput.trim();
            
-           //if the selection is invalid (less than one character in lenght))
+           //if the selection is invalid (less than one character in length))
            if (getInput. length() <1){
                System.out.println("Invalid entry");
                continue; // and repeat again
@@ -95,27 +96,28 @@ public class HelpMenuView {
     }
 
     private void gameGoal() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** start gameGoal function called ***");
     }
 
     private void gameMovement() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("***start gameMovement function called ***");
     }
 
     private void answerRiddles() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("***start answerRiddles function called ***");
     }
 
     private void pickingUpItems() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** start pickingUpItems function called ***");
     }
 
     private void returnToMainMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       MainMenuView mainMenu = new MainMenuView();
+       mainMenu.displayMenu();
     }
 
     private void quitProgram() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("***start quitProgram function called ***");
     }
 }
 
