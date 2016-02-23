@@ -117,7 +117,8 @@ public class HelpMenuView {
     }
 
     private void quitProgram() {
-        System.out.println("***start quitProgram function called ***");
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.displayMenu();
     }
 }
 
