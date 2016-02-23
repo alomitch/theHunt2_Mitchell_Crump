@@ -19,12 +19,14 @@ public class MainMenuView {
             +"\n-----------------------------------------"
             + "\n| Main Menu                            |"
             +"\n-----------------------------------------"
-            +"\nG - Start game"
+            +"\nN- Start a new Game"
+            +"\nG - Start  existing game"
             +"\nH - Get help on how to play the game"
             +"\nS - Save game"
             +"\nE - Exit"
             +"\nM - Show Game Map"
             +"\nR - Return to Main Menu"
+            +"\nA - About us"
             +"\n-----------------------------------------";
 
     public void displayMenu() {
@@ -88,6 +90,9 @@ public class MainMenuView {
             case 'R':// Return to Main Menu
                this.returnToMainMenu();
                break;
+            case 'A':// About us
+                this.aboutUs();
+                break;
             case 'E':// exit current game
                 return;
            default:
@@ -107,7 +112,7 @@ public class MainMenuView {
        gameMenu.displayMenu();
        
        }
-
+    
     private void startExistingGame() {
        System.out.println("*** startExistingGame function called ***");
     }
@@ -127,6 +132,10 @@ public class MainMenuView {
 
     private void returnToMainMenu() {
        System.out.println("***start returnToMainMenu function called***");
+    }
+
+    private void aboutUs() {
+       System.out.println("***start aboutUs function called***");
     }
 
    
