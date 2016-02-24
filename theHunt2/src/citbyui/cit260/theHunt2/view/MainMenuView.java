@@ -19,7 +19,7 @@ public class MainMenuView {
             +"\n-----------------------------------------"
             + "\n| Main Menu                            |"
             +"\n-----------------------------------------"
-            +"\nN- Start a new Game"
+            +"\nN - Start a new Game"
             +"\nG - Start  existing game"
             +"\nH - Get help on how to play the game"
             +"\nS - Save game"

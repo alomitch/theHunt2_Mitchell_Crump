@@ -23,7 +23,6 @@ public class Items {
             +"\nO - Old Cell Phone"
             +"\nM - Monkey"    
             +"\nR - Return to Main Menu"
-            +"\nQ - Quit"
             +"\n-----------------------------------------";
 
     public void displayMenu() {
@@ -38,7 +37,7 @@ public class Items {
        
             this.doAction(selection); // do action based on selection
        
-        } while (selection != 'Q'); // while selection is not "Quit"
+        } while (selection != 'R'); // while selection is not "Return to Main Menu"
        
     }
 
@@ -86,10 +85,7 @@ public class Items {
                 break;              
             case 'R':// Return to Main Menu
                this.returnToMainMenu();
-               break;
-            case 'Q': // Quit
-                this.quitProgram();
-                return;
+               return;
             default:
                System.out.println("\n*** Invalid selection *** Try again ");
                break;          
@@ -121,9 +117,5 @@ public class Items {
        mainMenu.displayMenu();
     }
 
-    private void quitProgram() {
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenu();
-    }
 }
 
