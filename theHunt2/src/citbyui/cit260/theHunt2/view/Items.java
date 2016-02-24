@@ -5,24 +5,23 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-
 import java.util.Scanner;
-
 
 /**
  *
  * @author mikec_000
  */
-public class HelpMenuView {
-    
-    private final String MENU = "\n"
+public class Items {
+ 
+        private final String MENU = "\n"
             +"\n-----------------------------------------"
-            + "\n| Help Menu                            |"
+            + "\n| Items Menu                            |"
             +"\n-----------------------------------------"
-            +"\nG - What is the goal of the game?"
-            +"\nM - How to move"
-            +"\nA - Answering riddles"
-            +"\nI - Picking up items"
+            +"\nC - Clues"
+            +"\nT - TNT"
+            +"\nA - Aid Bag"
+            +"\nO - Old Cell Phone"
+            +"\nM - Monkey"    
             +"\nR - Return to Main Menu"
             +"\nQ - Quit"
             +"\n-----------------------------------------";
@@ -32,7 +31,7 @@ public class HelpMenuView {
         char selection = ' ';
         do {
                
-            System.out.println(MENU); // display the help menu
+            System.out.println(MENU); // display the Items menu
        
             String input = this.getInput(); // get the user's selection
             selection = input.charAt(0); // get first character of string
@@ -51,7 +50,7 @@ public class HelpMenuView {
        while (!valid) { // while a valid option has not been retrieved
            
            //prompt for the player's selection
-           System.out.println("Choose Option From Help Menu");
+           System.out.println("Choose Option From Item Menu");
           
            // get the selection from the keyboard and trim off the blanks
           getInput = keyboard.nextLine();
@@ -70,18 +69,21 @@ public class HelpMenuView {
 
     private void doAction(char choice) {
         switch (choice){
-            case 'G'://display the goal of the game
-                this.gameGoal();
+            case 'C':// display information on game clues
+                this.clues();
                 break;
-            case 'M': //How to move
-                this.gameMovement();
+            case 'T': // display information on TNT
+                this.tnt();
                 break;
-            case 'A': // Answering riddles
-                this.answerRiddles();
+            case 'A': // display information on the aid bag
+                this.aidBag();
                 break;
-            case 'I':// Picking up Inventory Items
-                this.pickingUpItems();
+            case 'O':// display information on the old cell phone
+                this.oldCellPhone();
                 break;
+            case 'M':// display information on the monkey
+                this.monkey();
+                break;              
             case 'R':// Return to Main Menu
                this.returnToMainMenu();
                break;
@@ -95,23 +97,25 @@ public class HelpMenuView {
         }
     }
 
-    private void gameGoal() {
-        System.out.println("*** start gameGoal function called ***");
+    private void clues() {
+        System.out.println("*** start clues function called ***");
     }
 
-    private void gameMovement() {
-       System.out.println("***start gameMovement function called ***");
+    private void tnt() {
+       System.out.println("***start tnt function called ***");
     }
 
-    private void answerRiddles() {
-        System.out.println("***start answerRiddles function called ***");
+    private void aidBag() {
+        System.out.println("***start aidBag function called ***");
     }
 
-    private void pickingUpItems() {
-        Items items = new Items();
-        items.displayMenu();
+    private void oldCellPhone() {
+        System.out.println("*** start oldCellPhone function called ***");
     }
-
+    private void monkey() {
+        System.out.println("*** start monkey function called ***");
+    }
+    
     private void returnToMainMenu() {
        MainMenuView mainMenu = new MainMenuView();
        mainMenu.displayMenu();
@@ -122,7 +126,4 @@ public class HelpMenuView {
         mainMenu.displayMenu();
     }
 }
-
-
-    
 
