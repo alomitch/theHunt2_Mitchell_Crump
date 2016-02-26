@@ -5,19 +5,17 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-import byu.cit260.theHunt2.control.GameControl;
 import java.util.Scanner;
-import thehunt2.theHunt2;
+import byu.cit260.theHunt2.control.PuzzleTeaspoon.java;
 
 /**
  *
- * @author mikec_000
+ * @author AlleciaMitchell
  */
-public class WaterPuzzle {
-   
+public class TeaspoonPuzzle {
     private final String MENU = "\n"
             +"\n-----------------------------------------"
-            + "\n| Water Puzzle                         |"
+            + "\n| Teaspoon Puzzle                         |"
             +"\n-----------------------------------------"
             +"\nYou have come to a peculiar device next  "
             +"\nto a waterfall.  A barrel is suspended   "
@@ -38,7 +36,7 @@ public class WaterPuzzle {
         char selection = ' ';
         do {
                
-            System.out.println(MENU); // display the Water Puzzle
+            System.out.println(MENU); // display the Teaspoon Puzzle
        
             String input = this.getInput(); // get the user's selection
             selection = input.charAt(0); // get first character of string
@@ -57,7 +55,7 @@ public class WaterPuzzle {
        while (!valid) { // while a valid answer has not been retrieved
            
            //prompt for the player's answer
-           System.out.println("How long will it take to fill the tub completely?");
+           System.out.println("I have a teaspoon. How many times will I need to fill the teaspoon to fill a half gallon jug?");
           
            // get the answer from the keyboard and trim off the blanks
           getInput = keyboard.nextLine();
@@ -72,53 +70,59 @@ public class WaterPuzzle {
            break; // out of the (exit) the repetition
        }
        return getInput; //return the answer
-    }
-
-    
-    Scanner keyboard = new Scanner(System.in);
-        System.out.println("Enter Tub Capacity:");
+       
+        System.out.println("Enter the number of teaspoons in a tablespoon:");
         String tubCapacity = keyboard.nextLine();
  
-    System.out.println("Enter Barrel Capacity:");
+    System.out.println("Enter the number of tablespoons in a cup:");
         String barrelCapacity = keyboard.nextLine();
         
-    System.out.println("Enter Fill Valve Fill Rate:");
+    System.out.println("Enter the number of cups in a gallon:");
         String fillRate = keyboard.nextLine();
+    }
+   public static void main(String[] args) {
         
-    public static void main(String[] args) {
-        
-        int tubCapacity = 120;
+        int amtTeaTablespoon = 120;
                 
-        if (tubCapacity < 120) {
-            System.out.println("The tub is larger than that!");
+        if (amtTeaTablespoon < 3) {
+            System.out.println("The amount of teaspoons in a tablespoon is larger than that!");
         }
-        else if (tubCapacity > 120) {
-            System.out.println("Whoa!  The tub isn't that big!");
+        else if (amtTeaTablespoon > 3) {
+            System.out.println("Whoa! There isnt that many teaspoons in a tablespoon!");
         }
         else {
-            System.out.println("Correct!  The tub has a capacity of 120 gallons.");
+            System.out.println("Correct!  There are 16 Teaspoons in a Tablespoon!");
         }
         
-        int barrelCapacity = 40;
+        int amtTablespoon = 16;
                 
-        if (barrelCapacity < 40) {
-            System.out.println("The barrel is larger than that!");
+        if (amtTablespoon < 16) {
+            System.out.println("The amount of Tablespoons in a cup is larger than that!!");
         }
-        else if (barrelCapacity > 40) {
-            System.out.println("Whoa!  The barrel isn't that big!");
+        else if (amtTablespoon > 16) {
+            System.out.println("Whoa! There isnt that many tablespoons in a cup!");
         }
         else {
-            System.out.println("Correct!  The barrel has a capacity of 40 gallons.");
+            System.out.println("Correct!  There are 16 Tablespoons in a Gallon!");
         }
         
-        int fillRate = 2.2;
+        int amtCups = 16;
                 
-        if (fillRate < 2.2) {
-            System.out.println("The fill valve is faster than that!");
+        if (amtCups < 16) {
+            System.out.println("There are more cups in a gallan than that!");
         }
-        else if (fillRate > 2.2) {
-            System.out.println("Whoa!  The fill valve isn't that fast!");
+        else if (amtCups > 16) {
+            System.out.println("Whoa! There are less cups in a gallon than that!");
         }
         else {
-            System.out.println("Correct!  The fill valve fills at 2.2 gallons per minute.");
+            System.out.println("Correct!  There are 16 cups in a gallon!");
         }
+   
+   }
+
+    private void doAction(char selection) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+}
+    
