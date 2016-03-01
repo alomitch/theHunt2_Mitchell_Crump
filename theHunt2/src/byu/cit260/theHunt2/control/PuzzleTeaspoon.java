@@ -11,20 +11,28 @@ package byu.cit260.theHunt2.control;
  */
 public class PuzzleTeaspoon {
 
-    double calcTspInHalfGallon(double teaspoon, double tablespoon, double cup){
-        if ( teaspoon != 3){
-            return -1;
+    private static Object units;
+    public static double calcTeaspoons(double teaspoon, double tablespoon, double cup){
+        
+        if (units.equals ("teaspoon")){
+            double measurment = 0;
+           teaspoon = measurment;
+           else double teaspoon;
+         if (units.equals (" tablespoon"))
+               teaspoon = measurment * 3;
+         else if (units.equals ("cup"))
+               teaspoon = measurment* 48;
+         else if (units.equals("halfGallon"))
+               teaspoon = measurment *384;
+         
+         else if (double teaspoon,double tablespoon, double cup) = 384 teaspoon;
+                    return ("Congradulations!");
         }
-        if (tablespoon !=16){
-            return -1;
-        }
-        if (cup != 16){
-            return-1;
-        }
-      
-        double amtTeaspoon = (teaspoon * tablespoon * cup ) /  2;
-        return amtTeaspoon;
-    }
+   //    double amtHalfGallon= 384 teaspoon
+      // double amtHalfGallon= 128 tablespoon
+       //double amtHalfGallon= 8 cup
+     // If ( double jugTeaspoon = 384);
+        // return teaspoon;
 }
 
     
