@@ -67,7 +67,7 @@ public class MainMenuView {
            }
            break; // out of the (exit) the repetition
        }
-       return getInput; //return the name
+       return getInput; //return 
     }
 
     public void doAction(char choice) {

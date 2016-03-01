@@ -81,7 +81,13 @@ public class TeaspoonPuzzle {
         String fillRate = keyboard.nextLine();
     }
    public static void main(String[] args) {
-        
+     
+       Teaspoon amtTeaTablespoon = new Teaspoon();
+       Tablespoon amtTablespoon = new Tablespoon();
+       Cups amtCups = new Cups();
+       
+    
+       
         int amtTeaTablespoon = 120;
                 
         if (amtTeaTablespoon < 3) {
