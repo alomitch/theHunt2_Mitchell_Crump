@@ -37,12 +37,13 @@ public class TeaspoonPuzzle {
        
             String input = this.getInput(); // get the user's selection
             selection = input.charAt(0); // get first character of string
+            
             System.out.println("Enter the number of teaspoons:");
-            String teaspoon = getInput();  
-            int iTeaspoon = Integer.parseInt(teaspoon);
+               String teaspoon = getInput();  
+               int iTeaspoon = Integer.parseInt(teaspoon);
             System.out.println("Enter the number of tablespoons :");
                String tablespoon = getInput();
-            int iTablespoon = Integer.parseInt(tablespoon);   
+               int iTablespoon = Integer.parseInt(tablespoon);   
            System.out.println("Enter the number of cups:");    
               String cup = getInput();
               int iCup = Integer.parseInt(cup);
@@ -64,8 +65,8 @@ public class TeaspoonPuzzle {
           // System.out.println("I have a teaspoon. How many times will I need to fill the teaspoon to fill a half gallon jug?");
           
            // get the answer from the keyboard and trim off the blanks
-          input = keyboard.nextLine();
-         input= input.trim();
+           input = keyboard.nextLine();
+           input= input.trim();
            
            //if the answer is invalid (less than two character in lenght))
            if (input. length() <1){

@@ -12,5 +12,5 @@ package citbyui.cit260.theHunt2.view;
 public class ViewInterface {
     public void display ();
     public String getInput();
-    public boolean doAction ( Object obj);
+    public boolean doAction (String value);
 }

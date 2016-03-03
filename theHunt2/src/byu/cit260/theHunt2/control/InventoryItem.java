@@ -9,7 +9,7 @@ package byu.cit260.theHunt2.control;
  *
  * @author AlleciaMitchell
  */
-public class PuzzleTrain {
+public class InventoryItem {
     
     
     public double calcSpeedOfTrainA ( double speed,  double distance ) {
