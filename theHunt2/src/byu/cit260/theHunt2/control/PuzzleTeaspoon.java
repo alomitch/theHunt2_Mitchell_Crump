@@ -24,29 +24,18 @@ public class PuzzleTeaspoon {
                teaspoon = measurment* 48;
          else if (units.equals("halfGallon"))
                teaspoon = measurment *384;
-         
+         convert userInput
+  
          else if (double teaspoon,double tablespoon, double cup) = 384 teaspoon;
                     return ("Congradulations!");
+                    
+public class ConversionLayouot{           
+         private final Conversion itablespoon = new ConvertFromTablespoon();
+         private final Conversion icups = new ConvertFromCups();
+         }
         }
    //    double amtHalfGallon= 384 teaspoon
       // double amtHalfGallon= 128 tablespoon
        //double amtHalfGallon= 8 cup
      // If ( double jugTeaspoon = 384);
         // return teaspoon;
-}
-
-    double calcTspInHalfGallon(double teaspoon, double tablespoon, double cup) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    double calcTspInHalfGallon(double teaspoon, double tablespoon, double cup) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    double calcTspInHalfGallon(double teaspoon, double tablespoon, double cup) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    double calcTspInHalfGallon(double teaspoon, double tablespoon, double cup) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }

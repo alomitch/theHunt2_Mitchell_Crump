@@ -41,7 +41,7 @@ public class PuzzleTeaspoonTest {
         PuzzleTeaspoon instance = new PuzzleTeaspoon();
         
         // call function to run test
-        double result = instance.calcTspInHalfGallon(teaspoon, tablespoon, cup);
+        double result = PuzzleTeaspoon.calcTeaspoons(teaspoon, tablespoon, cup);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 786.0);

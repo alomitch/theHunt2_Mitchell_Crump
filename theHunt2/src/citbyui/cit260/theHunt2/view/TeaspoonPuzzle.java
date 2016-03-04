@@ -24,8 +24,8 @@ public class TeaspoonPuzzle {
             +"\ncups, or tablespoons. It is your job to come "
             +"\nup with the exact amount of either cups,"
             +"\ntablespoons, and teaspoons it will take "
-            +"\nto fill the half gallon jug before youhave access "
-            + "\nthe water to even fill the jug. "
+            +"\nto fill the half gallon jug before you have access "
+            + "\nthe water to even fill up the half gallon jug. "
             +"\n-----------------------------------------";
 
     public void displayMenu() {
