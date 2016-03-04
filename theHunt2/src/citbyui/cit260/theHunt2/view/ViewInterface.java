@@ -9,8 +9,8 @@ package citbyui.cit260.theHunt2.view;
  *
  * @author AlleciaMitchell
  */
-public class ViewInterface {
-    public void display ();
+public interface ViewInterface {
+    public void display();
     public String getInput();
-    public boolean doAction (String value);
+    public boolean doAction(String value);
 }

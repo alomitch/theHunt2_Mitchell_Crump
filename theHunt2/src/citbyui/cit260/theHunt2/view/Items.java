@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author mikec_000
  */
-public class Items {
+public abstract class Items extends View{
  
         private final String MENU = "\n"
             +"\n-----------------------------------------"
@@ -25,46 +25,7 @@ public class Items {
             +"\nR - Return to Main Menu"
             +"\n-----------------------------------------";
 
-    public void displayMenu() {
-        
-        char selection = ' ';
-        do {
-               
-            System.out.println(MENU); // display the Items menu
-       
-            String input = this.getInput(); // get the user's selection
-            selection = input.charAt(0); // get first character of string
-       
-            this.doAction(selection); // do action based on selection
-       
-        } while (selection != 'R'); // while selection is not "Return to Main Menu"
-       
-    }
-
-    private String getInput() {
-         boolean valid = false; // indicates if the name has been retrieved
-       String getInput = null;
-       Scanner keyboard = new Scanner(System.in);   // keyboard input stream
-       
-       while (!valid) { // while a valid option has not been retrieved
-           
-           //prompt for the player's selection
-           System.out.println("Choose Option From Item Menu");
-          
-           // get the selection from the keyboard and trim off the blanks
-          getInput = keyboard.nextLine();
-           getInput = getInput.trim();
-           
-           //if the selection is invalid (less than one character in length))
-           if (getInput. length() <1){
-               System.out.println("Invalid entry");
-               continue; // and repeat again
-               
-           }
-           break; // out of the (exit) the repetition
-       }
-       return getInput; //return the selection
-    }
+    
 
     private void doAction(char choice) {
         switch (choice){
@@ -114,7 +75,7 @@ public class Items {
     
     private void returnToMainMenu() {
        MainMenuView mainMenu = new MainMenuView();
-       mainMenu.displayMenu();
+       mainMenu.display();
     }
 
 }

@@ -76,13 +76,13 @@ public class WaterPuzzle {
 
     
     Scanner keyboard = new Scanner(System.in);
-        System.out.println("Enter Tub Capacity:");
+        System.out.println("\nEnter Tub Capacity:");
         String tubCapacity = keyboard.nextLine();
  
-    System.out.println("Enter Barrel Capacity:");
+        System.out.println("\nEnter Barrel Capacity:");
         String barrelCapacity = keyboard.nextLine();
         
-    System.out.println("Enter Fill Valve Fill Rate:");
+        System.out.println("\nEnter Fill Valve Fill Rate:");
         String fillRate = keyboard.nextLine();
         
     public static void main(String[] args) {
@@ -111,7 +111,7 @@ public class WaterPuzzle {
             System.out.println("Correct!  The barrel has a capacity of 40 gallons.");
         }
         
-        int fillRate = 2.2;
+        double fillRate = 2.2;
                 
         if (fillRate < 2.2) {
             System.out.println("The fill valve is faster than that!");
@@ -122,3 +122,9 @@ public class WaterPuzzle {
         else {
             System.out.println("Correct!  The fill valve fills at 2.2 gallons per minute.");
         }
+    }
+
+    private void doAction(char selection) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}

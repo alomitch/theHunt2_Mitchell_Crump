@@ -12,15 +12,18 @@ import static sun.font.GlyphLayout.done;
  *
  * @author AlleciaMitchell
  */
-public abstract class View extends ViewInterface {
+public abstract class View implements ViewInterface {
     protected String displayMessage;
+    
+    public View() {
+    }
     
     public View(String message){
         this.displayMessage = message;
     }
     
     @Override
-    public String display () {
+    public void display () {
         
         boolean done = false;   
         do{
@@ -38,7 +41,7 @@ public abstract class View extends ViewInterface {
  public String getInput() {
          Scanner keyboard = new Scanner(System.in);   // keyboard input stream
          boolean valid = false; // indicates if the name has been retrieved
-          String value = null;
+         String value = null;
           
        // while a valid name has not been retrieved
        while (!valid) { 
@@ -59,6 +62,6 @@ public abstract class View extends ViewInterface {
        }
        return value; //return the name
        }
-    
+}
         
     
