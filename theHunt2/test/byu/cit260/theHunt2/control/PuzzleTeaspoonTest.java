@@ -63,7 +63,7 @@ public class PuzzleTeaspoonTest {
         expResult = -1.0; 
         
         // call function to run test
-         result = instance.calcTspInHalfGallon(teaspoon, tablespoon, cup);
+         result = PuzzleTeaspoon.calcTeaspoons(teaspoon, tablespoon, cup);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
@@ -85,7 +85,7 @@ public class PuzzleTeaspoonTest {
         expResult = -1.0; 
         
         // call function to run test
-         result = instance.calcTspInHalfGallon(teaspoon, tablespoon, cup);
+         result = PuzzleTeaspoon.calcTeaspoons(teaspoon, tablespoon, cup);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
@@ -109,7 +109,7 @@ public class PuzzleTeaspoonTest {
         expResult = -1.0; 
         
         // call function to run test
-         result = instance.calcTspInHalfGallon(teaspoon, tablespoon, cup);
+         result = PuzzleTeaspoon.calcTeaspoons(teaspoon, tablespoon, cup);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);   
@@ -131,7 +131,7 @@ public class PuzzleTeaspoonTest {
         expResult = 786.0; 
         
         // call function to run test
-         result = instance.calcTspInHalfGallon(teaspoon, tablespoon, cup);
+         result = PuzzleTeaspoon.calcTeaspoons(teaspoon, tablespoon, cup);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 786.0);    

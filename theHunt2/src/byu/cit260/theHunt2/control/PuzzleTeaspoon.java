@@ -34,3 +34,19 @@ public class PuzzleTeaspoon {
      // If ( double jugTeaspoon = 384);
         // return teaspoon;
 }
+
+    double calcTspInHalfGallon(double teaspoon, double tablespoon, double cup) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    double calcTspInHalfGallon(double teaspoon, double tablespoon, double cup) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    double calcTspInHalfGallon(double teaspoon, double tablespoon, double cup) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    double calcTspInHalfGallon(double teaspoon, double tablespoon, double cup) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
