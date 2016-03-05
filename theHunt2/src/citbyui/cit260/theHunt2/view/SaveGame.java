@@ -40,8 +40,7 @@ public abstract class SaveGame extends View{
     private void saveGame() {
         System.out.println("*** start saveGame function called ***");
     }
-
-        
+       
     private void returnToMainMenu() {
        MainMenuView mainMenu = new MainMenuView();
        mainMenu.display();
