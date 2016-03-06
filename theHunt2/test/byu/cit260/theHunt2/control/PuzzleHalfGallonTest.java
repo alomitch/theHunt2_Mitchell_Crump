@@ -12,17 +12,17 @@ import static org.junit.Assert.*;
  *
  * @author AlleciaMitchell
  */
-public class PuzzleTeaspoonTest {
+public class PuzzleHalfGallonTest {
     
-    public PuzzleTeaspoonTest() {
+    public PuzzleHalfGallonTest() {
     }
 
     /**
      * Test of calcTspInHalfGallon method, of class PuzzleTeaspoon.
      */
     @Test
-    public void testCalcTspInHalfGallon() {
-        System.out.println("calcTspInHalfGallon");
+    public void testCalcHalfGallon() {
+        System.out.println("calcHalfGallon");
         /****************
          * Test case #1
          ***************/
@@ -38,10 +38,11 @@ public class PuzzleTeaspoonTest {
         double expResult = 786.0; 
         
         //create instance
-        PuzzleTeaspoon instance = new PuzzleTeaspoon();
+        PuzzleHalfGallon instance = new PuzzleHalfGallon();
+        String units = null;
         
         // call function to run test
-        double result = PuzzleTeaspoon.calcTeaspoons(teaspoon, tablespoon, cup);
+        boolean result = PuzzleHalfGallon.calcHalfGallon(cup, units);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 786.0);
@@ -63,7 +64,7 @@ public class PuzzleTeaspoonTest {
         expResult = -1.0; 
         
         // call function to run test
-         result = PuzzleTeaspoon.calcTeaspoons(teaspoon, tablespoon, cup);
+         result = PuzzleHalfGallon.calcHalfGallon(tablespoon,  units);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
@@ -85,7 +86,7 @@ public class PuzzleTeaspoonTest {
         expResult = -1.0; 
         
         // call function to run test
-         result = PuzzleTeaspoon.calcTeaspoons(teaspoon, tablespoon, cup);
+         result = PuzzleHalfGallon.calcHalfGallon(teaspoon, units);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
@@ -109,7 +110,7 @@ public class PuzzleTeaspoonTest {
         expResult = -1.0; 
         
         // call function to run test
-         result = PuzzleTeaspoon.calcTeaspoons(teaspoon, tablespoon, cup);
+         result = PuzzleHalfGallon.calcHalfGallon(cup, units);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);   
@@ -131,11 +132,15 @@ public class PuzzleTeaspoonTest {
         expResult = 786.0; 
         
         // call function to run test
-         result = PuzzleTeaspoon.calcTeaspoons(teaspoon, tablespoon, cup);
+         result = PuzzleHalfGallon.calcHalfGallon(tablespoon, units);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 786.0);    
         
+    }
+
+    private void assertEquals(double expResult, boolean result, double d) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
