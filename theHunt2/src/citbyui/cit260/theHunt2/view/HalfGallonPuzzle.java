@@ -7,6 +7,7 @@ package citbyui.cit260.theHunt2.view;
 
 import byu.cit260.theHunt2.control.PuzzleHalfGallon;
 import java.util.Scanner;
+import static jdk.nashorn.tools.ShellFunctions.input;
 
 
 /**
@@ -18,7 +19,7 @@ public abstract class HalfGallonPuzzle extends View {
     
     private final String MENU = "\n"
             +"\n-----------------------------------------"
-            + "\n| Teaspoon Puzzle                         |"
+            + "\n| Half Gallon Puzzle                         |"
             +"\n-----------------------------------------"
             +"\nYou have come to an empy half gallon  "
             +"\njug next to a waterfall. You need to fill the  "
@@ -33,6 +34,7 @@ public abstract class HalfGallonPuzzle extends View {
             + "\n T -Tablespoons "
             + "\n C -Cups"
             +"\n-----------------------------------------";
+    private boolean input;
 
     public void displayMenu() {
         
@@ -105,13 +107,17 @@ public abstract class HalfGallonPuzzle extends View {
           default:
                System.out.println("\n*** Invalid selection *** Try again ");
                break;
-           }
+        }
+        return input;
+     }//end of method
+    
+    
+
      private void teaspoon() {
             String teaspoon = getInput(); 
             int Teaspoon = Integer.parseInt(teaspoon);
-    }
-
-    public void tablespoon() {
+ } 
+ public void tablespoon() {
              String tablespoon = getInput();
               int Tablespoon = Integer.parseInt(tablespoon); 
     }
@@ -120,8 +126,8 @@ public abstract class HalfGallonPuzzle extends View {
             String cup = getInput();
              int Cup = Integer.parseInt(cup);
               
+    
     }
-   
 }
 
   
