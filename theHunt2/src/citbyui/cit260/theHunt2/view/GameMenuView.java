@@ -21,6 +21,7 @@ public abstract class GameMenuView extends View {
             + "\nH-Puzzle Scene HalfGallon"
             + "\nW-Puzzle  SceneWater"
             +"\nR -Return to Main Menu"
+            + "\nS-Save GAme"
             +"\n-----------------------------------------";
 
     
@@ -32,15 +33,18 @@ public abstract class GameMenuView extends View {
             case 'M':// save current game
                 this.showmap();
                 break;    
-                 case 'L':// save current game
+            case 'L':// save current game
                 this.newLocation();
                 break;     
-                 case 'H':// save current game
+           case 'H':// save current game
                 this.halfGallon();
                 break;     
-                 case 'W':// save current game
+           case 'W':// save current game
                 this.water();
                 break;     
+           case 'S'://Save game
+               this.saveGame();
+               break;
             case 'R':// Return to Main Menu
               // this.returnToMainMenu();
                return true;
@@ -58,23 +62,23 @@ public abstract class GameMenuView extends View {
     }
 
     private void showmap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("***start showmap function called ***");
     }
 
     private void newLocation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("*** start newLocation function called ***");
     }
 
     private void halfGallon() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         System.out.println("*** start halfGallon function called ***");
     }
 
     private void water() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         System.out.println("*** start water function called ***");
     }
 
     void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         System.out.println("*** start return to main menu function called ***");
     }
        
 }
