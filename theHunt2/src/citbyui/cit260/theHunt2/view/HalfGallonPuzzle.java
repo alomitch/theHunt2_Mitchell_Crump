@@ -13,7 +13,9 @@ import java.util.Scanner;
  *
  * @author AlleciaMitchell
  */
-public class HalfGallonPuzzle {
+public abstract class HalfGallonPuzzle extends View {
+    
+    
     private final String MENU = "\n"
             +"\n-----------------------------------------"
             + "\n| Teaspoon Puzzle                         |"
@@ -72,7 +74,8 @@ public class HalfGallonPuzzle {
        }
        return getInput; //return the name
     }
-    void doAction(char choice) {
+     public boolean doAction(String value) {
+        char choice = value.charAt(0);
         switch (choice){
             case 't'://create and start a new game
                 this.teaspoon();

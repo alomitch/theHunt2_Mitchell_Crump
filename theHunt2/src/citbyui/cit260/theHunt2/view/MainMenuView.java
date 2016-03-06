@@ -70,7 +70,7 @@ public class MainMenuView extends View {
        GameControl.createNewGame(theHunt2.getPlayer());
        
        // display the game menu
-       GameMenuView gameMenu = new GameMenuView();
+       GameMenuView gameMenu = new GameMenuView() {};
        gameMenu.displayMenu();
        
        }
