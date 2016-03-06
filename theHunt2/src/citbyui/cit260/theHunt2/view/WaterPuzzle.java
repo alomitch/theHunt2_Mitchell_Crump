@@ -5,16 +5,16 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-import byu.cit260.theHunt2.control.GameControl;
+import java.util.Random;
 import java.util.Scanner;
-import thehunt2.theHunt2;
+import byu.cit260.theHunt2.control.PuzzleSceneWater;
 
 /**
  *
  * @author mikec_000
  */
 public class WaterPuzzle {
-   
+    int tubGallons = 0;
     private final String MENU = "\n"
             +"\n-----------------------------------------"
             + "\n| Water Puzzle                         |"
@@ -32,20 +32,30 @@ public class WaterPuzzle {
             +"\nYou must figure out how long it will take"
             +"\nto fill the tub completely."
             +"\n-----------------------------------------";
+    
+    //you've come to a tub with a fill valve.
 
     public void displayMenu() {
-        
+        tubGallons = getTubCapacity();
         char selection = ' ';
+        int minutes;
+        int returnVal;
         do {
                
             System.out.println(MENU); // display the Water Puzzle
-       
+            System.out.println("The tub capacity is " + tubGallons + " gallons.");
+            System.out.println("How many minutes will it take to fill the tub completely?  Enter -1 to cancel.");
             String input = this.getInput(); // get the user's selection
-            selection = input.charAt(0); // get first character of string
+            minutes = Integer.parseInt(input);
+                   
+            returnVal = this.doAction(minutes); // do action based on selection
+            if (returnVal == 1)
+                System.out.println("Congratulations!  You are correct!");
+            else 
+                System.out.println("Sorry.  Please try again.");
+            
        
-            this.doAction(selection); // do action based on selection
-       
-        } while (selection != 'E'); // while selection is not "Exit"
+        } while (minutes != -1 || returnVal != 1); // while selection is not -1
        
     }
 
@@ -57,7 +67,7 @@ public class WaterPuzzle {
        while (!valid) { // while a valid answer has not been retrieved
            
            //prompt for the player's answer
-           System.out.println("How long will it take to fill the tub completely?");
+           
           
            // get the answer from the keyboard and trim off the blanks
           getInput = keyboard.nextLine();
@@ -74,57 +84,36 @@ public class WaterPuzzle {
        return getInput; //return the answer
     }
 
-    
-    Scanner keyboard = new Scanner(System.in);
-        System.out.println("\nEnter Tub Capacity:");
-        String tubCapacity = keyboard.nextLine();
- 
-        System.out.println("\nEnter Barrel Capacity:");
-        String barrelCapacity = keyboard.nextLine();
-        
-        System.out.println("\nEnter Fill Valve Fill Rate:");
-        String fillRate = keyboard.nextLine();
-        
-    public static void main(String[] args) {
-        
-        int tubCapacity = 120;
-                
-        if (tubCapacity < 120) {
-            System.out.println("The tub is larger than that!");
-        }
-        else if (tubCapacity > 120) {
-            System.out.println("Whoa!  The tub isn't that big!");
-        }
-        else {
-            System.out.println("Correct!  The tub has a capacity of 120 gallons.");
-        }
-        
-        int barrelCapacity = 40;
-                
-        if (barrelCapacity < 40) {
-            System.out.println("The barrel is larger than that!");
-        }
-        else if (barrelCapacity > 40) {
-            System.out.println("Whoa!  The barrel isn't that big!");
-        }
-        else {
-            System.out.println("Correct!  The barrel has a capacity of 40 gallons.");
-        }
-        
-        double fillRate = 2.2;
-                
-        if (fillRate < 2.2) {
-            System.out.println("The fill valve is faster than that!");
-        }
-        else if (fillRate > 2.2) {
-            System.out.println("Whoa!  The fill valve isn't that fast!");
-        }
-        else {
-            System.out.println("Correct!  The fill valve fills at 2.2 gallons per minute.");
-        }
-    }
 
-    private void doAction(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+public static int randInt(int min, int max) {    // Usually this can be a field rather than a method variable    
+    Random rand = new Random();    // nextInt is normally exclusive of the top value,    
+                                   // so add 1 to make it inclusive    
+    int randomNum = rand.nextInt((max - min) + 1) + min;    
+    return randomNum;
+}
+
+public static int getTubCapacity(){
+    return randInt(100, 200);
+}
+ 
+ 
+    private int doAction(int minutes) {
+        if (minutes < 1)
+          return -1;
+        double fillRate = PuzzleSceneWater.calcTubFillRate (tubGallons, 2.2);
+        if (fillRate == -1)
+          return -2;
+        
+        double fillTime = PuzzleSceneWater.calcTotalFillTime(fillRate, tubGallons);
+        if (fillTime == -1)
+          return -2;
+        
+        int iFillTime = (int)Math.round(fillTime);
+        if (iFillTime == minutes)
+          return 1;
+        
+        return 0;
+        
     }
 }

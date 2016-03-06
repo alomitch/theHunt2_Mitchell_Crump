@@ -11,8 +11,8 @@ package byu.cit260.theHunt2.control;
  */
 public class PuzzleSceneWater {
     
-    public double calcTubFillRate ( double volume, double gpm) {
-             if ( volume != 40) {
+    public static double calcTubFillRate ( int volume, double gpm) {
+             if ( volume < 100 || volume > 200) {
                  return-1;
              }
              if ( gpm != 2.2){
@@ -24,14 +24,14 @@ public class PuzzleSceneWater {
              return tubFillRate;
     }  
              
-    public double calcTotalFillTime ( double tubFillRate, double numberOfFills){
-                 if ( tubFillRate != 18.18){
+    public static double calcTotalFillTime ( double tubFillRate, double numberOfGallons){
+                 if (tubFillRate <= 0){
                      return -1;
                  }
-                 if (numberOfFills != 3){
+                 if (numberOfGallons <= 0){
                      return -1;
                  }
-                 double totalFillTime = tubFillRate * numberOfFills;
+                 double totalFillTime = numberOfGallons / tubFillRate;
         
                  return totalFillTime;
     }               

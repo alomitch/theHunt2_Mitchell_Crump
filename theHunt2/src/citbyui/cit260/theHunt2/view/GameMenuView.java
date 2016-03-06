@@ -16,3 +16,7 @@ public class GameMenuView {
     }
     
 }
+
+//show map
+//move to new location - 
+//pick up an item

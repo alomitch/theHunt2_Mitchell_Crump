@@ -6,7 +6,6 @@
 package citbyui.cit260.theHunt2.view;
 
 import byu.cit260.theHunt2.control.GameControl;
-import java.util.Scanner;
 import thehunt2.theHunt2;
 
 /**
@@ -31,7 +30,10 @@ public class MainMenuView extends View {
             +"\n-----------------------------------------");
     }    
 
-    public void doAction(char choice) {
+    @Override
+    public boolean doAction(String value) {
+        char choice = value.charAt(0);
+        
         switch (choice){
             case 'N'://create and start a new game
                 this.startNewGame();
@@ -49,19 +51,18 @@ public class MainMenuView extends View {
                 this.displayGameMap();
                 break;
             case 'R':// Return to Main Menu
-               this.returnToMainMenu();
+               //this.returnToMainMenu();
                break;
             case 'A':// About us
                 this.aboutUs();
                 break;
             case 'E':// exit current game
-                return;
+                return true;
            default:
                System.out.println("\n*** Invalid selection *** Try again ");
-               break;
-           
-               
+               break;                        
         }
+        return false;
     }
 
     private void startNewGame() {
@@ -102,13 +103,6 @@ public class MainMenuView extends View {
 
     private void aboutUs() {
        System.out.println("***start aboutUs function called***");
-    }
-
-    @Override
-    public boolean doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-   
+    } 
     
 }

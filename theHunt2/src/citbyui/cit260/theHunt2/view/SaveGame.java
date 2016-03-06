@@ -14,7 +14,7 @@ public abstract class SaveGame extends View{
  
         private final String MENU = "\n"
             +"\n-----------------------------------------"
-            + "\n| Save Game                            |"
+            +"\n| Save Game                             |"
             +"\n-----------------------------------------"
             +"\nS - Save Game"
             +"\nR - Return to Main Menu"
@@ -22,28 +22,27 @@ public abstract class SaveGame extends View{
 
     
 
-    private void doAction(char choice) {
+    public boolean doAction(String value) {
+        char choice = value.charAt(0);
+        
         switch (choice){
             case 'S':// save current game
                 this.saveGame();
                 break;     
             case 'R':// Return to Main Menu
-               this.returnToMainMenu();
-               return;
+              // this.returnToMainMenu();
+               return true;
             default:
                System.out.println("\n*** Invalid selection *** Try again ");
                break;          
                
         }
+        
+        return false;
     }
 
     private void saveGame() {
         System.out.println("*** start saveGame function called ***");
     }
        
-    private void returnToMainMenu() {
-       MainMenuView mainMenu = new MainMenuView();
-       mainMenu.display();
-    }
-
 }
