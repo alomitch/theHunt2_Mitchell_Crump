@@ -36,44 +36,60 @@ public abstract class HalfGallonPuzzle extends View {
 
     public void displayMenu() {
         
+        
         char selection = ' ';
-        do {
+       // do {
                
             System.out.println(MENU); // display the main menu
-       
+            
+            System.out.println("Out of either cups,tablespoons,or teaspoons how many of either group would fill "
+                    + "up a half  gallon");
             String input = this.getInput(); // get the user's selection
             selection = input.charAt(0); // get first character of string
-       
-            this.doAction(selection); // do action based on selection
-       
-        } while (selection != 'E'); // while selection is not "Exit"
+            
+           System.out.println("Enter the number of teaspoons:");
+               String teaspoon = getInput();  
+               int iTeaspoon = Integer.parseInt(teaspoon);
+            System.out.println("Enter the number of tablespoons :");
+               String tablespoon = getInput();
+               int iTablespoon = Integer.parseInt(tablespoon);   
+           System.out.println("Enter the number of cups:");    
+              String cup = getInput();
+              int iCup = Integer.parseInt(cup);
+              
+        boolean calcHalfGallon = PuzzleHalfGallon.calcHalfGallon(selection, input)
+                // } while (selection != 'E'); // while selection is not "Exit"
+;
        
     }
-
-    private String getInput() {
-         boolean valid = false; // indicates if the name has been retrieved
-       String getInput = null;
+    
+  public String getInput() {
+         boolean valid = false; // indicates if the answer has been retrieved
+       String input = null;
        Scanner keyboard = new Scanner(System.in);   // keyboard input stream
        
-       while (!valid) { // while a valid name has not been retrieved
+       while (!valid) { // while a valid answer has not been retrieved
            
-           //prompt for the player's name
-           System.out.println("Choose Option From The Half Gallon Puzzle Menu");
+           //prompt for the player's answer
+          // System.out.println("I have a teaspoon. How many times will I need to fill the teaspoon to fill a half gallon jug?");
           
-           // get the name from the keyboard and trim off the blanks
-          getInput = keyboard.nextLine();
-           getInput = getInput.trim();
+           // get the answer from the keyboard and trim off the blanks
+           input = keyboard.nextLine();
+           input= input.trim();
            
-           //if the name is invalid (less than two character in lenght))
-           if (getInput. length() <1){
-               System.out.println("Invalid entry");
+           //if the answer is invalid (less than two character in lenght))
+           if (input. length() <1){
+               System.out.println("That is an invalid response.");
                continue; // and repeat again
                
            }
            break; // out of the (exit) the repetition
        }
-       return getInput; //return the name
-    }
+       return input; //return the answer
+  }
+  
+  
+    @Override
      public boolean doAction(String value) {
         char choice = value.charAt(0);
         switch (choice){
@@ -90,29 +106,24 @@ public abstract class HalfGallonPuzzle extends View {
                System.out.println("\n*** Invalid selection *** Try again ");
                break;
            }
-      }     
-    
-    private void teaspoon() {
-        System.out.println("Enter the number of teaspoons:");
+     private void teaspoon() {
             String teaspoon = getInput(); 
             int Teaspoon = Integer.parseInt(teaspoon);
-             PuzzleTeaspoon.calcHalfGallon(double quantity, String units);
     }
 
-    private void tablespoon() {
-        System.out.println("Enter the number of tablespoons :");
+    public void tablespoon() {
              String tablespoon = getInput();
               int Tablespoon = Integer.parseInt(tablespoon); 
-               PuzzleTeaspoon.calcHalfGallon(double quantity, String units);
     }
 
-    private void cups() {
-      System.out.println("Enter the number of cups:");    
+    public void cups() {
             String cup = getInput();
              int Cup = Integer.parseInt(cup);
-              PuzzleTeaspoon.calcHalfGallon(double quantity, String units);
+              
     }
-    
+   
 }
+
   
     
+//PuzzleHalfGallon.calcHalfGallon(double quantity, String unit);
