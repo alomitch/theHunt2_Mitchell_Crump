@@ -47,7 +47,7 @@ public class PuzzleSceneWaterTest {
         PuzzleSceneWater instance = new PuzzleSceneWater();
         
         //call function to run test
-        double result = instance.calcTubFillRate(volume, gpm);
+        double result = instance.calcTubFillRate((int) volume, gpm);
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 18.18);
@@ -81,7 +81,7 @@ public class PuzzleSceneWaterTest {
         expResult = -1; // expected output returned value
         
         // call function to run test
-        result = instance.calcTubFillRate( volume, gpm);
+        result = instance.calcTubFillRate((int) volume, gpm);
         
         // compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
@@ -100,7 +100,7 @@ public class PuzzleSceneWaterTest {
         expResult = -1; // expected output returned value
         
         // call function to run test
-        result = instance.calcTubFillRate( volume, gpm);
+        result = instance.calcTubFillRate((int) volume, gpm);
         
         // compare expected return value with actual value returned
         assertEquals(expResult, result, -1.0);
@@ -119,7 +119,7 @@ public class PuzzleSceneWaterTest {
         expResult = 18.18181818181818; // expected output returned value
         
         // call function to run test
-        result = instance.calcTubFillRate( volume, gpm);
+        result = instance.calcTubFillRate((int) volume, gpm);
         
         // compare expected return value with actual value returned
         assertEquals(expResult, result, 18.18181818181818);
@@ -138,7 +138,7 @@ public class PuzzleSceneWaterTest {
         expResult = 54.54; // expected output returned value
         
         // call function to run test
-        result = instance.calcTubFillRate( volume, gpm);
+        result = instance.calcTubFillRate((int) volume, gpm);
         
         // compare expected return value with actual value returned
         assertEquals(expResult, result, 54.54);
