@@ -6,6 +6,7 @@
 package byu.cit260.theHunt2.control;
 
 import byu.cit260.theHunt2.model.Player;
+import citbyui.cit260.theHunt2.view.GameMenuView;
 
 /**
  *
@@ -14,7 +15,9 @@ import byu.cit260.theHunt2.model.Player;
 public class GameControl {
 
     public static void createNewGame(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       GameMenuView gameMenu = new GameMenuView() {};
+       gameMenu.displayMenu();
+       
     }
     
 }

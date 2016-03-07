@@ -17,11 +17,11 @@ public abstract class GameMenuView extends View {
             +"\n|  Game Menu                            |"
             +"\n-----------------------------------------"
             +"\nM - Show Map"
-            + "\nL-Move To New Location"
-            + "\nH-Puzzle Scene HalfGallon"
-            + "\nW-Puzzle  SceneWater"
-            +"\nR -Return to Main Menu"
-            + "\nS-Save GAme"
+            +"\nL - Move To New Location"
+            +"\nH - Puzzle Scene HalfGallon"
+            +"\nW - Puzzle Scene Water"
+            +"\nR - Return to Main Menu"
+            +"\nS - Save GAme"
             +"\n-----------------------------------------";
 
     
@@ -77,16 +77,8 @@ public abstract class GameMenuView extends View {
          System.out.println("*** start water function called ***");
     }
 
-    void displayMenu() {
+    public void displayMenu() {
          System.out.println("*** start return to main menu function called ***");
     }
        
 }
-    
-    
-
-
-
-//show map
-//move to new location - 
-//pick up an item
