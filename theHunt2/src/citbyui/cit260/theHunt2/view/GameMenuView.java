@@ -11,8 +11,9 @@ package citbyui.cit260.theHunt2.view;
  */
 public abstract class GameMenuView extends View {
 
- 
-        private final String MENU = "\n"
+
+ public GameMenuView(){
+      super("\n"
             +"\n-----------------------------------------"
             +"\n|  Game Menu                            |"
             +"\n-----------------------------------------"
@@ -22,7 +23,8 @@ public abstract class GameMenuView extends View {
             +"\nW - Puzzle Scene Water"
             +"\nR - Return to Main Menu"
             +"\nS - Save GAme"
-            +"\n-----------------------------------------";
+            +"\n-----------------------------------------");
+}
 
     
 
