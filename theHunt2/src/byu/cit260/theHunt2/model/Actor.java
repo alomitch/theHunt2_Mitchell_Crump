@@ -6,38 +6,32 @@
 package byu.cit260.theHunt2.model;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
  * @author mikec_000
  */
-public enum Actor implements Serializable{
+public enum Actor implements Serializable {
     
-    Monkey("He is a goofy animal on the island"),
-    
-   
+    Monkey("He is a goofy animal on the island."),
+      
     private final String description;
     private final Point coordinates;
 
-   // public Actor() {
- //   }
-    
     Actor (String description){
       this.description = description;
       coordinates = new Point(1,1);
-}
+    }
 
     public String getDescription() {
         return description;
     }
 
-
-    public double getCoordinates() {
+    public Point getCoordinates() {
         return coordinates;
     }
 
-
+}
     @Override
     public String toString() {
         return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + '}';

@@ -5,7 +5,6 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-import static apple.laf.JRSUIConstants.Widget.MENU;
 import byu.cit260.theHunt2.control.PuzzleHalfGallon;
 import java.util.Scanner;
 
@@ -44,7 +43,7 @@ public abstract class HalfGallonPuzzle extends View {
         char selection = ' ';
        // do {
                
-            System.out.println(MENU); // display the main menu
+            //System.out.println(MENU); // display the main menu
             
             System.out.println("Out of either cups,tablespoons,or teaspoons how many of either group would fill "
                     + "up a half  gallon");

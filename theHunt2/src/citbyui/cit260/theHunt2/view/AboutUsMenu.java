@@ -5,7 +5,6 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-import static apple.laf.JRSUIConstants.Widget.MENU;
 import java.util.Scanner;
 
 /**
@@ -25,21 +24,21 @@ public abstract class AboutUsMenu extends View {
             +"\nE- Exit"
             +"\n-----------------------------------------");
     }
-    public void displayMenu() {
-        
-        char selection = ' ';
-        do {
-               
-            System.out.println(MENU); // display the main menu
-       
-            String input = this.getInput(); // get the user's selection
-            selection = input.charAt(0); // get first character of string
-       
-           // this.doAction(selection); // do action based on selection
-       
-        } while (selection != 'E'); // while selection is not "Exit"
-       
-    }
+//    public void displayMenu() {
+//        
+//        char selection = ' ';
+//        do {
+//               
+//            System.out.println(MENU); // display the main menu
+//       
+//            String input = this.getInput(); // get the user's selection
+//            selection = input.charAt(0); // get first character of string
+//       
+//           // this.doAction(selection); // do action based on selection
+//       
+//        } while (selection != 'E'); // while selection is not "Exit"
+//       
+//    }
 
     @Override
     public String getInput() {

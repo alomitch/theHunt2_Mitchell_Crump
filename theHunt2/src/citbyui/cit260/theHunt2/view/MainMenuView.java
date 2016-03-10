@@ -5,6 +5,9 @@
  */
 package citbyui.cit260.theHunt2.view;
 
+import byu.cit260.theHunt2.control.GameControl;
+import thehunt2.theHunt2;
+
 /**
  *
  * @author AlleciaMitchell
@@ -63,8 +66,8 @@ public class MainMenuView extends View {
     }
 
     private void startNewGame() {
-        // create new game
-       // GameControl.createNewGame(theHunt2.getPlayer());
+       // create new game
+       GameControl.createNewGame(theHunt2.getPlayer());
        
        // display the game menu
        GameMenuView gameMenu = new GameMenuView() {};

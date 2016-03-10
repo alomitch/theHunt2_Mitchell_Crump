@@ -5,6 +5,7 @@
  */
 package byu.cit260.theHunt2.model;
 
+import byu.cit260.theHunt2.control.InventoryItem;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -17,6 +18,13 @@ public class Game implements Serializable {
     //class instance variables
     private double totalTime;
     private int noPeople;
+    private Treasure treasure;
+    private Player player;
+    private Map map;
+    
+    private Items[] items;
+    private Actor[] actor;
+    
 
     public Game() {
     }
@@ -77,6 +85,56 @@ public class Game implements Serializable {
     public void setTotalTime(double d) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public Treasure getTreasure() {
+        return treasure;
+    }
+
+    public void setTreasure(Treasure treasure) {
+        this.treasure = treasure;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Items[] getItems() {
+        return items;
+    }
+
+    public void setItems(Items[] items) {
+        this.items = items;
+    }
+
+    public Actor[] getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor[] actor) {
+        this.actor = actor;
+    }
+
+    public void setItems(citbyui.cit260.theHunt2.view.Items[] itemsList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setItems(InventoryItem[] itemsList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     
     
 }

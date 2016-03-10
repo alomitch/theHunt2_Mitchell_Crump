@@ -104,7 +104,7 @@ private static void groupTest(){
      private static void michaelTests(){
         
         Map map = new Map();
-        // map.setName("The Hunt");  CLJ
+        map.setName("The Hunt"); 
         map.setRowCount(0.00);
         map.setColumnCount(0.00);
         System.out.println(map.toString());
@@ -112,7 +112,7 @@ private static void groupTest(){
         Actor actor = new Actor();
         actor.setName("Jack");
         actor.setDescription("Treasure Hunter");
-        // map.setCoordinates(0.00); CLJ
+        map.setCoordinates(0.00);
         System.out.println(actor.toString());
        
         Location location = new Location();
@@ -125,23 +125,23 @@ private static void groupTest(){
         puzzleScene.setDescription("puzzle");
         puzzleScene.setTravelTime(0.0);
         puzzleScene.setBlocked(0.0);
-       // puzzleScene.setSymbol(0.0); CLJ
-       // puzzleScene.setPuzzle(0.0); CLJ
+        puzzleScene.setSymbol(0.0); 
+        puzzleScene.setPuzzle(0.0); 
         System.out.println(puzzleScene.toString());
                    
         Scene scene = new Scene();
         scene.setDescription("scene");
         scene.setTravelTime(0.0);
         scene.setBlocked(0.0);
-        // scene.setSymbol(0.0); CLJ
+        scene.setSymbol(0.0); 
         System.out.println(scene.toString());
         
         ItemScene itemScene = new ItemScene();
         itemScene.setDescription("puzzle");
         itemScene.setTravelTime(0.0);
         itemScene.setBlocked(0.0);
-        // itemScene.setSymbol(0.0); CLJ
-        // itemScene.setItem(0.0);
+        itemScene.setSymbol(0.0);
+        itemScene.setItem(0.0);
         System.out.println(itemScene.toString());    
     }
     /**
