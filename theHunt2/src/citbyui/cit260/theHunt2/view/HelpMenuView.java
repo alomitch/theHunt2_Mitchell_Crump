@@ -25,8 +25,8 @@ public abstract class HelpMenuView extends View {
             +"\nQ - Quit"
             +"\n-----------------------------------------");
     }
- 
-
+       
+    
     @Override
     public boolean doAction(String value) {
         char choice = value.charAt(0);
