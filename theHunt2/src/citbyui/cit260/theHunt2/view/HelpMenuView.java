@@ -6,9 +6,6 @@
 package citbyui.cit260.theHunt2.view;
 
 
-import java.util.Scanner;
-
-
 /**
  *
  * @author mikec_000
@@ -30,6 +27,7 @@ public abstract class HelpMenuView extends View {
     }
  
 
+    @Override
     public boolean doAction(String value) {
         char choice = value.charAt(0);
         
