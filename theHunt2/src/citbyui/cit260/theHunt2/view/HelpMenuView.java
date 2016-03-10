@@ -15,7 +15,8 @@ import java.util.Scanner;
  */
 public abstract class HelpMenuView extends View {
     
-    private final String MENU = "\n"
+    public HelpMenuView(){
+       super("\n"
             +"\n-----------------------------------------"
             + "\n| Help Menu                            |"
             +"\n-----------------------------------------"
@@ -25,11 +26,13 @@ public abstract class HelpMenuView extends View {
             +"\nI - Picking up items"
             +"\nR - Return to Main Menu"
             +"\nQ - Quit"
-            +"\n-----------------------------------------";
-
+            +"\n-----------------------------------------");
+    }
  
 
-    private void doAction(char choice) {
+    public boolean doAction(String value) {
+        char choice = value.charAt(0);
+        
         switch (choice){
             case 'G'://display the goal of the game
                 this.gameGoal();
@@ -48,12 +51,13 @@ public abstract class HelpMenuView extends View {
                break;
             case 'Q': // Quit
                 this.quitProgram();
-                return;
+                return true;
             default:
                System.out.println("\n*** Invalid selection *** Try again ");
                break;          
                
         }
+        return false;
     }
 
     private void gameGoal() {

@@ -6,7 +6,6 @@
 package citbyui.cit260.theHunt2.view;
 
 import java.util.Scanner;
-import static sun.font.GlyphLayout.done;
 
 /**
  *

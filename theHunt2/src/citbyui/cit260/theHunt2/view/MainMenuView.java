@@ -5,9 +5,6 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-import byu.cit260.theHunt2.control.GameControl;
-import thehunt2.theHunt2;
-
 /**
  *
  * @author AlleciaMitchell

@@ -28,6 +28,7 @@ public abstract class GameMenuView extends View {
 
     
 
+ @Override
     public boolean doAction(String value) {
         char choice = value.charAt(0);
         

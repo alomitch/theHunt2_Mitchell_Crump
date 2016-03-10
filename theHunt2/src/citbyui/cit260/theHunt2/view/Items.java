@@ -5,15 +5,14 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author mikec_000
  */
 public abstract class Items extends View{
- 
-        private final String MENU = "\n"
+     
+       public Items(){
+           super("\n"  
             +"\n-----------------------------------------"
             + "\n| Items Menu                            |"
             +"\n-----------------------------------------"
@@ -23,11 +22,14 @@ public abstract class Items extends View{
             +"\nO - Old Cell Phone"
             +"\nM - Monkey"    
             +"\nR - Return to Main Menu"
-            +"\n-----------------------------------------";
-
+            +"\n-----------------------------------------");
+       }
     
 
-    private void doAction(char choice) {
+       @Override
+     public boolean doAction(String value) {
+        char choice = value.charAt(0);
+        
         switch (choice){
             case 'C':// display information on game clues
                 this.clues();
@@ -46,12 +48,13 @@ public abstract class Items extends View{
                 break;              
             case 'R':// Return to Main Menu
                this.returnToMainMenu();
-               return;
+               return true;
             default:
                System.out.println("\n*** Invalid selection *** Try again ");
                break;          
                
         }
+        return false;
     }
 
     private void clues() {

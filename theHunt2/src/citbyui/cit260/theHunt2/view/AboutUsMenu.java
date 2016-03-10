@@ -5,14 +5,17 @@
  */
 package citbyui.cit260.theHunt2.view;
 
+import static apple.laf.JRSUIConstants.Widget.MENU;
 import java.util.Scanner;
 
 /**
  *
  * @author AlleciaMitchell
  */
-public class AboutUsMenu {
-    private final String MENU = "\n"
+public abstract class AboutUsMenu extends View {
+    
+    public AboutUsMenu(){
+            super("\n"
             +"\n-----------------------------------------"
             + "\n| About Us Menu                            |"
             +"\n-----------------------------------------"
@@ -20,8 +23,8 @@ public class AboutUsMenu {
             +"\nm - Creator Michael Crump"
             +"\nR - Return to Main Menu"
             +"\nE- Exit"
-            +"\n-----------------------------------------";
-
+            +"\n-----------------------------------------");
+    }
     public void displayMenu() {
         
         char selection = ' ';
@@ -32,13 +35,14 @@ public class AboutUsMenu {
             String input = this.getInput(); // get the user's selection
             selection = input.charAt(0); // get first character of string
        
-            this.doAction(selection); // do action based on selection
+           // this.doAction(selection); // do action based on selection
        
         } while (selection != 'E'); // while selection is not "Exit"
        
     }
 
-    private String getInput() {
+    @Override
+    public String getInput() {
          boolean valid = false; // indicates if the name has been retrieved
        String getInput = null;
        Scanner keyboard = new Scanner(System.in);   // keyboard input stream
@@ -63,7 +67,10 @@ public class AboutUsMenu {
        return getInput; //return the name
     }
 
-    public void doAction(char choice) {
+    @Override
+    public boolean doAction(String value) {
+        char choice = value.charAt(0);
+        
         switch (choice){
             case 'a'://About Creator Allecia Mitchell
                 this.aboutCreatorAllecia();
@@ -75,13 +82,14 @@ public class AboutUsMenu {
                this.returnToMainMenu();
                break;
             case 'E':// exit current game
-                return;
+                return true;
            default:
                System.out.println("\n*** Invalid selection *** Try again ");
                break;
            
                
         }
+        return false;
     }
 
     private void aboutCreatorAllecia() {

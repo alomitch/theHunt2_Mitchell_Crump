@@ -11,18 +11,19 @@ package citbyui.cit260.theHunt2.view;
  */
 
 public abstract class SaveGame extends View{
- 
-        private final String MENU = "\n"
+    public SaveGame(){
+        super("\n"
             +"\n-----------------------------------------"
             +"\n| Save Game                             |"
             +"\n-----------------------------------------"
             +"\nS - Save Game"
             +"\nR - Return to Main Menu"
-            +"\n-----------------------------------------";
+            +"\n-----------------------------------------");
 
-    
+}
 
-    public boolean doAction(String value) {
+    @Override
+   public boolean doAction(String value) {
         char choice = value.charAt(0);
         
         switch (choice){

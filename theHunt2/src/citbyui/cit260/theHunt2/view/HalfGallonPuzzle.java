@@ -5,9 +5,9 @@
  */
 package citbyui.cit260.theHunt2.view;
 
+import static apple.laf.JRSUIConstants.Widget.MENU;
 import byu.cit260.theHunt2.control.PuzzleHalfGallon;
 import java.util.Scanner;
-import static jdk.nashorn.tools.ShellFunctions.input;
 
 
 /**
@@ -16,8 +16,9 @@ import static jdk.nashorn.tools.ShellFunctions.input;
  */
 public abstract class HalfGallonPuzzle extends View {
     
-    
-    private final String MENU = "\n"
+    public HalfGallonPuzzle(){
+            super("\n"
+           //private final String MENU = "\n"
             +"\n-----------------------------------------"
             + "\n| Half Gallon Puzzle                         |"
             +"\n-----------------------------------------"
@@ -33,7 +34,8 @@ public abstract class HalfGallonPuzzle extends View {
             + "\n t -Teaspoons"
             + "\n T -Tablespoons "
             + "\n C -Cups"
-            +"\n-----------------------------------------";
+            +"\n-----------------------------------------");
+    }
     private boolean input;
 
     public void displayMenu() {
@@ -65,6 +67,7 @@ public abstract class HalfGallonPuzzle extends View {
        
     }
     
+    @Override
   public String getInput() {
          boolean valid = false; // indicates if the answer has been retrieved
        String input = null;
