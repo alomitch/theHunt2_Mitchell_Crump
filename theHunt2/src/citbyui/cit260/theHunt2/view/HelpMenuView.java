@@ -6,18 +6,15 @@
 package citbyui.cit260.theHunt2.view;
 
 
-import java.util.Scanner;
-
-
 /**
  *
  * @author mikec_000
  */
 public abstract class HelpMenuView extends View {
     
-    private final String MENU = "\n"
-            +"\n-----------------------------------------"
-            + "\n| Help Menu                            |"
+    public HelpMenuView(){
+            super("\n"
+            +"\n| Help Menu                            |"
             +"\n-----------------------------------------"
             +"\nG - What is the goal of the game?"
             +"\nM - How to move"
@@ -25,11 +22,14 @@ public abstract class HelpMenuView extends View {
             +"\nI - Picking up items"
             +"\nR - Return to Main Menu"
             +"\nQ - Quit"
-            +"\n-----------------------------------------";
+            +"\n-----------------------------------------");
 
- 
+    }
 
-    private void doAction(char choice) {
+    @Override
+    public boolean doAction(String value) {
+        char choice = value.charAt(0);
+        
         switch (choice){
             case 'G'://display the goal of the game
                 this.gameGoal();
@@ -48,12 +48,13 @@ public abstract class HelpMenuView extends View {
                break;
             case 'Q': // Quit
                 this.quitProgram();
-                return;
+                return true;
             default:
                System.out.println("\n*** Invalid selection *** Try again ");
                break;          
                
         }
+        return false;
     }
 
     private void gameGoal() {

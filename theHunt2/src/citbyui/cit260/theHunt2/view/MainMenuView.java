@@ -5,9 +5,6 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-import byu.cit260.theHunt2.control.GameControl;
-import thehunt2.theHunt2;
-
 /**
  *
  * @author AlleciaMitchell
@@ -42,7 +39,7 @@ public class MainMenuView extends View {
                 this.startExistingGame();
                 break;
             case 'H': // display the help menu
-                this.displayHelpMenuView();
+                this.helpMenuView();
                 break;
             case 'S':// save current game
                 this.saveGame();
@@ -79,14 +76,9 @@ public class MainMenuView extends View {
        System.out.println("*** startExistingGame function called ***");
     }
 
-    private void displayHelpMenuView() {
-        HelpMenuView helpMenu = new HelpMenuView() {
-            @Override
-            public boolean doAction(String value) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        };
-        helpMenu.display();
+    private void helpMenuView() {
+        HelpMenuView helpMenu = new HelpMenuView() {};                 
+        helpMenu.display();        
     }
 
     private void saveGame() {
