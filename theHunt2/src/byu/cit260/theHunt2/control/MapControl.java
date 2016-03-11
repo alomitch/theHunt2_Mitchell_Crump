@@ -14,7 +14,7 @@ import byu.cit260.theHunt2.model.Scene;
  */
 public class MapControl {
 
-    public static Map createMap() {
+    static Map createMap() {
         // create the map
         Map map = new Map (20, 20);
         
@@ -22,7 +22,7 @@ public class MapControl {
         Scene[] scenes = createScenes();
         
         // assign the different scenes to locations in the map
-        assignScenesToLocations(map, scenes);
+        GameControl.assignScenesToLocations(map, scenes);
         
         return map;
     }

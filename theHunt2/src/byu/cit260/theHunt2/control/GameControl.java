@@ -9,6 +9,7 @@ import byu.cit260.theHunt2.model.Backpack;
 import byu.cit260.theHunt2.model.Game;
 import byu.cit260.theHunt2.model.Map;
 import byu.cit260.theHunt2.model.Player;
+import byu.cit260.theHunt2.model.Scene;
 import byu.cit260.theHunt2.model.Treasure;
 import citbyui.cit260.theHunt2.view.Items;
 import thehunt2.theHunt2;
@@ -43,6 +44,10 @@ public class GameControl {
         
         // move actors to starting position in the map
         MapControl.moveActorsToStartingLocation(map);
+    }
+
+    static void assignScenesToLocations(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public enum Item {

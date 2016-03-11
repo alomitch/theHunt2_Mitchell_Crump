@@ -41,6 +41,10 @@ public String toString() {
 return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + '}';
 }
 
+    public void setDescription(String treasure_Hunter) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 
 }
