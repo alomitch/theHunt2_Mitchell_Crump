@@ -133,6 +133,10 @@ public class Game implements Serializable {
     public void setItems(InventoryItem[] itemsList) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public void setBackpack(Backpack backpack) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

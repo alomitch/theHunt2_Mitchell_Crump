@@ -5,6 +5,7 @@
  */
 package byu.cit260.theHunt2.control;
 
+import byu.cit260.theHunt2.model.Backpack;
 import byu.cit260.theHunt2.model.Game;
 import byu.cit260.theHunt2.model.Map;
 import byu.cit260.theHunt2.model.Player;
@@ -32,6 +33,10 @@ public class GameControl {
         game.setItems(itemsList);
         
         Treasure treasure = new Treasure(); //create new treasure
+        game.setTreasure(treasure);
+        
+        Backpack backpack = new Backpack (); // create new backpack
+        game.setBackpack(backpack);
         
         Map map = MapControl.createMap(); // create and initialize new map
         game.setMap(map); // save map in game
@@ -40,44 +45,53 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
     }
 
-    private static InventoryItem[] createItemsList() {
+    public enum Item {
+        backpack,
+        clue,
+        tnt,
+        monkey,
+        aidBag;       
+    }
+    public static InventoryItem[] createItemsList() {
         
         // created array(list) of inventory items
         InventoryItem[] inventory = 
-                new InventoryItem[14];
+                new InventoryItem[Constants.NUMBER_OF_INVENTORY_ITEMS];
         
         InventoryItem backpack = new InventoryItem();
         backpack.setDescription("Backpack");
         backpack.setQuantityInStock(0);
         backpack.setRequiredAmount(0);
-        inventory[0] = backpack;
+        inventory[Item.backpack.ordinal()] = backpack;
         
         InventoryItem clue = new InventoryItem();
         clue.setDescription("Clue");
         clue.setQuantityInStock(0);
         clue.setMaximumAmount(4);
-        inventory[1] = clue;
+        inventory[Item.clue.ordinal()] = clue;
         
         InventoryItem tnt = new InventoryItem();
         tnt.setDescription("TNT");
         tnt.setQuantityInStock(0);
         tnt.setMaximumAmount(1);
-        inventory[2] = tnt;
+        inventory[Item.tnt.ordinal()] = tnt;
         
         InventoryItem monkey = new InventoryItem();
         monkey.setDescription("Monkey");
         monkey.setQuantityInStock(0);
         monkey.setMaximumAmount(1);
-        inventory[3] = monkey;
+        inventory[Item.monkey.ordinal()] = monkey;
         
         InventoryItem aidBag = new InventoryItem();
         aidBag.setDescription("Aid Bag");
         aidBag.setQuantityInStock(0);
         aidBag.setMaximumAmount(1);
-        inventory[4] = aidBag;
+        inventory[Item.aidBag.ordinal()] = aidBag;
         
         return inventory;
     }
+    
+    
     
 }
     

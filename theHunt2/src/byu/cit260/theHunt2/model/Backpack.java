@@ -17,8 +17,13 @@ public class Backpack implements Serializable {
     //class instance variables
     private int maxCapacity;
     private int currentCapacity;
+    private final String description;
 
     public Backpack() {
+        this.description = "\nThis is a backpack which can be used to store items. "
+                        + "\n It's space is limited, so choose what to keep wisely!";
+        this.maxCapacity = 5;
+        this.currentCapacity = 0;
     }
 
     @Override

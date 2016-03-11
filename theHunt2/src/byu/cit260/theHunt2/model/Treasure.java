@@ -8,7 +8,6 @@ package byu.cit260.theHunt2.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-
 /**
  *
  * @author AlleciaMitchell
@@ -20,6 +19,8 @@ public class Treasure implements Serializable {
         private double value;
 
     public Treasure() {
+        this.description = "\nThis is the treasure hidden on the island.  If you"
+                        + "\n can find it, you'll be rich beyond your wildest dreams!";
     }
 
     @Override
