@@ -6,6 +6,7 @@
 package citbyui.cit260.theHunt2.view;
 
 import byu.cit260.theHunt2.control.GameControl;
+import byu.cit260.theHunt2.model.Map;
 import thehunt2.theHunt2;
 
 /**
@@ -89,7 +90,9 @@ public class MainMenuView extends View {
     }
 
     private void displayGameMap() {
-        System.out.println("*** display game map function called ***");
+        // display the game map
+        Map map = new Map() {};
+        map.display();
     }
 
     private void returnToMainMenu() {

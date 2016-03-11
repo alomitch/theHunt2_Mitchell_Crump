@@ -109,11 +109,11 @@ private static void groupTest(){
         map.setColumnCount(0.00);
         System.out.println(map.toString());
             
-        Actor actor = new Actor();
-        actor.setName("Jack");
-        actor.setDescription("Treasure Hunter");
-        map.setCoordinates(0.00);
-        System.out.println(actor.toString());
+//        Actor actor = new Actor();
+//        actor.setName("Jack");
+//        actor.setDescription("Treasure Hunter");
+//        map.setCoordinates(0.00);
+//        System.out.println(actor.toString());
        
         Location location = new Location();
         location.setRow(0.0);

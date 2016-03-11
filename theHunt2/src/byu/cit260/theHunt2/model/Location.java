@@ -5,6 +5,7 @@
  */
 package byu.cit260.theHunt2.model;
 
+import byu.cit260.theHunt2.model.Scene.SceneType;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -34,13 +35,13 @@ public class Location implements Serializable{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void <any> getActors() {
-        return actors;
-    }
-
-    public void setActors(<any> actors) {
-        this.actors = actors;
-    }
+//    public void <any> getActors() {
+//        return actors;
+//    }
+//
+//    public void setActors(<any> actors) {
+//        this.actors = actors;
+//    }
 
     public Location() {
     }
@@ -107,6 +108,20 @@ public class Location implements Serializable{
     @Override
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", amountRemaining=" + amountRemaining + '}';
+    }
+    
+    private static void assignScenesToLocations(Map map, Scene[] scenes) {
+        Location [][] locations = map.getLocations();
+        Scene[] Scenes = null;
+        
+        //start point
+        locations[0][0].setScene(Scenes[SceneType.beach.ordinal()]);
+        locations[0][1].setScene(Scenes[SceneType.path.ordinal()]);
+        locations[0][2].setScene(Scenes[SceneType.waterPuzzle.ordinal()]);
+        locations[0][3].setScene(Scenes[SceneType.halfGallonPuzzle.ordinal()]);
+        locations[0][4].setScene(Scenes[SceneType.waterfall.ordinal()]);
+        locations[0][5].setScene(Scenes[SceneType.treasureRoom.ordinal()]);
+        locations[0][6].setScene(Scenes[SceneType.finish.ordinal()]);
     }
     
     

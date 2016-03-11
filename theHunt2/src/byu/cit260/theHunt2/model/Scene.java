@@ -20,8 +20,60 @@ public class Scene implements Serializable{
     private double blocked;
     private String symbol;
 
-    public Scene() {
+    private static boolean createScenes() {
+        Scene[] game = new Scene[SceneType.values().length];
+        
+        Scene startingScene = new Scene();
+        startingScene.setDescription(
+            "\nAfter dragging your boat ashore, you find yourself on a tropical beach.  "
+            + "The brush grows thick before you, but you can make out several paths which "
+            + "appear to lead deep into the island.  In the distance, you can see tropical"
+            + " waterfalls cascading from precipitous heights.  High atop distand cliffs, "
+            + "you see what appears to be ancient ruins covered in thick vines and ages of"
+            + " growth.  You beach your craft securely, then consider your backpack resting "
+            + "in the bow of the boat.  Should you travel light through the brush, or bring "
+            + "your pack in case you find anything interesting along the way?");
+        startingScene.setMapSymbol(" ST ");
+        startingScene.setBlocked(false);
+        startingScene.setTravelTime(240);
+        Scene[] scenes = null;
+        scenes[SceneType.start.ordinal()] = startingScene;
+        
+        Scene finishScene = new Scene();
+        finishScene.setDescription(
+            "\nFrom within the mountain you hear strange machinery and complex gears working."
+            + "  The giant stone wheel rolls slowly to the left, revealing a clever chamber "
+            + "hidden within.  As the light from behind you streams into the chamber, you "
+            + "notice gold, jewels, and precious treasures.  With a smile on your face, you "
+            + "wonder just how much will fit in your pack.");
+        finishScene.setMapSymbol(" FN ");
+        finishScene.setBlocked(false);
+        finishScene.setTravelTime(Double.POSITIVE_INFINITY);
+        scenes[SceneType.finish.ordinal()] = finishScene;
+        
+        return false;
+
     }
+
+    private void setBlocked(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setMapSymbol(String _fn_) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+        
+    public enum SceneType {
+        start,
+        beach,
+        path,
+        waterPuzzle,
+        halfGallonPuzzle,
+        waterfall,
+        treasureRoom,
+        finish,
+    }
+    
     
     
 
@@ -103,7 +155,7 @@ public class Scene implements Serializable{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    
+  
     
     
 }
