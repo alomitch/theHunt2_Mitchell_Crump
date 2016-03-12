@@ -18,6 +18,7 @@ public class Game implements Serializable {
     //class instance variables
     private double totalTime;
     private int noPeople;
+    private InventoryItem[] inventory;
     private Treasure treasure;
     private Player player;
     private Map map;

@@ -35,13 +35,17 @@ public class Location implements Serializable{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-//    public void <any> getActors() {
-//        return actors;
-//    }
-//
-//    public void setActors(<any> actors) {
-//        this.actors = actors;
-//    }
+public boolean isVisited() {
+        return visited;
+    }
+
+    public ArrayList<Actor> getActors() {
+        return actors;
+    }
+    
+       public void setActors(ArrayList<Actor> actors) {
+        this.actors = actors;
+    }
 
     public Location() {
     }

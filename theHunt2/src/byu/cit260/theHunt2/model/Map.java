@@ -12,6 +12,11 @@ import java.io.Serializable;
  * @author mikec_000
  */
 public class Map implements Serializable{
+
+    public static Map[] getMapLoctionsCurrentGame() {
+      System.out.println("\n ***getMapLocationsCurrentGame stub function called ***");
+      return null;
+    }
     
     //class instance variables
     private double rowCount;

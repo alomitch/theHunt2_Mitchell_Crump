@@ -5,6 +5,11 @@
  */
 package citbyui.cit260.theHunt2.view;
 
+import byu.cit260.theHunt2.control.GameControl;
+import byu.cit260.theHunt2.control.InventoryItem;
+import byu.cit260.theHunt2.model.Location;
+import byu.cit260.theHunt2.model.Map;
+
 /**
  *
  * @author mikec_000
@@ -18,10 +23,12 @@ public abstract class GameMenuView extends View {
             +"\n|  Game Menu                            |"
             +"\n-----------------------------------------"
             +"\nM - Show Map"
+            + "\nI-View List of items in inventory"
             +"\nL - Move To New Location"
-            +"\nH - Puzzle Scene HalfGallon"
+            +"\nG - Puzzle Scene HalfGallon"
             +"\nW - Puzzle Scene Water"
             +"\nR - Return to Main Menu"
+            + "\nH- Help"
             +"\nS - Save GAme"
             +"\n-----------------------------------------");
 }
@@ -34,12 +41,15 @@ public abstract class GameMenuView extends View {
         
         switch (choice){
             case 'M':// save current game
-                this.showmap();
+                this.displayMap();
                 break;    
+            case 'I'://View list of the items in inventory
+                this.viewItemInventory();
+                break;
             case 'L':// save current game
                 this.newLocation();
                 break;     
-           case 'H':// save current game
+           case 'G':// save current game
                 this.halfGallon();
                 break;     
            case 'W':// save current game
@@ -64,7 +74,25 @@ public abstract class GameMenuView extends View {
         System.out.println("*** start saveGame function called ***");
     }
 
-    private void showmap() {
+    private void displayMap() {
+        //get the map locations from the current game
+       Map[] map= Map.getMapLoctionsCurrentGame();
+        
+        //Display title, and row of columns numbers
+        System.out.println("\nTreasure Map");
+        System.out.println("\n");   
+        
+        //for every row in map
+        for (Map rowInMap : map){
+           System.out.println("---------------------------------");
+           System.out.println(rowInMap.getRowCount());
+        }
+        //for every column in map
+        for( Map columnInMap : map){
+          System.out.println("|")  
+           System.out.println();
+        }
+        
        System.out.println("***start showmap function called ***");
     }
 
@@ -83,5 +111,20 @@ public abstract class GameMenuView extends View {
     public void displayMenu() {
          System.out.println("*** start return to main menu function called ***");
     }
-       
+
+    private void viewItemInventory() {
+        //get the sorted list of items for the current game
+        InventoryItem[] item = GameControl.getSortedInventroyList();
+        
+        System.out.println("\nList of Items");
+        System.out.println("Description" + "\t"+
+                                          "Required" + "\t"+ "InStock");
+        //for each inventory item
+        for (InventoryItem inventoryItem : item){
+            //Display the description, the required amount and amount in stock
+            System.out.println( inventoryItem.getDescription()); 
+                                               
+                                         
+        }
+    }     
 }
