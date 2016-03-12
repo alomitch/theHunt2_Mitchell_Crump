@@ -16,6 +16,9 @@ import byu.cit260.theHunt2.model.Map;
  */
 public abstract class GameMenuView extends View {
 
+    private int row;
+    private Object MapControl;
+
 
  public GameMenuView(){
       super("\n"
@@ -77,21 +80,94 @@ public abstract class GameMenuView extends View {
     private void displayMap() {
         //get the map locations from the current game
        Map[] map= Map.getMapLoctionsCurrentGame();
+        String menu = ""
+            + "\n***********************************************************************"
+            + "\n" + map.getName() + " - " + map.getDescription()
+            + "\n***********************************************************************";
+            
+            System.out.println(menu);
         
+        for(int row = 0; .map.getLocation().length >= row; row++) {
+           
+            // Add header
+            for (LocationModel location : map.getLocations()[row]) {
+                System.out.print("|```````````````|");
+            }
+            System.out.println("");  // go to next line of row
+            
+            // Put row,col information in the map
+            for(int col = 0; col < map.getLocations()[row].length; col++) {
+                System.out.print("|===== " + row + "," + col + " =====|");
+            }
+            System.out.println(""); // Go to next liine
+            
+            for (Location location : map.getLocations()[row]) {
+                // We have 16 spaces to work with
+                int nameLength = location.getName().length();
+                int spaces = 15 - nameLength;
+                
+                System.out.print("|");
+                
+                // Left Pad the name
+                if(spaces > 0) {
+                    for(int i = 0;i < spaces/2; i++) {
+                        System.out.print(" ");
+                    }
+                }
+                
+                // Display location name
+                System.out.print(location.getName());
+                
+                // Right Pad
+                if(spaces > 0) {
+                    for(int i = 0;i < spaces/2; i++) {
+                        System.out.print(" ");
+                    }
+                }
+                System.out.print("|");
+            }
+            
+            System.out.println("");
+            for(int col = 0; col < map.getLocations()[row].length; col++) {
+                System.out.print("|***************|");
+            }
+            
+            System.out.println("");
+            for (LocationModel location : map.getLocations()[row]) {
+                
+                if(location == this.mapControl.getGameController().getGameModel().getCurrentLocationModel()) {
+                    System.out.print("|__You're Here__|");
+                } else if (location.getVisited() == true) {
+                    System.out.print("|____Visited____|");
+                } else {
+                    System.out.print("|__Not Visited__|");
+                }
+                
+            }
+            
+            System.out.println("");
+            for(int col = 0; col < map.getLocations()[row].length; col++) {
+                System.out.print("|***************|");
+            }
+            
+            
+            System.out.println("");
+            
+        }
         //Display title, and row of columns numbers
-        System.out.println("\nTreasure Map");
-        System.out.println("\n");   
+        //System.out.println("\nTreasure Map");
+       // System.out.println("\n");   
         
         //for every row in map
-        for (Map rowInMap : map){
-           System.out.println("---------------------------------");
-           System.out.println(rowInMap.getRowCount());
-        }
+       // for (Map rowInMap : map){
+         //  System.out.println("---------------------------------");
+         //  System.out.println(rowInMap.getRowCount());
+     //   }
         //for every column in map
-        for( Map columnInMap : map){
-          System.out.println("|")  
-           System.out.println();
-        }
+     //   for( Map columnInMap : map){
+     //     System.out.println("|")  
+       //    System.out.println();
+       // }
         
        System.out.println("***start showmap function called ***");
     }

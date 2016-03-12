@@ -22,16 +22,10 @@ public class Map implements Serializable{
     private double rowCount;
     private double columnCount;
     private Location[][] locations;
+    private String name;
+    private String description;
 
     public Map() {
-    }
-
-    public Location[][] getLocations() {
-        return locations;
-    }
-
-    public void setLocations(Location[][] locations) {
-        this.locations = locations;
     }
 
     public Map(int rowCount, int columnCount) {
@@ -60,7 +54,21 @@ public class Map implements Serializable{
         
         }
     }
-        
+    
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
 
     public double getRowCount() {
         return rowCount;
@@ -117,7 +125,7 @@ public class Map implements Serializable{
     }
 
     public void setName(String the_Hunt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("** get setName function***");
     }
 
     public void display() {

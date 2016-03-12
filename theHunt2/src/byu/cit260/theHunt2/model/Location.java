@@ -127,6 +127,10 @@ public boolean isVisited() {
         locations[0][5].setScene(Scenes[SceneType.treasureRoom.ordinal()]);
         locations[0][6].setScene(Scenes[SceneType.finish.ordinal()]);
     }
+
+    public Object getName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
