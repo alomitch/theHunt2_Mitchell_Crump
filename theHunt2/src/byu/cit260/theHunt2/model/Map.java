@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author mikec_000
  */
 public class Map implements Serializable{
-
+    
     public static Map[] getMapLoctionsCurrentGame() {
       System.out.println("\n ***getMapLocationsCurrentGame stub function called ***");
       return null;
@@ -21,9 +21,9 @@ public class Map implements Serializable{
     //class instance variables
     private double rowCount;
     private double columnCount;
-    private Location[][] locations;
-    private String name;
-    private String description;
+    public Location[][] locations;
+    public String name;
+    public String description;
 
     public Map() {
     }

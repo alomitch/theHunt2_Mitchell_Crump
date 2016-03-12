@@ -18,6 +18,7 @@ public abstract class GameMenuView extends View {
 
     private int row;
     private Object MapControl;
+    private Object mapControl;
 
 
  public GameMenuView(){
@@ -79,7 +80,7 @@ public abstract class GameMenuView extends View {
 
     private void displayMap() {
         //get the map locations from the current game
-       Map[] map= Map.getMapLoctionsCurrentGame();
+       Map[] map= Map.getMapLocationsCurrentGame();
         String menu = ""
             + "\n***********************************************************************"
             + "\n" + map.getName() + " - " + map.getDescription()
@@ -87,10 +88,10 @@ public abstract class GameMenuView extends View {
             
             System.out.println(menu);
         
-        for(int row = 0; .map.getLocation().length >= row; row++) {
+        for(int row = 0; .map.getLocation().length; row++) {
            
             // Add header
-            for (LocationModel location : map.getLocations()[row]) {
+            for (Location location : map.getLocations()[row]) {
                 System.out.print("|```````````````|");
             }
             System.out.println("");  // go to next line of row
@@ -103,7 +104,7 @@ public abstract class GameMenuView extends View {
             
             for (Location location : map.getLocations()[row]) {
                 // We have 16 spaces to work with
-                int nameLength = location.getName().length();
+                int nameLength = locations.getName().length();
                 int spaces = 15 - nameLength;
                 
                 System.out.print("|");
@@ -133,9 +134,9 @@ public abstract class GameMenuView extends View {
             }
             
             System.out.println("");
-            for (LocationModel location : map.getLocations()[row]) {
+            for (Location location : map.getLocations()[row]) {
                 
-                if(location == this.mapControl.getGameController().getGameModel().getCurrentLocationModel()) {
+                if(location == this.mapControl.getGameControl().getGameModel().getCurrentLocationModel()) {
                     System.out.print("|__You're Here__|");
                 } else if (location.getVisited() == true) {
                     System.out.print("|____Visited____|");
