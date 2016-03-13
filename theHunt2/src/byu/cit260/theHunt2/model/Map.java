@@ -42,16 +42,16 @@ public class Map implements Serializable{
         this.locations = new Location[rowCount][columnCount];
         
         for (int row = 0; row < rowCount; row++) {
-            //create and initialize new Location object instance
-            Location location = new Location();
-            int column = 0;
-            location.setColumn(column);
-            location.setRow(row);
-            location.setVisited(false);
+             for (int col= 0; col < columnCount; col++) {
+                 Location location = new Location();
+                 location.setColumn(col);
+                 location.setRow(row);
+                 location.setVisited(false);
             
-            //assign the Location object to the current position in array
-            locations[row][column] = location;
-        
+                 //assign the Location object to the current position in array
+                 locations[row][col] = location;
+             }
+          
         }
     }
     

@@ -23,6 +23,9 @@ public class Location implements Serializable{
     private Scene scene;
     private ArrayList<Actor> actors;
 
+      public Location() {
+    }
+      
     public Scene getScene() {
         return scene;
     }
@@ -31,8 +34,8 @@ public class Location implements Serializable{
         this.scene = scene;
     }
 
-    void setVisited(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setVisited(boolean visited) {
+        this.visited = visited;
     }
 
 public boolean isVisited() {
@@ -46,11 +49,6 @@ public boolean isVisited() {
        public void setActors(ArrayList<Actor> actors) {
         this.actors = actors;
     }
-
-    public Location() {
-    }
-    
-    
 
     public double getRow() {
         return row;
@@ -113,30 +111,6 @@ public boolean isVisited() {
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", amountRemaining=" + amountRemaining + '}';
     }
-    
-    private static void assignScenesToLocations(Map map, Scene[] scenes) {
-        Location [][] locations = map.getLocations();
-        Scene[] Scenes = null;
-        
-        //start point
-        locations[0][0].setScene(Scenes[SceneType.beach.ordinal()]);
-        locations[0][1].setScene(Scenes[SceneType.path.ordinal()]);
-        locations[0][2].setScene(Scenes[SceneType.waterPuzzle.ordinal()]);
-        locations[0][3].setScene(Scenes[SceneType.halfGallonPuzzle.ordinal()]);
-        locations[0][4].setScene(Scenes[SceneType.waterfall.ordinal()]);
-        locations[0][5].setScene(Scenes[SceneType.treasureRoom.ordinal()]);
-        locations[0][6].setScene(Scenes[SceneType.finish.ordinal()]);
-    }
-
-    public Object getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public boolean getVisited() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-    
+       
 }
 

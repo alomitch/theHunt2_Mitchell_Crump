@@ -10,8 +10,12 @@ package byu.cit260.theHunt2.control;
  * @author AlleciaMitchell
  */
 public class InventoryItem {
-    
-    
+        String description;
+        int quantityInStock;
+       int requiredAmount; 
+       int maximumAmount;
+       
+       
     public double calcSpeedOfTrainA ( double speed,  double distance ) {
              if ( speed != 35) {
                  return-1;
@@ -47,23 +51,36 @@ public class InventoryItem {
                return totalTravelTime;
        }
 
-    void setDescription(String backpack) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getDescription() {
+        return description;
     }
 
-    void setQuantityInStock(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int getQuantityInStock() {
+        return quantityInStock;
     }
 
-    void setRequiredAmount(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int getRequiredAmount() {
+        return requiredAmount;
     }
 
-    void setMaximumAmount(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int getMaximumAmount() {
+        return maximumAmount;    
     }
 
-    public boolean getDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setDescription(String description) {
+        this.description = description;
     }
+
+    public void setQuantityInStock(int quantityInStock) {
+        this.quantityInStock = quantityInStock;
+    }
+
+    public void setRequiredAmount(int requiredAmount) {
+        this.requiredAmount = requiredAmount;
+    }
+
+    public void setMaximumAmount(int maximumAmount) {
+        this.maximumAmount = maximumAmount;
+    }
+
 }

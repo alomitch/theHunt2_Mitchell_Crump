@@ -31,7 +31,7 @@ public class GameControl {
         
         //create the inventory list and save in the game
         InventoryItem[] itemsList = GameControl.createItemsList();
-        game.setItems(itemsList);
+        game.setInventory(itemsList);       
         
         Treasure treasure = new Treasure(); //create new treasure
         game.setTreasure(treasure);
@@ -43,12 +43,9 @@ public class GameControl {
         game.setMap(map); // save map in game
         
         // move actors to starting position in the map
-        MapControl.moveActorsToStartingLocation(map);
+       // MapControl.moveActorsToStartingLocation(map);
     }
 
-    static void assignScenesToLocations(Map map, Scene[] scenes) {
-        System.out.println("\n***get assignSceneToLocations stub function called ***");
-    }
 
     public static InventoryItem[] getSortedInventroyList() {
        System.out.println("\n*** getSortedInventoryList stub function called ***");
@@ -101,7 +98,13 @@ public class GameControl {
         return inventory;
     }
     
-    
+    public enum PuzzleScene {
+        train,
+        halfGallon,
+        Water;
+               
+    }
+  
     
 }
     

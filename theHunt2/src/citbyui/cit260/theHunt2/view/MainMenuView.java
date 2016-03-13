@@ -25,7 +25,6 @@ public class MainMenuView extends View {
             +"\nH - Get help on how to play the game"
             +"\nS - Save game"
             +"\nE - Exit"
-            +"\nM - Show Game Map"
             +"\nR - Return to Main Menu"
             +"\nA - About us"
             +"\n-----------------------------------------");
@@ -47,9 +46,6 @@ public class MainMenuView extends View {
                 break;
             case 'S':// save current game
                 this.saveGame();
-                break;
-            case 'M': // Show game map
-                this.displayGameMap();
                 break;
             case 'R':// Return to Main Menu
                //this.returnToMainMenu();
@@ -87,12 +83,6 @@ public class MainMenuView extends View {
 
     private void saveGame() {
         System.out.println("*** start saveGame function called ***");
-    }
-
-    private void displayGameMap() {
-        // display the game map
-        Map map = new Map() {};
-        map.display();
     }
 
     private void returnToMainMenu() {

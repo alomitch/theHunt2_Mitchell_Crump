@@ -17,51 +17,9 @@ public class Scene implements Serializable{
     //class instance variables
     private String description;
     private double travelTime;
-    private double blocked;
+    private boolean blocked;
     private String symbol;
 
-    private static boolean createScenes() {
-        Scene[] game = new Scene[SceneType.values().length];
-        
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
-            "\nAfter dragging your boat ashore, you find yourself on a tropical beach.  "
-            + "The brush grows thick before you, but you can make out several paths which "
-            + "appear to lead deep into the island.  In the distance, you can see tropical"
-            + " waterfalls cascading from precipitous heights.  High atop distand cliffs, "
-            + "you see what appears to be ancient ruins covered in thick vines and ages of"
-            + " growth.  You beach your craft securely, then consider your backpack resting "
-            + "in the bow of the boat.  Should you travel light through the brush, or bring "
-            + "your pack in case you find anything interesting along the way?");
-        startingScene.setMapSymbol(" ST ");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        Scene[] scenes = null;
-        scenes[SceneType.start.ordinal()] = startingScene;
-        
-        Scene finishScene = new Scene();
-        finishScene.setDescription(
-            "\nFrom within the mountain you hear strange machinery and complex gears working."
-            + "  The giant stone wheel rolls slowly to the left, revealing a clever chamber "
-            + "hidden within.  As the light from behind you streams into the chamber, you "
-            + "notice gold, jewels, and precious treasures.  With a smile on your face, you "
-            + "wonder just how much will fit in your pack.");
-        finishScene.setMapSymbol(" FN ");
-        finishScene.setBlocked(false);
-        finishScene.setTravelTime(Double.POSITIVE_INFINITY);
-        scenes[SceneType.finish.ordinal()] = finishScene;
-        
-        return false;
-
-    }
-
-    private void setBlocked(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void setMapSymbol(String _fn_) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
         
     public enum SceneType {
         start,
@@ -71,11 +29,9 @@ public class Scene implements Serializable{
         halfGallonPuzzle,
         waterfall,
         treasureRoom,
-        finish,
+        finish
     }
-    
-    
-    
+        
 
     public String getDescription() {
         return description;
@@ -93,11 +49,11 @@ public class Scene implements Serializable{
         this.travelTime = travelTime;
     }
 
-    public double getBlocked() {
+    public boolean getBlocked() {
         return blocked;
     }
 
-    public void setBlocked(double blocked) {
+    public void setBlocked(boolean blocked) {
         this.blocked = blocked;
     }
 
@@ -111,11 +67,11 @@ public class Scene implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.description);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.travelTime) ^ (Double.doubleToLongBits(this.travelTime) >>> 32));
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.blocked) ^ (Double.doubleToLongBits(this.blocked) >>> 32));
-        hash = 97 * hash + Objects.hashCode(this.symbol);
+        int hash = 5;
+        hash = 31 * hash + Objects.hashCode(this.description);
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.travelTime) ^ (Double.doubleToLongBits(this.travelTime) >>> 32));
+        hash = 31 * hash + (this.blocked ? 1 : 0);
+        hash = 31 * hash + Objects.hashCode(this.symbol);
         return hash;
     }
 
@@ -134,7 +90,7 @@ public class Scene implements Serializable{
         if (Double.doubleToLongBits(this.travelTime) != Double.doubleToLongBits(other.travelTime)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.blocked) != Double.doubleToLongBits(other.blocked)) {
+        if (this.blocked != other.blocked) {
             return false;
         }
         if (!Objects.equals(this.description, other.description)) {
@@ -145,6 +101,7 @@ public class Scene implements Serializable{
         }
         return true;
     }
+
 
     @Override
     public String toString() {

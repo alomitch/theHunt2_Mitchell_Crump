@@ -132,7 +132,7 @@ private static void groupTest(){
         Scene scene = new Scene();
         scene.setDescription("scene");
         scene.setTravelTime(0.0);
-        scene.setBlocked(0.0);
+        scene.setBlocked(false);
         scene.setSymbol(0.0); 
         System.out.println(scene.toString());
         

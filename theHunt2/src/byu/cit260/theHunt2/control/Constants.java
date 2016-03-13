@@ -11,6 +11,6 @@ package byu.cit260.theHunt2.control;
  */
 class Constants {
 
-    static int NUMBER_OF_INVENTORY_ITEMS;
-    
+    static int NUMBER_OF_INVENTORY_ITEMS= 5;
+    //static int NUMBER_OF_PUZZLE_SCENES;
 }

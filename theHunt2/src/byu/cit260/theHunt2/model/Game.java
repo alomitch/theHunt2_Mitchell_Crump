@@ -22,6 +22,7 @@ public class Game implements Serializable {
     private Treasure treasure;
     private Player player;
     private Map map;
+    private Backpack backpack;
     
     private Items[] items;
     private Actor[] actor;
@@ -83,10 +84,6 @@ public class Game implements Serializable {
         this.noPeople = noPeople;
     }
 
-    public void setTotalTime(double d) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public Treasure getTreasure() {
         return treasure;
     }
@@ -127,19 +124,20 @@ public class Game implements Serializable {
         this.actor = actor;
     }
 
-    public void setItems(citbyui.cit260.theHunt2.view.Items[] itemsList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public InventoryItem[] getInventory() {
+        return inventory;
     }
 
-    public void setItems(InventoryItem[] itemsList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setInventory(InventoryItem[] inventory) {
+        this.inventory = inventory;
+    }
+
+    public Backpack getBackpack() {
+        return backpack;
     }
 
     public void setBackpack(Backpack backpack) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.backpack = backpack;
     }
-    
-    
-    
-    
+   
 }
