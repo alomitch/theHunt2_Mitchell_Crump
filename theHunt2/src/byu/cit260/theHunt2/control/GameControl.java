@@ -52,6 +52,10 @@ public class GameControl {
        return null;
     }
 
+    public static InventoryItem[] getSortedClueList() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public enum Item {
         backpack,
         clue,
@@ -105,6 +109,6 @@ public class GameControl {
                
     }
   
-    
+  
 }
     

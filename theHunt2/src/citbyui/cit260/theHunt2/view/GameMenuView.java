@@ -103,9 +103,10 @@ public abstract class GameMenuView extends View {
                   }
                   System.out.println("|");
                }
-        
+        //get count of scenes that are not equal to null(build function) (incriment a counter)
     //   System.out.println("***start showmap function called ***");
     }
+//get count of scenes that are not equal to null(build function) (incriment a counter)
 
     private void newLocation() {
        System.out.println("*** start newLocation function called ***");
