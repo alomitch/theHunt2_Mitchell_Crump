@@ -32,7 +32,8 @@ public class InventoryItem {
              return totalTravelTimeA;
     }  
              
-    public double calcSpeedOfTrainB ( double speed, double distance) throws InventoryItemException{
+    public double calcSpeedOfTrainB ( double speed, double distance) 
+                                           throws InventoryItemException{
                  if ( speed != 70){
                     // return -1;
                      throw new InventoryItemException("That is the incorrect value for speed");

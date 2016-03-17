@@ -53,7 +53,8 @@ public class GameControl {
     }
 
     public static InventoryItem[] getSortedClueList() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n*** get SortedClueList stub functon called ***");
+        return null;
     }
 
     public enum Item {

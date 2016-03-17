@@ -5,9 +5,13 @@
  */
 package byu.cit260.theHunt2.control;
 
+import byu.cit260.theHunt2.model.Actor;
 import byu.cit260.theHunt2.model.Location;
 import byu.cit260.theHunt2.model.Map;
 import byu.cit260.theHunt2.model.Scene;
+import citbyu.cit260.theHunt2.exceptions.MapControlException;
+import java.awt.Point;
+import thehunt2.theHunt2;
 
 /**
  *
@@ -122,5 +126,50 @@ public class MapControl {
         locations[0][6].setScene(scenes[Scene.SceneType.finish.ordinal()]);
         
     }
+
     
+    public static void moveActorsToStartingLocation (Map map)
+                                      throws MapControlException {
+        //for every actor
+        Actor [] actors = Actor.values();
+        
+        for (Actor actor : actors){
+            Point coordinates = actor.getCoordinates();
+            MapControl.moveActorToLocation (actor, coordinates);
+
+        }
+       
+    }
+
+    private static int moveActorToLocation(Actor actor, Point coordinates)  
+                                            throws MapControlException{
+        Map map = theHunt2.getCurrentGame().getMap();
+           int newRow = coordinates.x-1;
+           int newColumn = coordinates. y-1;
+      
+         if (newRow < 0 || newRow >= map.getNoOfRows() ||
+                newColumn<0 ||newColumn>= map.getNoOfColumns()) {
+                throw new MapControlException("Can not move actor to location"
+                                                                            + coordinates.x + "," + coordinates.y
+                                                                             +"because that location is outside"
+                                                                            + "the bounds of the map.");
+        }
+          return 0;
+    }
+   
 }
+
+
+//  public static in moveActorsToStartingLocation (Map,map){
+//   //for every actor
+//    Actor[] actors = Actor.values();
+//
+//     for (Actor actor :actors){
+//            Point coordinates = actor.getCoordinates();
+//             int returnValue =MapControl.moveActorToLocation(actor,coordinates);
+//             if (returnValue <0){
+//             return returnValue;
+//}
+//
+//}
+//}
