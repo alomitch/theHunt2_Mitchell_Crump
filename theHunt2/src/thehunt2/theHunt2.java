@@ -151,7 +151,15 @@ private static void groupTest(){
         
         //create StartProgramView and start the program
         StartProgramView startProgramView = new StartProgramView();
+        try{
+            
+        //create StartPorgramView and start the program
         startProgramView.startProgram();
+        } catch (Throwable te){
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.startProgram();
+        }
     }
     
 }
