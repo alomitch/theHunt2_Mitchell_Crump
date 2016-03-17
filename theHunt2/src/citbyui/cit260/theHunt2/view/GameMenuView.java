@@ -8,7 +8,9 @@ package citbyui.cit260.theHunt2.view;
 import byu.cit260.theHunt2.control.GameControl;
 import byu.cit260.theHunt2.control.InventoryItem;
 import byu.cit260.theHunt2.model.Location;
+import byu.cit260.theHunt2.model.Actor;
 import byu.cit260.theHunt2.model.Map;
+import citbyu.cit260.theHunt2.exceptions.MapControlException;
 import thehunt2.theHunt2;
 
 /**
@@ -18,6 +20,8 @@ import thehunt2.theHunt2;
 public abstract class GameMenuView extends View {
 
     private int row;
+    public int actor;
+    private int coordinates;
     private Object MapControl;
     private Object mapControl;
 
@@ -110,6 +114,12 @@ public abstract class GameMenuView extends View {
 
     private void newLocation() {
        System.out.println("*** start newLocation function called ***");
+       //move actor to specified location
+       try {
+       MapControl.moveActorToLocation(actor, coordinates);
+       } catch (MapControlException me) {
+            System.out.println(me.getMessage());
+       }
     }
 
     private void halfGallon() {
