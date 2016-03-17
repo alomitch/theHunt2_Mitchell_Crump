@@ -7,6 +7,7 @@ package citbyui.cit260.theHunt2.view;
 
 import byu.cit260.theHunt2.control.GameControl;
 import byu.cit260.theHunt2.control.InventoryItem;
+import byu.cit260.theHunt2.control.MapControl;
 import byu.cit260.theHunt2.model.Location;
 import byu.cit260.theHunt2.model.Actor;
 import byu.cit260.theHunt2.model.Map;
@@ -113,13 +114,10 @@ public abstract class GameMenuView extends View {
 //get count of scenes that are not equal to null(build function) (incriment a counter)
 
     private void newLocation() {
+        //Actor actor = null;
+        //Coordinates coordinates = null;
        System.out.println("*** start newLocation function called ***");
-       //move actor to specified location
-       try {
-       MapControl.moveActorToLocation(actor, coordinates);
-       } catch (MapControlException me) {
-            System.out.println(me.getMessage());
-       }
+       //MapControl.moveActorToLocation(actor, coordinates);
     }
 
     private void halfGallon() {

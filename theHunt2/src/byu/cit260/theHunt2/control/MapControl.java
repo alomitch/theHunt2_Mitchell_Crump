@@ -141,7 +141,14 @@ public class MapControl {
        
     }
 
-    private static int moveActorToLocation(Actor actor, Point coordinates)  
+    /**
+     *
+     * @param actor
+     * @param coordinates
+     * @return
+     * @throws MapControlException
+     */
+    public static int moveActorToLocation(Actor actor, Point coordinates)  
                                             throws MapControlException{
         Map map = theHunt2.getCurrentGame().getMap();
            int newRow = coordinates.x-1;
