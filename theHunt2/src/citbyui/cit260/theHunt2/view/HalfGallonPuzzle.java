@@ -117,16 +117,32 @@ public abstract class HalfGallonPuzzle extends View {
 
      private void teaspoon() {
             String teaspoon = getInput(); 
+       try{ 
             int Teaspoon = Integer.parseInt(teaspoon);
+            
+       }catch (NumberFormatException nf){
+           System.out.println("\nYou must enter a valid number."
+                                         + "Try again or enter Q to quit.");
+       }
  } 
  public void tablespoon() {
              String tablespoon = getInput();
+       try{
               int Tablespoon = Integer.parseInt(tablespoon); 
+       }catch (NumberFormatException nf){
+           System.out.println("\nYou must enter a valid number."
+                                    + "Try again or enter Q to quit.");
+       }
     }
 
     public void cups() {
             String cup = getInput();
+      try{
              int Cup = Integer.parseInt(cup);
+      }catch (NumberFormatException nf){
+          System.out.println("\n You must enter a valid number."
+                                    + " Try again or enter Q to quit.");
+      }
               
     
     }
