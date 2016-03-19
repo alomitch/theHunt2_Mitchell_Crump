@@ -11,7 +11,7 @@ package byu.cit260.theHunt2.control;
  */
 public class PuzzleHalfGallon {
 
-    public static boolean calcHalfGallon(double quantity, String units){
+    public static boolean calcHalfGallon(double quantity, String units) {
        int teaspoonsInHalfGallon = 384;
         if (quantity <= 0){
          return false;    
