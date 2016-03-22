@@ -227,5 +227,13 @@ private static void groupTest(){
         itemScene.setItem(0.0);
         System.out.println(itemScene.toString());    
     }
+
+    public static PrintWriter getOutFile() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static BufferedReader getInFile() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
    
 }
