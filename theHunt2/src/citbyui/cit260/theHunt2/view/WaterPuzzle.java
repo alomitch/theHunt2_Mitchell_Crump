@@ -8,6 +8,7 @@ package citbyui.cit260.theHunt2.view;
 import java.util.Random;
 import java.util.Scanner;
 import byu.cit260.theHunt2.control.PuzzleSceneWater;
+import citbyu.cit260.theHunt2.exceptions.PuzzleWaterSceneException;
 
 /**
  *
@@ -35,7 +36,7 @@ public class WaterPuzzle {
     
     //you've come to a tub with a fill valve.
 
-    public void displayMenu() {
+    public void displayMenu() throws PuzzleWaterSceneException {
         tubGallons = getTubCapacity();
         char selection = ' ';
         int minutes;
@@ -98,7 +99,7 @@ public static int getTubCapacity(){
 }
  
  
-    private int doAction(int minutes) {
+    private int doAction(int minutes) throws PuzzleWaterSceneException {
         if (minutes < 1)
           return -1;
         double fillRate = PuzzleSceneWater.calcTubFillRate (tubGallons, 2.2);

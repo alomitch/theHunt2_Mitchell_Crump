@@ -5,7 +5,9 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import thehunt2.theHunt2;
 
 /**
  *
@@ -13,6 +15,9 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface {
     protected String displayMessage;
+    
+    protected final BufferedReader keyboard = theHunt2.getInFile();
+    protected final PrintWriter console = theHunt2.getOutFile();
     
     public View() {
     }
@@ -38,29 +43,30 @@ public abstract class View implements ViewInterface {
     
 @Override         
  public String getInput() {
-         Scanner keyboard = new Scanner(System.in);   // keyboard input stream
+        // Scanner keyboard = new Scanner (System.in);   // keyboard input stream
          boolean valid = false; // indicates if the name has been retrieved
          String value = null;
-          
-       // while a valid name has not been retrieved
-       while (!valid) { 
+        try{  
+               // while a valid name has not been retrieved
+              while (!valid) { 
+                      
+                     //prompt for the player's name
+                    System.out.println("\n"+ this.displayMessage);
+                     // get the name from the keyboard and trim off the blanks
+                     value = this.keyboard.readLine();
+                     value = value.trim();
            
-           //prompt for the player's name
-           System.out.println("\n"+ this.displayMessage);
-          
-           // get the name from the keyboard and trim off the blanks
-          value = keyboard.nextLine();
-          value = value.trim();
-           
-           //blank value entered
-           if (value. length() <1){
-               System.out.println("\n *** You must enter a value ***");
-               continue;   
+             if (value. length() <1){
+                      System.out.println("\n *** You must enter a value ***");
+                      continue;   
            }
            break; 
        }
+   }catch (Exception te){
+            System.out.println("Error reading input :" + te.getMessage());
+   }
        return value; //return the name
-       }
+   }
 }
         
     

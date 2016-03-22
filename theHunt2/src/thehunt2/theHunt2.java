@@ -20,7 +20,14 @@ import byu.cit260.theHunt2.model.PuzzleScene;
 import byu.cit260.theHunt2.model.Scene;
 import byu.cit260.theHunt2.model.TNT;
 import byu.cit260.theHunt2.model.Treasure;
+import citbyu.cit260.theHunt2.exceptions.ProgramControlException;
 import citbyui.cit260.theHunt2.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -29,7 +36,59 @@ import citbyui.cit260.theHunt2.view.StartProgramView;
 public class theHunt2 {
  
     private static Game currentGame = null;
-
+    private static Player player= null;
+    
+    private static PrintWriter outfile = null;
+    private static BufferedReader infile = null;
+    
+    private static PrintWriter logFile = null;
+    
+    
+     /**
+     * @param args the command line arguments
+     * @throws citbyu.cit260.theHunt2.exceptions.ProgramControlException
+     */
+    public static void main(String[] args) throws ProgramControlException {
+        
+        try{
+            
+             //open character stream files for end user input and output
+            theHunt2.infile =
+                 new BufferedReader (new InputStreamReader (System.in));
+             theHunt2.outfile = new PrintWriter(System.out,true);
+         
+             //open log file
+             String filePath = "log.txt";
+             theHunt2.logFile = new PrintWriter(filePath);
+             
+            //create StartPorgramView and start the program
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.startProgram();
+            return;
+        
+      } catch (Throwable te){
+            System.out.println("Exception: "+ te.toString()+
+                                               "\nCause:" + te.getCause()+
+                                               "\nMessage:" + te.getMessage());
+           
+            te.printStackTrace();;
+        }
+        finally{
+                try {
+                       if(theHunt2.infile != null)
+                             theHunt2.infile.close(); 
+                        if (theHunt2.outfile !=null)
+                              theHunt2.outfile.close();
+                        if (theHunt2.logFile !=null)
+                            theHunt2.logFile.close();
+               } catch (IOException ex) {
+                         System.out.println("Error closing files");
+                         return;
+            }
+            theHunt2.outfile.close();
+        }
+    }
+   
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -45,7 +104,31 @@ public class theHunt2 {
     public static void setPlayer(Player player) {
         theHunt2.player = player;
     }
-    private static Player player = null;
+
+    public static PrintWriter getOutfile() {
+        return outfile;
+    }
+
+    public static void setOutfile(PrintWriter outfile) {
+        theHunt2.outfile = outfile;
+    }
+
+    public static BufferedReader getInfile() {
+        return infile;
+    }
+
+    public static void setInfile(BufferedReader infile) {
+        theHunt2.infile = infile;
+    }
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        theHunt2.logFile = logFile;
+    }
+    
     
 private static void groupTest(){
        Player playerOne = new Player();  
@@ -144,22 +227,5 @@ private static void groupTest(){
         itemScene.setItem(0.0);
         System.out.println(itemScene.toString());    
     }
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-        //create StartProgramView and start the program
-        StartProgramView startProgramView = new StartProgramView();
-        try{
-            
-        //create StartPorgramView and start the program
-        startProgramView.startProgram();
-        } catch (Throwable te){
-            System.out.println(te.getMessage());
-            te.printStackTrace();
-            startProgramView.startProgram();
-        }
-    }
-    
+   
 }

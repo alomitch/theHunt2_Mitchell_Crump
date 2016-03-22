@@ -5,6 +5,7 @@
  */
 package byu.cit260.theHunt2.control;
 
+import citbyu.cit260.theHunt2.exceptions.InventoryItemException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -31,7 +32,7 @@ public class InventoryItemTest {
      * Test of calcSpeedOfTrainA method, of class InventoryItem.
      */
     @Test
-    public void testCalcSpeedOfTrainA() {
+    public void testCalcSpeedOfTrainA() throws InventoryItemException {
         System.out.println("calcSpeedOfTrainA");
         /****************
          * Test case #1
@@ -60,7 +61,7 @@ public class InventoryItemTest {
      * Test of calcSpeedOfTrainB method, of class InventoryItem.
      */
     @Test
-    public void testCalcSpeedOfTrainB() {
+    public void testCalcSpeedOfTrainB() throws InventoryItemException {
         System.out.println("calcSpeedOfTrainB");
         double speed = 70.0;
         double distance = 200.0;
@@ -75,7 +76,7 @@ public class InventoryItemTest {
      * Test of calcTotalTravelTime method, of class InventoryItem.
      */
     @Test
-    public void testCalcTotalTravelTime() {
+    public void testCalcTotalTravelTime() throws InventoryItemException {
         System.out.println("calcTotalTravelTime");
         double travelTimeA = 0.35;
         double travelTimeB = 0.35;

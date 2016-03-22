@@ -5,6 +5,7 @@
  */
 package byu.cit260.theHunt2.control;
 
+import citbyu.cit260.theHunt2.exceptions.PuzzleWaterSceneException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -31,7 +32,7 @@ public class PuzzleSceneWaterTest {
      * Test of calcTubFillRate method, of class PuzzleSceneWater.
      */
     @Test
-    public void testCalcTubFillRate() {
+    public void testCalcTubFillRate() throws PuzzleWaterSceneException {
         System.out.println("calcTubFillRate");
         /****************
          * Test case #1
@@ -58,7 +59,7 @@ public class PuzzleSceneWaterTest {
      * Test of calcTotalFillTime method, of class PuzzleSceneWater.
      */
     @Test
-    public void testCalcTotalFillTime() {
+    public void testCalcTotalFillTime() throws PuzzleWaterSceneException {
         System.out.println("calcTotalFillTime");
         double tubFillRate = 18.18;
         double numberOfFills = 3.0;

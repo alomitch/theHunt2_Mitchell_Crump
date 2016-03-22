@@ -7,6 +7,7 @@ package citbyui.cit260.theHunt2.view;
 
 import byu.cit260.theHunt2.control.ProgramControl;
 import byu.cit260.theHunt2.model.Player;
+import citbyu.cit260.theHunt2.exceptions.ProgramControlException;
 import java.util.Scanner;
 
 /**
@@ -18,7 +19,7 @@ public class StartProgramView {
     private String playersName;
        public StartProgramView(){
        }
-           public void startProgram(){
+           public void startProgram() throws ProgramControlException{
                // Display the banner screen
                this.displayBanner();
                
