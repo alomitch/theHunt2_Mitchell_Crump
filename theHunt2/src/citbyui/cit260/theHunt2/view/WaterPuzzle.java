@@ -9,12 +9,19 @@ import java.util.Random;
 import java.util.Scanner;
 import byu.cit260.theHunt2.control.PuzzleSceneWater;
 import citbyu.cit260.theHunt2.exceptions.PuzzleWaterSceneException;
+import java.io.PrintWriter;
+import java.io.BufferedReader;
+import thehunt2.theHunt2;
 
 /**
  *
  * @author mikec_000
  */
 public class WaterPuzzle {
+    
+    protected final BufferedReader keyboard = theHunt2.getInFile();
+    protected final PrintWriter console = theHunt2.getOutFile();
+    
     int tubGallons = 0;
     private final String MENU = "\n"
             +"\n-----------------------------------------"
@@ -43,17 +50,17 @@ public class WaterPuzzle {
         int returnVal;
         do {
                
-            System.out.println(MENU); // display the Water Puzzle
-            System.out.println("The tub capacity is " + tubGallons + " gallons.");
-            System.out.println("How many minutes will it take to fill the tub completely?  Enter -1 to cancel.");
+            this.console.println(MENU); // display the Water Puzzle
+            this.console.println("The tub capacity is " + tubGallons + " gallons.");
+            this.console.println("How many minutes will it take to fill the tub completely?  Enter -1 to cancel.");
             String input = this.getInput(); // get the user's selection
             minutes = Integer.parseInt(input);
                    
             returnVal = this.doAction(minutes); // do action based on selection
             if (returnVal == 1)
-                System.out.println("Congratulations!  You are correct!");
+                this.console.println("Congratulations!  You are correct!");
             else 
-                System.out.println("Sorry.  Please try again.");
+                this.console.println("Sorry.  Please try again.");
             
        
         } while (minutes != -1 || returnVal != 1); // while selection is not -1

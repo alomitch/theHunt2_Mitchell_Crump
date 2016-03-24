@@ -9,12 +9,19 @@ import byu.cit260.theHunt2.control.ProgramControl;
 import byu.cit260.theHunt2.model.Player;
 import citbyu.cit260.theHunt2.exceptions.ProgramControlException;
 import java.util.Scanner;
+import java.io.PrintWriter;
+import java.io.BufferedReader;
+import thehunt2.theHunt2;
+
 
 /**
  *
  * @author AlleciaMitchell
  */
 public class StartProgramView {
+    
+    protected final BufferedReader keyboard = theHunt2.getInFile();
+    protected final PrintWriter console = theHunt2.getOutFile();
 
     private String playersName;
        public StartProgramView(){
@@ -36,20 +43,20 @@ public class StartProgramView {
            }
 
     private void displayBanner() {
-      System.out.println("\n\n*******************************************************************************");
-      System.out.println("*                                                                                                                                                                        "
+      this.console.println("\n\n*******************************************************************************");
+      this.console.println("*                                                                                                                                                                        "
                                    +"\n*This is a game to explore a virtual world full of riddles and treasure.                                              *"
                                    +"\n*You will enjoy an intriguing story and adventure every step of the way. You will be                      *"
                                    +"\n*encouraged to continue the treasure hunt until ultimately you uncover the hiddent treasure    *"
                                    +"\n*that is hidden away on the mysterious island that you have been placed on.                               *");
-       System.out.println("*                                                                                                                                                                       "
+       this.console.println("*                                                                                                                                                                       "
                                    +"\n*You will be presented with a section of dialogue describing a tropical island and a mysterious   *"
                                    +"\n*map that you will aquire. You will be presented with options to move througout the land          *"
                                    +"\n* using a series of command prompt entries. After exploring the island for a shortime you          *"
                                    +"\n*to obstacles that will block your path that will prevent you from further travel. You will the    *"
                                    +"\n*need to answer the riddle in order to overcome the obstacle. Hidden within each of these          *"
                                    +"\n*obstacles is a clue which may be useful for solving the final riddle to find the treasure.             *");
-        System.out.println("*                                                                                                                                                                      "
+        this.console.println("*                                                                                                                                                                      "
                                   + "\n*Many paths exist within the island, but only one leads to the hidden treasure. You may             *"
                                   + "\n*encounter peril along any path, and a wrong step, or answer, that will lead you an untimely     *"
                                   + " \n*demise .                                                                                                                                                   *");
@@ -64,7 +71,7 @@ public class StartProgramView {
        while (!valid) { // while a valid name has not been retrieved
            
            //propt for the player's name
-           System.out.println("Enter the player's name below:");
+           this.console.println("Enter the player's name below:");
           
            // get the name from the keyboard and trim off the blanks
            playersName = keyboard.nextLine();
@@ -72,7 +79,8 @@ public class StartProgramView {
            
            //if the name is invalid (less than two character in lenght))
            if (playersName. length() <2){
-               System.out.println("Invalid name - the name must not be blank");
+               ErrorView.display(this.getClass().getName(),
+                       "Invalid name - the name must not be blank");
                continue; // and repeat again
                
            }
@@ -82,10 +90,10 @@ public class StartProgramView {
     }
 
     private void displayWelcomeMessage(Player player) {
-        System.out.println("\n\n===============================================================================");
-        System.out.println("\tWelcome to the game, " + player.getName());
-        System.out.println("\tWe hope you have a lot of fun!");
-        System.out.println("===================================================================================");
+        this.console.println("\n\n===============================================================================");
+        this.console.println("\tWelcome to the game, " + player.getName());
+        this.console.println("\tWe hope you have a lot of fun!");
+        this.console.println("===================================================================================");
         
     }
        

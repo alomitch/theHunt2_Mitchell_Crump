@@ -43,6 +43,9 @@ public class theHunt2 {
     
     private static PrintWriter logFile = null;
     
+    protected final BufferedReader keyboard = theHunt2.getInFile();
+    protected final PrintWriter console = theHunt2.getOutFile();
+    
     
      /**
      * @param args the command line arguments
