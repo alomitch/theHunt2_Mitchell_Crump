@@ -49,7 +49,7 @@ public abstract class AboutUsMenu extends View {
        while (!valid) { // while a valid name has not been retrieved
            
            //prompt for the player's name
-           System.out.println("Choose Option From The About Us Menu");
+           this.console.println("Choose Option From The About Us Menu");
           
            // get the name from the keyboard and trim off the blanks
           getInput = keyboard.nextLine();
@@ -57,7 +57,8 @@ public abstract class AboutUsMenu extends View {
            
            //if the name is invalid (less than two character in lenght))
            if (getInput. length() <1){
-               System.out.println("Invalid entry");
+               ErrorView.display(this.getClass().getName(),
+                        "Invalid entry");
                continue; // and repeat again
                
            }
@@ -83,7 +84,8 @@ public abstract class AboutUsMenu extends View {
             case 'E':// exit current game
                 return true;
            default:
-               System.out.println("\n*** Invalid selection *** Try again ");
+               ErrorView.display(this.getClass().getName(),
+                       "\n*** Invalid selection *** Try again ");
                break;
            
                

@@ -49,7 +49,8 @@ public abstract class Clues extends View{
                this.returnToMainMenu();
                return true;
             default:
-               System.out.println("\n*** Invalid selection *** Try again ");
+               ErrorView.display(this.getClass().getName(),
+                       "\n*** Invalid selection *** Try again ");
                break;          
                
         }
@@ -81,14 +82,14 @@ public abstract class Clues extends View{
         //get the sorted list of clues acquired
         InventoryItem[] clue = GameControl.getSortedClueList() ;
         
-        System.out.println("\nList of clues");
-        System.out.println("Description" + "\t" +
+        this.console.println("\nList of clues");
+        this.console.println("Description" + "\t" +
                             "In Backpack");
         
         //for each clue
         for (InventoryItem inventoryItem : clue) {
             //DISPLAY the clue and how many in inventory
-            System.out.println(inventoryItem.getDescription() + "\t     " +
+            this.console.println(inventoryItem.getDescription() + "\t     " +
                     inventoryItem.getQuantityInStock());
         }
     }

@@ -55,7 +55,7 @@ public class theHunt2 {
              //open character stream files for end user input and output
             theHunt2.infile =
                  new BufferedReader (new InputStreamReader (System.in));
-             theHunt2.outfile = new PrintWriter(System.out,true);
+             theHunt2.outfile = new PrintWriter(System.out, true);
          
              //open log file
              String filePath = "log.txt";
@@ -67,9 +67,9 @@ public class theHunt2 {
             return;
         
       } catch (Throwable te){
-            System.out.println("Exception: "+ te.toString()+
-                                               "\nCause:" + te.getCause()+
-                                               "\nMessage:" + te.getMessage());
+            System.out.println("Exception: " + te.toString()+
+                                "\nCause:" + te.getCause()+
+                                "\nMessage:" + te.getMessage());
            
             te.printStackTrace();;
         }

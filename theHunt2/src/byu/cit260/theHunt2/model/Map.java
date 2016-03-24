@@ -5,6 +5,7 @@
  */
 package byu.cit260.theHunt2.model;
 
+import citbyui.cit260.theHunt2.view.ErrorView;
 import java.io.Serializable;
 
 /**
@@ -31,10 +32,12 @@ public class Map implements Serializable{
     public Map(int rowCount, int columnCount) {
         
         if (rowCount < 1 || columnCount < 1) {
-            System.out.println("The number of rows and columns must be > zero");
+            ErrorView.display(this.getClass().getName(),
+                        "The number of rows and columns must be > zero");
             return;
         }
         
+         
         this.rowCount = rowCount;
         this.columnCount = columnCount;
         

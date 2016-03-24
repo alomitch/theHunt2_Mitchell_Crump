@@ -51,7 +51,8 @@ public abstract class HelpMenuView extends View {
                 this.quitProgram();
                 return true;
             default:
-               System.out.println("\n*** Invalid selection *** Try again ");
+               ErrorView.display(this.getClass().getName(),
+                       "\n*** Invalid selection *** Try again ");
                break;          
                
         }

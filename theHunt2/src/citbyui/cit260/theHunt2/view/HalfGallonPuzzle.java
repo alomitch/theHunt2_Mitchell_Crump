@@ -45,18 +45,18 @@ public abstract class HalfGallonPuzzle extends View {
                
             //System.out.println(MENU); // display the main menu
             
-            System.out.println("Out of either cups,tablespoons,or teaspoons how many of either group would fill "
+            this.console.println("Out of either cups,tablespoons,or teaspoons how many of either group would fill "
                     + "up a half  gallon");
             String input = this.getInput(); // get the user's selection
             selection = input.charAt(0); // get first character of string
             
-           System.out.println("Enter the number of teaspoons:");
+           this.console.println("Enter the number of teaspoons:");
                String teaspoon = getInput();  
                int iTeaspoon = Integer.parseInt(teaspoon);
-            System.out.println("Enter the number of tablespoons :");
+            this.console.println("Enter the number of tablespoons :");
                String tablespoon = getInput();
                int iTablespoon = Integer.parseInt(tablespoon);   
-           System.out.println("Enter the number of cups:");    
+           this.console.println("Enter the number of cups:");    
               String cup = getInput();
               int iCup = Integer.parseInt(cup);
               
@@ -75,7 +75,7 @@ public abstract class HalfGallonPuzzle extends View {
        while (!valid) { // while a valid answer has not been retrieved
            
            //prompt for the player's answer
-          // System.out.println("I have a teaspoon. How many times will I need to fill the teaspoon to fill a half gallon jug?");
+          // Sys    tem.out.println("I have a teaspoon. How many times will I need to fill the teaspoon to fill a half gallon jug?");
           
            // get the answer from the keyboard and trim off the blanks
            input = keyboard.nextLine();
@@ -83,7 +83,8 @@ public abstract class HalfGallonPuzzle extends View {
            
            //if the answer is invalid (less than two character in lenght))
            if (input. length() <1){
-               System.out.println("That is an invalid response.");
+               ErrorView.display(this.getClass().getName(),
+                       "That is an invalid response.");
                continue; // and repeat again
                
            }
@@ -107,7 +108,8 @@ public abstract class HalfGallonPuzzle extends View {
                 this.cups();
                 break; 
           default:
-               System.out.println("\n*** Invalid selection *** Try again ");
+               ErrorView.display(this.getClass().getName(),
+                       "\n*** Invalid selection *** Try again ");
                break;
         }
         return input;
@@ -121,7 +123,8 @@ public abstract class HalfGallonPuzzle extends View {
             int Teaspoon = Integer.parseInt(teaspoon);
             
        }catch (NumberFormatException nf){
-           System.out.println("\nYou must enter a valid number."
+           ErrorView.display(this.getClass().getName(),
+                   "\nYou must enter a valid number."
                                          + "Try again or enter Q to quit.");
        }
  } 
@@ -130,7 +133,8 @@ public abstract class HalfGallonPuzzle extends View {
        try{
               int Tablespoon = Integer.parseInt(tablespoon); 
        }catch (NumberFormatException nf){
-           System.out.println("\nYou must enter a valid number."
+           ErrorView.display(this.getClass().getName(),
+                   "\nYou must enter a valid number."
                                     + "Try again or enter Q to quit.");
        }
     }
@@ -140,7 +144,8 @@ public abstract class HalfGallonPuzzle extends View {
       try{
              int Cup = Integer.parseInt(cup);
       }catch (NumberFormatException nf){
-          System.out.println("\n You must enter a valid number."
+          ErrorView.display(this.getClass().getName(),
+                  "\n You must enter a valid number."
                                     + " Try again or enter Q to quit.");
       }
               

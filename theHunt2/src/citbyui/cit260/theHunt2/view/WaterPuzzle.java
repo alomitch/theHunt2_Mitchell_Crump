@@ -76,7 +76,8 @@ public class WaterPuzzle {
            
            //if the answer is invalid (less than two character in lenght))
            if (getInput. length() <1){
-               System.out.println("That is an invalid response.");
+               ErrorView.display(this.getClass().getName(),
+                       "That is an invalid response.");
                continue; // and repeat again
                
            }

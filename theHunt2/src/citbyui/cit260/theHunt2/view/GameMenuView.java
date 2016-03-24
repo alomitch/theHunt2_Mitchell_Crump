@@ -72,7 +72,8 @@ public abstract class GameMenuView extends View {
               // this.returnToMainMenu();
                return true;
             default:
-               System.out.println("\n*** Invalid selection *** Try again ");
+               ErrorView.display(this.getClass().getName(),
+                       "\n*** Invalid selection *** Try again ");
                break;          
                
         }
@@ -93,20 +94,20 @@ public abstract class GameMenuView extends View {
             + "\n" + "The Hunt - Map"  
             + "\n***********************************************************************";
             
-            System.out.println(menu);
+            this.console.println(menu);
         
                for(int row = 0; row< loc.length; row++) {    
-                      System.out.print("row "+ row + " : " );
+                      this.console.print("row "+ row + " : " );
                  
                   for(int col=0; col<loc[row].length; col++){
-                     System.out.print("|"); 
+                     this.console.print("|"); 
                      Location curLoc =loc [row][col];
                      if(curLoc.getScene()==null)
-                         System.out.print(" ?? "); 
+                         this.console.print(" ?? "); 
                      else
-                         System.out.print(curLoc.getScene().getSymbol()); 
+                         this.console.print(curLoc.getScene().getSymbol()); 
                   }
-                  System.out.println("|");
+                  this.console.println("|");
                }
         //get count of scenes that are not equal to null(build function) (incriment a counter)
     //   System.out.println("***start showmap function called ***");
@@ -136,13 +137,13 @@ public abstract class GameMenuView extends View {
         //get the sorted list of items for the current game
         InventoryItem[] item = GameControl.getSortedInventroyList();
         
-        System.out.println("\nList of Items");
-        System.out.println("Description" + "\t"+
+        this.console.println("\nList of Items");
+        this.console.println("Description" + "\t"+
                                           "Required" + "\t"+ "InStock");
         //for each inventory item
         for (InventoryItem inventoryItem : item){
             //Display the description, the required amount and amount in stock
-            System.out.println( inventoryItem.getDescription()); 
+            this.console.println( inventoryItem.getDescription()); 
                                                
                                          
         }
