@@ -13,7 +13,7 @@ import thehunt2.theHunt2;
  * @author AlleciaMitchell
  */
 public class ErrorView {
-    private static final PrintWriter errorFile = theHunt2.getOutFile();
+    private static final PrintWriter errorFile = theHunt2.getOutfile();
     private static final PrintWriter logFile = theHunt2.getLogFile();
     
     public static void display (String className, String errorMessage){

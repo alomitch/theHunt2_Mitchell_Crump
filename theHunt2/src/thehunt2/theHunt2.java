@@ -43,8 +43,8 @@ public class theHunt2 {
     
     private static PrintWriter logFile = null;
     
-    protected final BufferedReader keyboard = theHunt2.getInFile();
-    protected final PrintWriter console = theHunt2.getOutFile();
+    protected final BufferedReader keyboard = theHunt2.getInfile();
+    protected final PrintWriter console = theHunt2.getOutfile();
     
     
      /**
@@ -131,8 +131,8 @@ public class theHunt2 {
     public static void setLogFile(PrintWriter logFile) {
         theHunt2.logFile = logFile;
     }
-    
-    
+
+   
 private static void groupTest(){
        Player playerOne = new Player();  
        
@@ -143,6 +143,9 @@ private static void groupTest(){
         System.out.println(playerInfo);
         
     }
+
+   
+
     
    private static void alleciaTests(){
          
@@ -230,13 +233,5 @@ private static void groupTest(){
         itemScene.setItem(0.0);
         System.out.println(itemScene.toString());    
     }
-
-    public static PrintWriter getOutFile() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static BufferedReader getInFile() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-   
 }
+    

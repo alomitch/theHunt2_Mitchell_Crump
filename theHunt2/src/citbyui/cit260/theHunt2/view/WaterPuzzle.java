@@ -19,8 +19,8 @@ import thehunt2.theHunt2;
  */
 public class WaterPuzzle {
     
-    protected final BufferedReader keyboard = theHunt2.getInFile();
-    protected final PrintWriter console = theHunt2.getOutFile();
+    protected final BufferedReader keyboard = theHunt2.getInfile();
+    protected final PrintWriter console = theHunt2.getOutfile();
     
     int tubGallons = 0;
     private final String MENU = "\n"

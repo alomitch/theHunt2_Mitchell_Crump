@@ -16,8 +16,8 @@ import thehunt2.theHunt2;
 public abstract class View implements ViewInterface {
     protected String displayMessage;
     
-    protected final BufferedReader keyboard = theHunt2.getInFile();
-    protected final PrintWriter console = theHunt2.getOutFile();
+    protected final BufferedReader keyboard = theHunt2.getInfile();
+    protected final PrintWriter console = theHunt2.getOutfile();
     
     public View() {
     }

@@ -20,8 +20,8 @@ import thehunt2.theHunt2;
  */
 public class StartProgramView {
     
-    protected final BufferedReader keyboard = theHunt2.getInFile();
-    protected final PrintWriter console = theHunt2.getOutFile();
+    protected final BufferedReader keyboard = theHunt2.getInfile();
+    protected final PrintWriter console = theHunt2.getOutfile();
 
     private String playersName;
        public StartProgramView(){
