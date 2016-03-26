@@ -18,11 +18,12 @@ public class MainMenuView extends View {
     public MainMenuView(){
         super("\n"
             +"\n-----------------------------------------"
-            + "\n| Main Menu                            |"
+            +"\n| Main Menu                             |"
             +"\n-----------------------------------------"
             +"\nN - Start a new Game"
             +"\nG - Start  existing game"
             +"\nH - Get help on how to play the game"
+            +"\nP - Print a list of all items"    
             +"\nS - Save game"
             +"\nE - Exit"
             +"\nR - Return to Main Menu"
@@ -44,6 +45,9 @@ public class MainMenuView extends View {
             case 'H': // display the help menu
                 this.helpMenuView();
                 break;
+            case 'P': // print a list of all items
+                this.itemsListView();
+                break;    
             case 'S':// save current game
                 this.saveGame();
                 break;
@@ -96,6 +100,11 @@ public class MainMenuView extends View {
     private void helpMenuView() {
         HelpMenuView helpMenu = new HelpMenuView() {};                 
         helpMenu.display();        
+    }
+    
+    private void itemsListView() {
+        ItemsListView itemsList = new ItemsListView() {};                 
+        itemsList.display();        
     }
 
     private void saveGame() {
