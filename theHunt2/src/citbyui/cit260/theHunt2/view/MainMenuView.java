@@ -23,7 +23,8 @@ public class MainMenuView extends View {
             +"\nN - Start a new Game"
             +"\nG - Start  existing game"
             +"\nH - Get help on how to play the game"
-            +"\nP - Print a list of all items"    
+            +"\nP - Print a list of all items"   
+            +"\nL-  Print a list of all Locations on Map"
             +"\nS - Save game"
             +"\nE - Exit"
             +"\nR - Return to Main Menu"
@@ -47,7 +48,9 @@ public class MainMenuView extends View {
                 break;
             case 'P': // print a list of all items
                 this.itemsListView();
-                break;    
+                break;   
+            case'L'://print a list of all locations on Map
+                this.locationsListView();
             case 'S':// save current game
                 this.saveGame();
                 break;
@@ -128,5 +131,9 @@ public class MainMenuView extends View {
     private void aboutUs() {
        System.out.println("***start aboutUs function called***");
     } 
+
+    private void locationsListView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
