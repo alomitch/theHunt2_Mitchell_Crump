@@ -58,8 +58,8 @@ public class StartProgramView {
                                    +"\n*is a clue which may be useful for solving the final riddle to find the treasure.                   *");
         this.console.println("*                                                                                                                                                                      "
                                    + "\n*Many paths exist within the island, but only one leads to the hidden treasure. You may encounter  *"
-                                   + "\n*peril along any path, and a wrong step or answer will lead you an untimely demise.                *");
-                                         
+                                   + "\n*peril along any path, and a wrong step or answer will lead you an untimely demise.                *"
+                                   + "\n*                                                                                                  *");      
     }
 
     private String getPlayersName() {
@@ -70,7 +70,7 @@ public class StartProgramView {
        while (!valid) { // while a valid name has not been retrieved
            
            //propt for the player's name
-           this.console.println("Enter the player's name below:");
+           this.console.println("Enter your name below:");
           
            // get the name from the keyboard and trim off the blanks
            playersName = keyboard.nextLine();
@@ -90,7 +90,7 @@ public class StartProgramView {
 
     private void displayWelcomeMessage(Player player) {
         this.console.println("\n\n===============================================================================");
-        this.console.println("\tWelcome to the game, " + player.getName());
+        this.console.println("\tWelcome to the game, " + player.getName() + ".");
         this.console.println("\tWe hope you have a lot of fun!");
         this.console.println("===================================================================================");
         
