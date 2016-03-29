@@ -57,9 +57,9 @@ public class StartProgramView {
                                    +"\n* need to answer riddles in order to overcome the obstacles. Hidden within each of these obstacles  *"
                                    +"\n*is a clue which may be useful for solving the final riddle to find the treasure.                   *");
         this.console.println("*                                                                                                                                                                      "
-                                   + "\n*Many paths exist within the island, but only one leads to the hidden treasure. You may encounter  *"
-                                   + "\n*peril along any path, and a wrong step or answer will lead you an untimely demise.                *"
-                                   + "\n*                                                                                                  *");      
+                                   +"\n*Many paths exist within the island, but only one leads to the hidden treasure. You may encounter   *"
+                                   +"\n*peril along any path, and a wrong step or answer will lead you an untimely demise.                 *"
+                                   +"\n*                                                                                                   *");      
     }
 
     private String getPlayersName() {
