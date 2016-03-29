@@ -33,7 +33,7 @@ public abstract class GameMenuView extends View {
             +"\n|  Game Menu                            |"
             +"\n-----------------------------------------"
             +"\nM - Show Map"
-            + "\nI- View List of items in inventory"
+            +"\nI - View List of items in inventory"
             +"\nL - Move To New Location"
             +"\nG - Puzzle Scene HalfGallon"
             +"\nW - Puzzle Scene Water"
