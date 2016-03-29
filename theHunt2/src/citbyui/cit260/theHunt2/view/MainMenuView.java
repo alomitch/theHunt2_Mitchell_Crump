@@ -24,7 +24,7 @@ public class MainMenuView extends View {
             +"\nG - Start  existing game"
             +"\nH - Get help on how to play the game"
             +"\nP - Print a list of all items"   
-            +"\nL-  Print a list of all Locations on Map"
+            +"\nL -  Print a list of all Locations on Map"
             +"\nS - Save game"
             +"\nE - Exit"
             +"\nR - Return to Main Menu"
