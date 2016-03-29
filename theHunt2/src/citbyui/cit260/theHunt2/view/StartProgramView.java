@@ -46,19 +46,19 @@ public class StartProgramView {
       this.console.println("\n\n*****************The Hunt*********************");
       this.console.println("*                                                                                                                                                                        "
                                    +"\n*Welcome to The Hunt!  In this game, you will explore a virtual world full of riddles and treasure. *"
-                                   +"\n*You will enjoy an intriguing story and adventure every step of the way, and you will be            *"
-                                   +"\n*encouraged to continue the treasure hunt until you ultimately uncover the hiddent treasure         *"
-                                   +"\n*that is hidden away on the mysterious island that you have been placed on.                         *");
+                                   +"\n*You will enjoy an intriguing story and adventure every step of the way, and you will be encouraged *"
+                                   +"\n*to continue the treasure hunt until you ultimately uncover the hiddent treasure that is hidden away*"
+                                   +"\n* on the mysterious island that you have been placed on.                                            *");
        this.console.println("*                                                                                                                                                                       "
                                    +"\n*You begin your adventure after beaching your boat on a tropical island.  You have with you a       *"
-                                   +"\n*mysterious map of the island. You will be presented with options to move througout the land        *"
-                                   +"\n* using a series of command prompt entries. After exploring the island for a shortime you will      *"
-                                   +"\n*encounter items which can be acquired, and obstacles that will block your path from further travel.*"
-                                   +"\n*You will need to answer riddles in order to overcome the obstacles. Hidden within each of these    *"
-                                   +"\n*obstacles is a clue which may be useful for solving the final riddle to find the treasure.         *");
+                                   +"\n*mysterious map of the island. You will be presented with options to move througout the land using a*"
+                                   +"\n* series of command prompt entries. After exploring the island for a short time you will encounter  *"
+                                   +"\n*items which can be acquired, and obstacles that will block your path from further travel.  You will*"
+                                   +"\n* need to answer riddles in order to overcome the obstacles. Hidden within each of these obstacles  *"
+                                   +"\n*is a clue which may be useful for solving the final riddle to find the treasure.                   *");
         this.console.println("*                                                                                                                                                                      "
-                                   + "\n*Many paths exist within the island, but only one leads to the hidden treasure. You may            *"
-                                   + "\n*encounter peril along any path, and a wrong step or answer will lead you an untimely demise.      *");
+                                   + "\n*Many paths exist within the island, but only one leads to the hidden treasure. You may encounter  *"
+                                   + "\n*peril along any path, and a wrong step or answer will lead you an untimely demise.                *");
                                          
     }
 
