@@ -38,7 +38,7 @@ public abstract class GameMenuView extends View {
             +"\nG - Puzzle Scene HalfGallon"
             +"\nW - Puzzle Scene Water"
             +"\nR - Return to Main Menu"
-            + "\nH- Help"
+            +"\nH - Help"
             +"\nS - Save GAme"
             +"\n-----------------------------------------");
 }
