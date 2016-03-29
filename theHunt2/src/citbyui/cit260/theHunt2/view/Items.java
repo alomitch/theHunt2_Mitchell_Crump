@@ -48,7 +48,7 @@ public abstract class Items extends View{
                 break;              
             case 'R':// Return to Main Menu
                this.returnToMainMenu();
-               return true;
+               break;
             default:
                ErrorView.display(this.getClass().getName(),
                        "\n*** Invalid selection *** Try again ");
