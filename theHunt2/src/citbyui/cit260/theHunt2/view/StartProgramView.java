@@ -43,21 +43,21 @@ public class StartProgramView {
            }
 
     private void displayBanner() {
-      this.console.println("\n\n*******************************************************************************");
+      this.console.println("\n\n*****************The Hunt*********************");
       this.console.println("*                                                                                                                                                                        "
-                                   +"\n*This is a game to explore a virtual world full of riddles and treasure.                                              *"
-                                   +"\n*You will enjoy an intriguing story and adventure every step of the way. You will be                      *"
-                                   +"\n*encouraged to continue the treasure hunt until ultimately you uncover the hiddent treasure    *"
-                                   +"\n*that is hidden away on the mysterious island that you have been placed on.                               *");
+                                   +"\n*This is a game to explore a virtual world full of riddles and treasure.                          *"
+                                   +"\n*You will enjoy an intriguing story and adventure every step of the way. You will be              *"
+                                   +"\n*encouraged to continue the treasure hunt until ultimately you uncover the hiddent treasure       *"
+                                   +"\n*that is hidden away on the mysterious island that you have been placed on.                       *");
        this.console.println("*                                                                                                                                                                       "
                                    +"\n*You will be presented with a section of dialogue describing a tropical island and a mysterious   *"
                                    +"\n*map that you will aquire. You will be presented with options to move througout the land          *"
-                                   +"\n* using a series of command prompt entries. After exploring the island for a shortime you          *"
-                                   +"\n*to obstacles that will block your path that will prevent you from further travel. You will the    *"
-                                   +"\n*need to answer the riddle in order to overcome the obstacle. Hidden within each of these          *"
-                                   +"\n*obstacles is a clue which may be useful for solving the final riddle to find the treasure.             *");
+                                   +"\n* using a series of command prompt entries. After exploring the island for a shortime you         *"
+                                   +"\n*to obstacles that will block your path that will prevent you from further travel. You will the   *"
+                                   +"\n*need to answer the riddle in order to overcome the obstacle. Hidden within each of these         *"
+                                   +"\n*obstacles is a clue which may be useful for solving the final riddle to find the treasure.       *");
         this.console.println("*                                                                                                                                                                      "
-                                  + "\n*Many paths exist within the island, but only one leads to the hidden treasure. You may             *"
+                                  + "\n*Many paths exist within the island, but only one leads to the hidden treasure. You may           *"
                                   + "\n*encounter peril along any path, and a wrong step, or answer, that will lead you an untimely     *"
                                   + " \n*demise .                                                                                                                                                   *");
         
