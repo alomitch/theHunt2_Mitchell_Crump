@@ -23,7 +23,7 @@ public abstract class AboutUsMenu extends View {
             +"\nR - Return to Main Menu"
             +"\nE- Exit"
             +"\n-----------------------------------------");
-    }
+        }
 //    public void displayMenu() {
 //        
 //        char selection = ' ';
@@ -39,7 +39,32 @@ public abstract class AboutUsMenu extends View {
 //        } while (selection != 'E'); // while selection is not "Exit"
 //       
 //    }
-
+        @Override
+    public boolean doAction(String value) {
+        char choice = value.charAt(0);
+        
+        switch (choice){
+            case 'a'://About Creator Allecia Mitchell
+                this.aboutCreatorAllecia();
+                break;
+            case 'm': //About Creator Michael Crump
+                this.aboutCreatorMichael();
+                break;
+            case 'R':// Return to Main Menu
+               this.returnToMainMenu();
+               break;
+            case 'E':// exit current game
+                return true;
+           default:
+               ErrorView.display(this.getClass().getName(),
+                       "\n*** Invalid selection *** Try again ");
+               break;
+           
+               
+        }
+        return false;
+    }
+    
     @Override
     public String getInput() {
          boolean valid = false; // indicates if the name has been retrieved
@@ -67,31 +92,7 @@ public abstract class AboutUsMenu extends View {
        return getInput; //return the name
     }
 
-    @Override
-    public boolean doAction(String value) {
-        char choice = value.charAt(0);
-        
-        switch (choice){
-            case 'a'://About Creator Allecia Mitchell
-                this.aboutCreatorAllecia();
-                break;
-            case 'm': //About Creator Michael Crump
-                this.aboutCreatorMichael();
-                break;
-            case 'R':// Return to Main Menu
-               this.returnToMainMenu();
-               break;
-            case 'E':// exit current game
-                return true;
-           default:
-               ErrorView.display(this.getClass().getName(),
-                       "\n*** Invalid selection *** Try again ");
-               break;
-           
-               
-        }
-        return false;
-    }
+
 
     private void aboutCreatorAllecia() {
         System.out.println("*** start aboutCreatorAllecia function called***");
