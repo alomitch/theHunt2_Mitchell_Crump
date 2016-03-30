@@ -60,46 +60,48 @@ public class MapControl {
         scenes[Scene.SceneType.start.ordinal()] = startingScene;
         
         Scene newScene = new Scene();
-        newScene.setDescription("\nTODO:We need to add a description here.  ");
+        newScene.setDescription("\nLet's choose where to go to find the hidden treasure!.  ");
         newScene.setSymbol("BH");
         newScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.beach.ordinal()] = newScene;
         
         Scene puzzleScene = new Scene();
-        puzzleScene.setDescription("\nTODO:We need to add a description here.  ");
+        puzzleScene.setDescription("\nYou have arrived at a puzzle scene. Figure out the puzzle of the Half Gallon.  ");
         puzzleScene.setSymbol("HG");
         puzzleScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.halfGallonPuzzle.ordinal()] = puzzleScene;
         
         Scene pathScene = new Scene();
-        pathScene.setDescription("\nTODO:We need to add a description here.  ");
+        pathScene.setDescription("\nThere is only trees on this path.We need to keep moving to find out where the treasure is. It's time to move to another location. ");
         pathScene.setSymbol("TH");
         pathScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.path.ordinal()] = pathScene;
         
          Scene treasureRoomScene = new Scene();
-        treasureRoomScene.setDescription("\nTODO:We need to add a description here.  ");
+        treasureRoomScene.setDescription("\nWe finally made it! The treasure room! Use all you know to unlock the treasure!");
         treasureRoomScene.setSymbol("TR");
         treasureRoomScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.treasureRoom.ordinal()] = treasureRoomScene;
         
          Scene waterPuzzleScene = new Scene();
-        waterPuzzleScene.setDescription("\nTODO:We need to add a description here.  ");
+        waterPuzzleScene.setDescription("\nYou have arrived at a puzzle scene. Figure out the water puzzle. ");
         waterPuzzleScene.setSymbol("WP");
         waterPuzzleScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.waterPuzzle.ordinal()] = waterPuzzleScene;
         
          Scene waterfallScene = new Scene();
-        waterfallScene.setDescription("\nTODO:We need to add a description here.  ");
+        waterfallScene.setDescription("\nYou have reached a waterfall. Is there anything useful here to uncover the treasure?  ");
         waterfallScene.setSymbol("WF");
         waterfallScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.waterfall.ordinal()] = waterfallScene;
+        
+        
         
         Scene finishScene = new Scene();
         finishScene.setDescription(
@@ -126,12 +128,26 @@ public class MapControl {
         locations[0][2].setScene(scenes[Scene.SceneType.beach.ordinal()]);
         locations[0][3].setScene(scenes[Scene.SceneType.beach.ordinal()]);
         locations[0][4].setScene(scenes[Scene.SceneType.beach.ordinal()]);
-        locations[1][0].setScene(scenes[Scene.SceneType.path.ordinal()]);
-        locations[1][1].setScene(scenes[Scene.SceneType.waterPuzzle.ordinal()]);
-        locations[1][2].setScene(scenes[Scene.SceneType.halfGallonPuzzle.ordinal()]);
-        locations[1][3].setScene(scenes[Scene.SceneType.waterfall.ordinal()]);
-        locations[1][4].setScene(scenes[Scene.SceneType.treasureRoom.ordinal()]);
-        locations[2][0].setScene(scenes[Scene.SceneType.finish.ordinal()]);
+        locations[1][0].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[1][1].setScene(scenes[Scene.SceneType.path.ordinal()]);
+        locations[1][2].setScene(scenes[Scene.SceneType.waterPuzzle.ordinal()]);
+        locations[1][3].setScene(scenes[Scene.SceneType.halfGallonPuzzle.ordinal()]);
+        locations[1][4].setScene(scenes[Scene.SceneType.waterfall.ordinal()]);
+        locations[2][0].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[2][1].setScene(scenes[Scene.SceneType.treasureRoom.ordinal()]);
+        locations[2][2].setScene(scenes[Scene.SceneType.path.ordinal()]);
+        locations[2][3].setScene(scenes[Scene.SceneType.finish.ordinal()]);
+        locations[2][4].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[3][0].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[3][1].setScene(scenes[Scene.SceneType.waterfall.ordinal()]);
+        locations[3][2].setScene(scenes[Scene.SceneType.path.ordinal()]);
+        locations[3][3].setScene(scenes[Scene.SceneType.waterfall.ordinal()]);
+        locations[3][4].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[4][0].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[4][1].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[4][2].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[4][3].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[4][4].setScene(scenes[Scene.SceneType.beach.ordinal()]);
         //add 14 more locations and make it look pretty.
     }
 
