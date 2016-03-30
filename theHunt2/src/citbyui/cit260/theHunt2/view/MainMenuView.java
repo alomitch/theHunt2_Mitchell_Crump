@@ -82,9 +82,9 @@ public class MainMenuView extends View {
     
     private void startExistingGame() {
        
-        // prompt for and get the name of the file to save the game in
-        this.console.println("\n\nEnter the file path for file where the game "
-                            + "is to be saved.");
+        // prompt for and get the path of the file to load
+        this.console.println("\n\nEnter the file path for the game file to be "
+                            + "loaded.");
         
         String filePath = this.getInput();
         
@@ -129,7 +129,8 @@ public class MainMenuView extends View {
     }
 
     private void aboutUs() {
-       System.out.println("***start aboutUs function called***");
+       AboutUsMenu aboutUsMenu = new AboutUsMenu() {};                 
+       aboutUsMenu.display();        
     } 
 
     private void locationsListView() {
