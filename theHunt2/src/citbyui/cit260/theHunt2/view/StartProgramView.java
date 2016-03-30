@@ -79,7 +79,7 @@ public class StartProgramView {
            //if the name is invalid (less than two character in lenght))
            if (playersName. length() <2){
                ErrorView.display(this.getClass().getName(),
-                       "Invalid name - the name must not be blank");
+                       "Invalid name - the name must be at least two characters.");
                continue; // and repeat again
                
            }

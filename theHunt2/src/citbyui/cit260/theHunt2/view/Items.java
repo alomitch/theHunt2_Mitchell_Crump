@@ -59,22 +59,22 @@ public abstract class Items extends View{
     }
 
     private void clues() {
-        System.out.println("*** start clues function called ***");
+        System.out.println("Find and keep clues to help you solve the final riddle!");
     }
 
     private void tnt() {
-       System.out.println("***start tnt function called ***");
+       System.out.println("Use TNT to blow up a riddle that has you stumped.  Only one use.");
     }
 
     private void aidBag() {
-        System.out.println("***start aidBag function called ***");
+        System.out.println("The Aid Bag can help heal you if injured.");
     }
 
     private void oldCellPhone() {
-        System.out.println("*** start oldCellPhone function called ***");
+        System.out.println("The cell phone has just enough power to get you one hint on a riddle.");
     }
     private void monkey() {
-        System.out.println("*** start monkey function called ***");
+        System.out.println("The monkey will travel with you, but otherwise serves no purpose.");
     }
     
     private void returnToMainMenu() {

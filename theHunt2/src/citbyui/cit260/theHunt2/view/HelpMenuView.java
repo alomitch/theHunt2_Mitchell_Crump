@@ -15,7 +15,7 @@ public abstract class HelpMenuView extends View {
     public HelpMenuView(){
        super("\n"
             +"\n-----------------------------------------"
-            + "\n| Help Menu                            |"
+            +"\n| Help Menu                             |"
             +"\n-----------------------------------------"
             +"\nG - What is the goal of the game?"
             +"\nM - How to move"
@@ -60,15 +60,15 @@ public abstract class HelpMenuView extends View {
     }
 
     private void gameGoal() {
-        System.out.println("*** start gameGoal function called ***");
+        System.out.println("***The goal of The Hunt is to find the treasure.***");
     }
 
     private void gameMovement() {
-       System.out.println("***start gameMovement function called ***");
+       System.out.println("***Enter directional commands:  FORWARD, BACK, LEFT, RIGHT.***");
     }
 
     private void answerRiddles() {
-        System.out.println("***start answerRiddles function called ***");
+        System.out.println("***To answer a riddle, type your response.  Grammar counts!***");
     }
 
     private void pickingUpItems() {
