@@ -34,6 +34,7 @@ public class MainMenuView extends View {
 
     @Override
     public boolean doAction(String value) {
+        value = value.toUpperCase();
         char choice = value.charAt(0);
         
         switch (choice){

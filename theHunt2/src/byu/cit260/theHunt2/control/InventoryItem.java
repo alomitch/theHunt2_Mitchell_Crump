@@ -6,12 +6,13 @@
 package byu.cit260.theHunt2.control;
 
 import citbyu.cit260.theHunt2.exceptions.InventoryItemException;
+import java.io.Serializable;
 
 /**
  *
  * @author AlleciaMitchell
  */
-public class InventoryItem {
+public class InventoryItem implements Serializable{
         String description;
         int quantityInStock;
        int requiredAmount; 

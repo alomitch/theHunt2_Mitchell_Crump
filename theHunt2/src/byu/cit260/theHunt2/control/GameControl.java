@@ -53,9 +53,9 @@ public class GameControl {
     
     public static void saveGame(Game game, String filePath)
             throws GameControlException {
-        String filepath = null;
+//        String filepath = null;
         
-        try( FileOutputStream fops = new FileOutputStream(filepath)) {
+        try( FileOutputStream fops = new FileOutputStream(filePath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
             
             output.writeObject(game); // write the game object out to file

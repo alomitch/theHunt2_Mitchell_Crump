@@ -25,6 +25,7 @@ public class Map implements Serializable{
     public Location[][] locations;
     public String name;
     public String description;
+    private Location currentLocation;
 
     public Map() {
     }
@@ -56,6 +57,15 @@ public class Map implements Serializable{
              }
           
         }
+    }
+
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
+        currentLocation.setVisited(true);
     }
     
     public String getName() {
@@ -135,13 +145,13 @@ public class Map implements Serializable{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public int getNoOfRows() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public int getNoOfColumns() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    public int getNoOfRows() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+//
+//    public int getNoOfColumns() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
    
 

@@ -11,6 +11,8 @@ import byu.cit260.theHunt2.model.Map;
 import byu.cit260.theHunt2.model.Scene;
 import citbyu.cit260.theHunt2.exceptions.MapControlException;
 import java.awt.Point;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import thehunt2.theHunt2;
 
 /**
@@ -21,7 +23,7 @@ public class MapControl {
 
     static Map createMap() {
         // create the map
-        Map map = new Map (20, 20);
+        Map map = new Map (5, 5);
         
         // create a list of the different scenes in the game
         Scene[] scenes = createScenes();
@@ -29,13 +31,15 @@ public class MapControl {
         // assign the different scenes to locations in the map
         assignScenesToLocations(map, scenes);
         
+        try {
+            movePlayerToStartingLocation(map);
+        } catch (MapControlException ex) {
+            Logger.getLogger(MapControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return map;
     }
 
-    //static void moveActorsToStartingLocation(Map map) {
-      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    //}
-
+    
     private static Scene[] createScenes() {
         Scene[] scenes = new Scene[Scene.SceneType.values().length];
         int numberOfScenes = Scene.SceneType.values().length;
@@ -50,49 +54,49 @@ public class MapControl {
             + " growth.  You beach your craft securely, then consider your backpack resting "
             + "in the bow of the boat.  Should you travel light through the brush, or bring "
             + "your pack in case you find anything interesting along the way?");
-        startingScene.setSymbol(" ST ");
+        startingScene.setSymbol("ST");
         startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.start.ordinal()] = startingScene;
         
         Scene newScene = new Scene();
         newScene.setDescription("\nTODO:We need to add a description here.  ");
-        newScene.setSymbol(" BH ");
+        newScene.setSymbol("BH");
         newScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.beach.ordinal()] = newScene;
         
         Scene puzzleScene = new Scene();
         puzzleScene.setDescription("\nTODO:We need to add a description here.  ");
-        puzzleScene.setSymbol(" HG ");
+        puzzleScene.setSymbol("HG");
         puzzleScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.halfGallonPuzzle.ordinal()] = puzzleScene;
         
         Scene pathScene = new Scene();
         pathScene.setDescription("\nTODO:We need to add a description here.  ");
-        pathScene.setSymbol(" TH ");
+        pathScene.setSymbol("TH");
         pathScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.path.ordinal()] = pathScene;
         
          Scene treasureRoomScene = new Scene();
         treasureRoomScene.setDescription("\nTODO:We need to add a description here.  ");
-        treasureRoomScene.setSymbol(" TR ");
+        treasureRoomScene.setSymbol("TR");
         treasureRoomScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.treasureRoom.ordinal()] = treasureRoomScene;
         
          Scene waterPuzzleScene = new Scene();
         waterPuzzleScene.setDescription("\nTODO:We need to add a description here.  ");
-        waterPuzzleScene.setSymbol(" WP ");
+        waterPuzzleScene.setSymbol("WP");
         waterPuzzleScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.waterPuzzle.ordinal()] = waterPuzzleScene;
         
          Scene waterfallScene = new Scene();
         waterfallScene.setDescription("\nTODO:We need to add a description here.  ");
-        waterfallScene.setSymbol(" WF ");
+        waterfallScene.setSymbol("WF");
         waterfallScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[Scene.SceneType.waterfall.ordinal()] = waterfallScene;
@@ -104,7 +108,7 @@ public class MapControl {
             + "hidden within.  As the light from behind you streams into the chamber, you "
             + "notice gold, jewels, and precious treasures.  With a smile on your face, you "
             + "wonder just how much will fit in your pack.");
-        finishScene.setSymbol(" FN ");
+        finishScene.setSymbol("FN");
         finishScene.setBlocked(false);
        // finishScene.setTravelTime(Double.POSITIVE_INFINITY);
         scenes[Scene.SceneType.finish.ordinal()] = finishScene;
@@ -118,26 +122,30 @@ public class MapControl {
         String testSymbol = scenes[Scene.SceneType.path.ordinal()].getSymbol();
         //start point
         locations[0][0].setScene(scenes[Scene.SceneType.beach.ordinal()]);
-        locations[0][1].setScene(scenes[Scene.SceneType.path.ordinal()]);
-        locations[0][2].setScene(scenes[Scene.SceneType.waterPuzzle.ordinal()]);
-        locations[0][3].setScene(scenes[Scene.SceneType.halfGallonPuzzle.ordinal()]);
-        locations[0][4].setScene(scenes[Scene.SceneType.waterfall.ordinal()]);
-        locations[0][5].setScene(scenes[Scene.SceneType.treasureRoom.ordinal()]);
-        locations[0][6].setScene(scenes[Scene.SceneType.finish.ordinal()]);
-        
+        locations[0][1].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[0][2].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[0][3].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[0][4].setScene(scenes[Scene.SceneType.beach.ordinal()]);
+        locations[1][0].setScene(scenes[Scene.SceneType.path.ordinal()]);
+        locations[1][1].setScene(scenes[Scene.SceneType.waterPuzzle.ordinal()]);
+        locations[1][2].setScene(scenes[Scene.SceneType.halfGallonPuzzle.ordinal()]);
+        locations[1][3].setScene(scenes[Scene.SceneType.waterfall.ordinal()]);
+        locations[1][4].setScene(scenes[Scene.SceneType.treasureRoom.ordinal()]);
+        locations[2][0].setScene(scenes[Scene.SceneType.finish.ordinal()]);
+        //add 14 more locations and make it look pretty.
     }
 
     
-    public static void moveActorsToStartingLocation (Map map)
+    public static void movePlayerToStartingLocation (Map map)
                                       throws MapControlException {
         //for every actor
-        Actor [] actors = Actor.values();
-        
-        for (Actor actor : actors){
-            Point coordinates = actor.getCoordinates();
-            MapControl.moveActorToLocation (actor, coordinates);
+//        Actor [] actors = Actor.values();
+//        
+//        for (Actor actor : actors){
+//            Point coordinates = actor.getCoordinates();
+            MapControl.movePlayerToLocation(map,0,0);
 
-        }
+        
        
     }
 
@@ -148,20 +156,21 @@ public class MapControl {
      * @return
      * @throws MapControlException
      */
-    public static int moveActorToLocation(Actor actor, Point coordinates)  
+    public static void movePlayerToLocation(Map map, int row, int column)  
                                             throws MapControlException{
-        Map map = theHunt2.getCurrentGame().getMap();
-           int newRow = coordinates.x-1;
-           int newColumn = coordinates. y-1;
+        //Map map = theHunt2.getCurrentGame().getMap();
+//           int newRow = coordinates.x-1;
+//           int newColumn = coordinates. y-1;
       
-         if (newRow < 0 || newRow >= map.getNoOfRows() ||
-                newColumn<0 ||newColumn>= map.getNoOfColumns()) {
+         if (row < 0 || row >= map.getRowCount()||
+                column<0 ||column>= map.getColumnCount()) {
                 throw new MapControlException("Can not move actor to location"
-                                                                            + coordinates.x + "," + coordinates.y
+                                                                            + row + "," + column
                                                                              +"because that location is outside"
                                                                             + "the bounds of the map.");
         }
-          return 0;
+         map.setCurrentLocation(map.getLocations()[row][column]);
+       //   return 0;
     }
    
 }
