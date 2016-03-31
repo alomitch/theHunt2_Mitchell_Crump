@@ -16,12 +16,12 @@ public abstract class AboutUsMenu extends View {
     public AboutUsMenu(){
             super("\n"
             +"\n-----------------------------------------"
-            + "\n| About Us Menu                            |"
+            +"\n| About Us Menu                            |"
             +"\n-----------------------------------------"
-            +"\na - Creator Allecia Mitchell"
-            +"\nm - Creator Michael Crump"
+            +"\nA - Creator Allecia Mitchell"
+            +"\nM - Creator Michael Crump"
             +"\nR - Return to Main Menu"
-            +"\nE- Exit"
+            +"\nE - Exit"
             +"\n-----------------------------------------");
         }
 //    public void displayMenu() {
@@ -44,10 +44,10 @@ public abstract class AboutUsMenu extends View {
         char choice = value.charAt(0);
         
         switch (choice){
-            case 'a'://About Creator Allecia Mitchell
+            case 'A'://About Creator Allecia Mitchell
                 this.aboutCreatorAllecia();
                 break;
-            case 'm': //About Creator Michael Crump
+            case 'M': //About Creator Michael Crump
                 this.aboutCreatorMichael();
                 break;
             case 'R':// Return to Main Menu
@@ -59,11 +59,24 @@ public abstract class AboutUsMenu extends View {
                ErrorView.display(this.getClass().getName(),
                        "\n*** Invalid selection *** Try again ");
                break;
-           
-               
+                          
         }
         return false;
     }
+        
+        private void aboutCreatorAllecia() {
+        System.out.println("*** start aboutCreatorAllecia function called***");
+    }
+
+        private void aboutCreatorMichael() {
+        System.out.println("Mike is a 38-year-old husband to one and father to three.  He lives in Nephi, UT.");
+    }
+
+    private void returnToMainMenu() {
+       MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
+    }
+    
     
     @Override
     public String getInput() {
@@ -94,16 +107,5 @@ public abstract class AboutUsMenu extends View {
 
 
 
-    private void aboutCreatorAllecia() {
-        System.out.println("*** start aboutCreatorAllecia function called***");
-    }
-
-    private void aboutCreatorMichael() {
-        System.out.println("*** start aboutCreatorMichael function called***");
-    }
-
-    private void returnToMainMenu() {
-       MainMenuView mainMenu = new MainMenuView();
-        mainMenu.display();
-    }
+    
 }
