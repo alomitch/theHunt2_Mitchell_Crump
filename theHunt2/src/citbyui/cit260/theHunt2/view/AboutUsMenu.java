@@ -5,8 +5,6 @@
  */
 package citbyui.cit260.theHunt2.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author AlleciaMitchell
@@ -16,7 +14,7 @@ public abstract class AboutUsMenu extends View {
     public AboutUsMenu(){
             super("\n"
             +"\n-----------------------------------------"
-            +"\n| About Us Menu                            |"
+            +"\n| About Us Menu                         |"
             +"\n-----------------------------------------"
             +"\nA - Creator Allecia Mitchell"
             +"\nM - Creator Michael Crump"
@@ -65,7 +63,7 @@ public abstract class AboutUsMenu extends View {
     }
         
         private void aboutCreatorAllecia() {
-        System.out.println("*** start aboutCreatorAllecia function called***");
+        System.out.println("Allecia is an aweseome person!  She lives in Las Vegas, NV.");
     }
 
         private void aboutCreatorMichael() {
@@ -78,32 +76,32 @@ public abstract class AboutUsMenu extends View {
     }
     
     
-    @Override
-    public String getInput() {
-         boolean valid = false; // indicates if the name has been retrieved
-       String getInput = null;
-       Scanner keyboard = new Scanner(System.in);   // keyboard input stream
-       
-       while (!valid) { // while a valid name has not been retrieved
-           
-           //prompt for the player's name
-           this.console.println("Choose Option From The About Us Menu");
-          
-           // get the name from the keyboard and trim off the blanks
-          getInput = keyboard.nextLine();
-           getInput = getInput.trim();
-           
-           //if the name is invalid (less than two character in lenght))
-           if (getInput. length() <1){
-               ErrorView.display(this.getClass().getName(),
-                        "Invalid entry");
-               continue; // and repeat again
-               
-           }
-           break; // out of the (exit) the repetition
-       }
-       return getInput; //return the name
-    }
+//    @Override
+//    public String getInput() {
+//         boolean valid = false; // indicates if the name has been retrieved
+//       String getInput = null;
+//       Scanner keyboard = new Scanner(System.in);   // keyboard input stream
+//       
+//       while (!valid) { // while a valid name has not been retrieved
+//           
+//           //prompt for the player's name
+//           this.console.println("Choose Option From The About Us Menu");
+//          
+//           // get the name from the keyboard and trim off the blanks
+//          getInput = keyboard.nextLine();
+//           getInput = getInput.trim();
+//           
+//           //if the name is invalid (less than two character in lenght))
+//           if (getInput. length() <1){
+//               ErrorView.display(this.getClass().getName(),
+//                        "Invalid entry");
+//               continue; // and repeat again
+//               
+//           }
+//           break; // out of the (exit) the repetition
+//       }
+//       return getInput; //return the name
+//    }
 
 
 

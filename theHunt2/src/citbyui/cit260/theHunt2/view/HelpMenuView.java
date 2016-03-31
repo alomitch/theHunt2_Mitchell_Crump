@@ -64,7 +64,7 @@ public abstract class HelpMenuView extends View {
     }
 
     private void gameMovement() {
-       System.out.println("***Enter directional commands:  FORWARD, BACK, LEFT, RIGHT.***");
+       System.out.println("***Use the Move to New Location menu option, then enter the coordinates.***");
     }
 
     private void answerRiddles() {
@@ -73,10 +73,10 @@ public abstract class HelpMenuView extends View {
 
     private void pickingUpItems() {
         Items items = new Items() {
-            @Override
-            public boolean doAction(String value) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
+//            @Override
+//            public boolean doAction(String value) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//            }
         };
         items.display();
     }

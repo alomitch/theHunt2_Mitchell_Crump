@@ -14,7 +14,7 @@ public abstract class Items extends View{
        public Items(){
            super("\n"  
             +"\n-----------------------------------------"
-            + "\n| Items Menu                            |"
+            +"\n| Items Menu                            |"
             +"\n-----------------------------------------"
             +"\nC - Clues"
             +"\nT - TNT"
