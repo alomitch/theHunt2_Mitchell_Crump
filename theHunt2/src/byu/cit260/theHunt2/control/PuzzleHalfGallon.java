@@ -5,18 +5,21 @@
  */
 package byu.cit260.theHunt2.control;
 
+import citbyu.cit260.theHunt2.exceptions.HalfGallonPuzzleException;
+
 /**
  *
  * @author AlleciaMitchell
  */
 public class PuzzleHalfGallon {
-
-    public static boolean calcHalfGallon(double quantity, String units) {
+                    
+    public static boolean calcHalfGallon(double quantity, String units) throws HalfGallonPuzzleException {
        int teaspoonsInHalfGallon = 384;
         if (quantity <= 0){
-         return false;    
+         return false;  
+       
         }
-        
+    
         if (units.equals ("teaspoon")){
          return (quantity == teaspoonsInHalfGallon);
         } 
@@ -27,7 +30,8 @@ public class PuzzleHalfGallon {
          if (units.equals ("cup"))
               return (quantity *48 == teaspoonsInHalfGallon);
          
-         return false;
+         //return false;
+          throw new HalfGallonPuzzleException("This amount needs to be more exact. Try again.");
     }               
 
     

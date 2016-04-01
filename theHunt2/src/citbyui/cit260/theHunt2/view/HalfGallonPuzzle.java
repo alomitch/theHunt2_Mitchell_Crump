@@ -6,6 +6,7 @@
 package citbyui.cit260.theHunt2.view;
 
 import byu.cit260.theHunt2.control.PuzzleHalfGallon;
+import citbyu.cit260.theHunt2.exceptions.HalfGallonPuzzleException;
 import java.util.Scanner;
 
 
@@ -37,7 +38,7 @@ public abstract class HalfGallonPuzzle extends View {
     }
     private boolean input;
 
-    public void displayMenu() {
+    public void displayMenu() throws HalfGallonPuzzleException {
         
         
         char selection = ' ';
@@ -52,13 +53,33 @@ public abstract class HalfGallonPuzzle extends View {
             
            this.console.println("Enter the number of teaspoons:");
                String teaspoon = getInput();  
+           
+            try{
                int iTeaspoon = Integer.parseInt(teaspoon);
+           }catch (NumberFormatException nf){
+           ErrorView.display(this.getClass().getName(),
+                   "\nYou must enter a valid number."
+                                         + "Try again or enter Q to quit.");
+       }
             this.console.println("Enter the number of tablespoons :");
                String tablespoon = getInput();
-               int iTablespoon = Integer.parseInt(tablespoon);   
+           try{
+               int iTablespoon = Integer.parseInt(tablespoon);  
+           }catch (NumberFormatException nf){
+           ErrorView.display(this.getClass().getName(),
+                   "\nYou must enter a valid number."
+                      + "Try again or enter Q to quit.");
+       }
            this.console.println("Enter the number of cups:");    
               String cup = getInput();
+              
+           try{
               int iCup = Integer.parseInt(cup);
+          }catch (NumberFormatException nf){
+           ErrorView.display(this.getClass().getName(),
+                   "\nYou must enter a valid number."
+                                         + "Try again or enter Q to quit.");
+       }
               
         boolean calcHalfGallon = PuzzleHalfGallon.calcHalfGallon(selection, input)
                 // } while (selection != 'E'); // while selection is not "Exit"

@@ -54,8 +54,14 @@ public class WaterPuzzle {
             this.console.println("The tub capacity is " + tubGallons + " gallons.");
             this.console.println("How many minutes will it take to fill the tub completely?  Enter -1 to cancel.");
             String input = this.getInput(); // get the user's selection
-            minutes = Integer.parseInt(input);
-                   
+            
+            try{
+                 // parse and convert number form text to a double
+                 minutes = Integer.parseInt(input);
+           } catch (NumberFormatException nf)      {
+                System.out.println("\n You must enter a valid number."
+                                + "Try again or enter Q to quit.");
+            }
             returnVal = this.doAction(minutes); // do action based on selection
             if (returnVal == 1)
                 this.console.println("Congratulations!  You are correct!");
@@ -110,17 +116,18 @@ public static int getTubCapacity(){
     private int doAction(int minutes) throws PuzzleWaterSceneException {
         if (minutes < 1)
           return -1;
-        double fillRate = PuzzleSceneWater.calcTubFillRate (tubGallons, 2.2);
-        if (fillRate == -1)
-          return -2;
+  
+           double fillRate = PuzzleSceneWater.calcTubFillRate (tubGallons, 2.2);
+            if (fillRate == -1)
+            return -2;
         
-        double fillTime = PuzzleSceneWater.calcTotalFillTime(fillRate, tubGallons);
-        if (fillTime == -1)
-          return -2;
+           double fillTime = PuzzleSceneWater.calcTotalFillTime(fillRate, tubGallons);
+             if (fillTime == -1)
+             return -2;
         
-        int iFillTime = (int)Math.round(fillTime);
-        if (iFillTime == minutes)
-          return 1;
+           int iFillTime = (int)Math.round(fillTime);
+            if (iFillTime == minutes)
+            return 1;
         
         return 0;
         

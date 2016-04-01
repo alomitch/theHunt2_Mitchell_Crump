@@ -5,6 +5,7 @@
  */
 package byu.cit260.theHunt2.control;
 
+import citbyu.cit260.theHunt2.exceptions.HalfGallonPuzzleException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -21,7 +22,7 @@ public class PuzzleHalfGallonTest {
      * Test of calcTspInHalfGallon method, of class PuzzleTeaspoon.
      */
     @Test
-    public void testCalcHalfGallon() {
+    public void testCalcHalfGallon() throws HalfGallonPuzzleException {
         System.out.println("calcHalfGallon");
         /****************
          * Test case #1
