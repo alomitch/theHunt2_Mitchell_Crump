@@ -78,9 +78,9 @@ public class MainMenuView extends View {
        this.console.println("\nAfter dragging your boat ashore, you find yourself on a tropical beach.  "
             + "\nThe brush grows thick before you, but you can make out several paths which "
             + "\nappear to lead deep into the island.  In the distance, you can see tropical"
-            + "\n waterfalls cascading from precipitous heights.  High atop distand cliffs, "
+            + "\nwaterfalls cascading from precipitous heights.  High atop distand cliffs, "
             + "\nyou see what appears to be ancient ruins covered in thick vines and ages of"
-            + "\n growth.  You beach your craft securely, then consider your backpack resting "
+            + "\ngrowth.  You beach your craft securely, then consider your backpack resting "
             + "\nin the bow of the boat.  Should you travel light through the brush, or bring "
             + "\nyour pack in case you find anything interesting along the way?");
        

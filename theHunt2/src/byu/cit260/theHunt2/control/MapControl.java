@@ -47,13 +47,13 @@ public class MapControl {
         Scene startingScene = new Scene();
         startingScene.setDescription(
             "\nAfter dragging your boat ashore, you find yourself on a tropical beach.  "
-            + "The brush grows thick before you, but you can make out several paths which "
-            + "appear to lead deep into the island.  In the distance, you can see tropical"
-            + " waterfalls cascading from precipitous heights.  High atop distand cliffs, "
-            + "you see what appears to be ancient ruins covered in thick vines and ages of"
-            + " growth.  You beach your craft securely, then consider your backpack resting "
-            + "in the bow of the boat.  Should you travel light through the brush, or bring "
-            + "your pack in case you find anything interesting along the way?");
+            + "\nThe brush grows thick before you, but you can make out several paths which "
+            + "\nappear to lead deep into the island.  In the distance, you can see tropical"
+            + "\nwaterfalls cascading from precipitous heights.  High atop distand cliffs, "
+            + "\nyou see what appears to be ancient ruins covered in thick vines and ages of"
+            + "\ngrowth.  You beach your craft securely, then consider your backpack resting "
+            + "\nin the bow of the boat.  Should you travel light through the brush, or bring "
+            + "\nyour pack in case you find anything interesting along the way?");
         startingScene.setSymbol("ST");
         startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
