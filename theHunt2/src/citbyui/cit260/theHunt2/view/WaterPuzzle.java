@@ -46,7 +46,7 @@ public class WaterPuzzle {
     public void displayMenu() throws PuzzleWaterSceneException {
         tubGallons = getTubCapacity();
         char selection = ' ';
-        int minutes;
+        int minutes = 0;
         int returnVal;
         do {
                
