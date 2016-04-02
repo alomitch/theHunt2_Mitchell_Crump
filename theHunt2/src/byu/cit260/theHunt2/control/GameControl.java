@@ -108,11 +108,11 @@ public class GameControl {
         InventoryItem[] inventory = 
                 new InventoryItem[Constants.NUMBER_OF_INVENTORY_ITEMS];
         
-        InventoryItem key = new InventoryItem();
-        key.setDescription("Key");
-        key.setQuantityInStock(0);
-        key.setRequiredAmount(0);
-        inventory[Item.key.ordinal()] = key;
+//        InventoryItem key = new InventoryItem();
+//        key.setDescription("Key");
+//        key.setQuantityInStock(0);
+//        key.setRequiredAmount(0);
+//        inventory[Item.key.ordinal()] = key;
         
         InventoryItem backpack = new InventoryItem();
         backpack.setDescription("Backpack");

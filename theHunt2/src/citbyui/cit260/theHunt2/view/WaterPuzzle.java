@@ -25,7 +25,7 @@ public class WaterPuzzle {
     int tubGallons = 0;
     private final String MENU = "\n"
             +"\n-----------------------------------------"
-            + "\n| Water Puzzle                         |"
+            +"\n| Water Puzzle                          |"
             +"\n-----------------------------------------"
             +"\nYou have come to a peculiar device next  "
             +"\nto a waterfall.  A barrel is suspended   "
@@ -41,8 +41,7 @@ public class WaterPuzzle {
             +"\nto fill the tub completely."
             +"\n-----------------------------------------";
     
-    //you've come to a tub with a fill valve.
-
+   
     public void displayMenu() throws PuzzleWaterSceneException {
         tubGallons = getTubCapacity();
         char selection = ' ';
@@ -64,7 +63,7 @@ public class WaterPuzzle {
             }
             returnVal = this.doAction(minutes); // do action based on selection
             if (returnVal == 1)
-                this.console.println("Congratulations!  You are correct!");
+                this.console.println("Congratulations!  You are correct!  Try visiting location 2,3.");
             else 
                 this.console.println("Sorry.  Please try again.");
             

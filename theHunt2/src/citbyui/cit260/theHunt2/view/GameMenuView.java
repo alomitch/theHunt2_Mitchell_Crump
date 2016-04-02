@@ -127,7 +127,11 @@ public abstract class GameMenuView extends View {
                      System.out.print(leftIndicator + locations[row][col].getScene().getSymbol() + rightIndicator);
              }
              System.out.println("|");
+             
          }
+         
+         System.out.println("** next to a location indicate your current position"
+                     + "\n>< designate locations you have already visited.");
     
         
 //               for(int row = 0; row< loc.length; row++) {    
