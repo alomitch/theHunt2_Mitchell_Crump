@@ -22,15 +22,6 @@ public class Treasure implements Serializable {
     public Treasure() {
         this.description = "\nThis is the treasure hidden on the island.  If you"
                         + "\n can find it, you'll be rich beyond your wildest dreams!";
-        
-        
-        int key = inventory[Item.key.ordinal].getQuantityInStock();
- 
-if ( row == 1 && column == 2 && key == 1)  {
-      display scene
-}  else  {
-       this.console.println("You need a key to access this location")
-       }
     }
 
     @Override
