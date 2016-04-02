@@ -5,6 +5,7 @@
  */
 package byu.cit260.theHunt2.control;
 
+import static byu.cit260.theHunt2.control.GameControl.Item.key;
 import byu.cit260.theHunt2.model.Backpack;
 import byu.cit260.theHunt2.model.Game;
 import byu.cit260.theHunt2.model.Map;
@@ -98,13 +99,20 @@ public class GameControl {
         clue,
         tnt,
         monkey,
-        aidBag;       
+        aidBag,
+        key;       
     }
     public static InventoryItem[] createItemsList() {
         
         // created array(list) of inventory items
         InventoryItem[] inventory = 
                 new InventoryItem[Constants.NUMBER_OF_INVENTORY_ITEMS];
+        
+        InventoryItem key = new InventoryItem();
+        key.setDescription("Key");
+        key.setQuantityInStock(0);
+        key.setRequiredAmount(0);
+        inventory[Item.key.ordinal()] = key;
         
         InventoryItem backpack = new InventoryItem();
         backpack.setDescription("Backpack");
