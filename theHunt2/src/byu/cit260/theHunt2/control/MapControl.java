@@ -5,15 +5,12 @@
  */
 package byu.cit260.theHunt2.control;
 
-import byu.cit260.theHunt2.model.Actor;
 import byu.cit260.theHunt2.model.Location;
 import byu.cit260.theHunt2.model.Map;
 import byu.cit260.theHunt2.model.Scene;
 import citbyu.cit260.theHunt2.exceptions.MapControlException;
-import java.awt.Point;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import thehunt2.theHunt2;
 
 /**
  *

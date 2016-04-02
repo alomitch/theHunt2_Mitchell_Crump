@@ -6,8 +6,6 @@
 package citbyui.cit260.theHunt2.view;
 
 import byu.cit260.theHunt2.control.GameControl;
-import static byu.cit260.theHunt2.control.GameControl.Item.key;
-import static citbyui.cit260.theHunt2.view.ErrorView.display;
 /**
  *
  * @author AlleciaMitchell
@@ -16,11 +14,11 @@ public class TreasureRoom {
     private int inventory;
     
    int key = inventory[GameControl.Item.key.ordinal].getQuantityInStock();
- 
-if ( row == 1 && column == 2 && key == 1)  {
-      display scene
-}  else  {
-       this.console.println("You need a key to access this location")
+     
+    if Scene ( row == 1 && column == 2 && key == 1)  {
+      display TreasureRoom;
+    
+       System.out.println("You need a key to access this location");
        }
 
     public int getInventory() {
@@ -37,6 +35,18 @@ if ( row == 1 && column == 2 && key == 1)  {
 
     public void setKey(int key) {
         this.key = key;
+    }
+
+    private static class display {
+
+        public display() {
+        }
+    }
+
+    private static class row {
+
+        public row() {
+        }
     }
 
    

@@ -20,7 +20,8 @@ public abstract class Items extends View{
             +"\nT - TNT"
             +"\nA - Aid Bag"
             +"\nO - Old Cell Phone"
-            +"\nM - Monkey"    
+            +"\nM - Monkey"  
+            +"\nM - Key"        
             +"\nR - Return to Main Menu"
             +"\n-----------------------------------------");
        }
@@ -45,7 +46,10 @@ public abstract class Items extends View{
                 break;
             case 'M':// display information on the monkey
                 this.monkey();
-                break;              
+                break; 
+            case 'K':// display information on the key
+                this.key();
+                break;
             case 'R':// Return to Main Menu
                this.returnToMainMenu();
                break;
@@ -75,6 +79,9 @@ public abstract class Items extends View{
     }
     private void monkey() {
         System.out.println("The monkey will travel with you, but otherwise serves no purpose.");
+    }
+    private void key() {
+        System.out.println("You will need to find the key before you can access the Treasure Room.");
     }
     
     private void returnToMainMenu() {
