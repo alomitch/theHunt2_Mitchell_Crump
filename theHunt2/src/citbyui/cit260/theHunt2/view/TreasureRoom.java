@@ -14,8 +14,8 @@ public class TreasureRoom {
     private int inventory;
     
    int key = inventory[GameControl.Item.key.ordinal].getQuantityInStock();
-     
-    if Scene ( row == 1 && column == 2 && key == 1)  {
+          
+    if TreasureRoom ( row == 1 && column == 2 && key == 1)  {
       display TreasureRoom;
     
        System.out.println("You need a key to access this location");

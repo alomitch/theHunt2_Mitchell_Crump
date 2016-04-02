@@ -78,7 +78,7 @@ public class MapControl {
         scenes[Scene.SceneType.path.ordinal()] = pathScene;
         
          Scene treasureRoomScene = new Scene();
-        treasureRoomScene.setDescription("\nWe finally made it! The treasure room! Use all you know to unlock the treasure!");
+        treasureRoomScene.setDescription("\nWe finally made it! The treasure room! Use all you have to unlock the treasure!");
         treasureRoomScene.setSymbol("TR");
         treasureRoomScene.setBlocked(false);
         //startingScene.setTravelTime(240);
