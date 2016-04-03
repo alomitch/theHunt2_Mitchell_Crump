@@ -130,7 +130,7 @@ public abstract class GameMenuView extends View {
              
          }
          
-         System.out.println("** next to a location indicate your current position"
+         System.out.println("** next to a location indicates your current position."
                      + "\n>< designate locations you have already visited.");
     
         
