@@ -21,8 +21,8 @@ protected final BufferedReader keyboard = theHunt2.getInfile();
     
     public LocationsListView(){
         super ("Please select an option:"
-                + "L- Location List"
-                + "E-Exit and Return to Main Menu");
+                + "L-  Location List"
+                + "E-  Exit and Return to Main Menu");
                 
     }
     @Override

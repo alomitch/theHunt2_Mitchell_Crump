@@ -5,7 +5,6 @@
  */
 package byu.cit260.theHunt2.model;
 
-import byu.cit260.theHunt2.model.Scene.SceneType;
 import java.io.Serializable;
 import java.util.ArrayList;
 

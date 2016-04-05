@@ -37,6 +37,8 @@ public class PuzzleHalfGallon {
     
 }
         
+
+
    //    double amtHalfGallon= 384 teaspoon
       // double amtHalfGallon= 128 tablespoon
        //double amtHalfGallon= 8 cup

@@ -144,7 +144,8 @@ public class MainMenuView extends View {
     } 
 
     private void locationsListView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        LocationsListView locationsList = new LocationsListView() {};                 
+        locationsList.display();   
     }
     
 }
